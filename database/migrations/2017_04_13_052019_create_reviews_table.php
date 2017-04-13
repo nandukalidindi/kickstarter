@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePledgesTable extends Migration
+class CreateReviewsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class CreatePledgesTable extends Migration
      */
     public function up()
     {
-      Schema::create('pledges', function (Blueprint $table) {
+      Schema::create('reviews', function (Blueprint $table) {
         $table->integer('user_id');
         $table->integer('project_id');
-        $table->double('amount', 5, 2);
-        $table->integer('cc_card_id');
+        $table->enum('type', ['comment', 'rating', 'like']);
+        $table->text('comment');
+        $table->integer('rating');
         $table->timestamps();
 
         $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
@@ -32,6 +33,6 @@ class CreatePledgesTable extends Migration
      */
     public function down()
     {
-      Schema::dropIfExists('pledges');
+      Schema::dropIfExists('reviews');
     }
 }
