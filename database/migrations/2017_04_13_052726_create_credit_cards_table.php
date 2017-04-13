@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePledgesTable extends Migration
+class CreateCreditCardsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,15 @@ class CreatePledgesTable extends Migration
      */
     public function up()
     {
-      Schema::create('pledges', function (Blueprint $table) {
+      Schema::create('credit_cards', function (Blueprint $table) {
+        $table->increments('id')->unique();
         $table->integer('user_id');
-        $table->integer('project_id');
-        $table->double('amount', 5, 2);
-        $table->integer('cc_card_id');
+        $table->text('cc_number');
+        $table->boolean('is_default')->default(false);
+        $table->boolean('is_enabled')->default(true);
         $table->timestamps();
 
         $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-        $table->foreign('project_id')->references('id')->on('projects')->onDelete('cascade');
       });
     }
 
@@ -32,6 +32,6 @@ class CreatePledgesTable extends Migration
      */
     public function down()
     {
-      Schema::dropIfExists('pledges');
+      Schema::dropIfExists('credit_cards');
     }
 }
