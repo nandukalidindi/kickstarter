@@ -17,8 +17,8 @@ class CreateReviewsTable extends Migration
         $table->integer('user_id');
         $table->integer('project_id');
         $table->enum('type', ['comment', 'rating', 'like']);
-        $table->text('comment');
-        $table->integer('rating');
+        $table->text('comment')->nullable();
+        $table->integer('rating')->nullable();
         $table->timestamps();
 
         $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
