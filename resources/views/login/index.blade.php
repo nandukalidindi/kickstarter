@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html class="site_index fontface js" data-request-id="6a99a737-ea11-4723-9483-0712fae53b7f" lang="en"><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# kickstarter: http://ogp.me/ns/fb/kickstarter#"><script type="text/javascript" async="" src="https://cdn.siftscience.com/s.js"></script><script type="text/javascript" async="" src="https://dtlilztwypawv.cloudfront.net/s.js"></script><script id="twitter-wjs" src="https://platform.twitter.com/widgets.js"></script><script src="https://connect.facebook.net/signals/config/1647394995565822?v=stable" async=""></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script>
-<script>
+<html class="user_sessions_new fontface js" data-request-id="dfeb1f75-9b30-4e37-9a48-992718712628" lang="en"><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# kickstarter: http://ogp.me/ns/fb/kickstarter#"><script type="text/javascript" async="" src="https://cdn.siftscience.com/s.js"></script><script type="text/javascript" async="" src="https://dtlilztwypawv.cloudfront.net/s.js"></script><script id="twitter-wjs" src="https://platform.twitter.com/widgets.js"></script><script src="https://connect.facebook.net/signals/config/1647394995565822?v=stable" async=""></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script>
   docElement = this.document.documentElement;
   docElement.className=docElement.className.replace(/\bno-js\b/,'') + 'js';
 </script>
 <title>
-
+Log in —
 Kickstarter
 </title>
 
@@ -30,47 +29,107 @@ Kickstarter
 <link href="https://static.kickstarter.com/assets/apple-touch-icon-167x167-a70a477f95bc6064cd8aa657baab9aa9ced69cba7b5d692f0220a7cff672c07e.png" rel="apple-touch-icon" sizes="167x167" type="image/png">
 <link href="https://static.kickstarter.com/assets/apple-touch-icon-180x180-721b718e39d953efff0ca790ed4ab7eda2e6bfd3a9aefca63c4ecca3761f68db.png" rel="apple-touch-icon" sizes="180x180" type="image/png">
 
-<meta name="apple-itunes-app" content="app-id=596961532, app-argument=https://www.kickstarter.com/?app_banner=1">
-<meta property="al:ios:app_name" content="Kickstarter">
-<meta property="al:ios:app_store_id" content="596961532">
-<meta property="al:ios:url" content="ksr://www.kickstarter.com/?app_banner=1">
-<meta name="title" content="Kickstarter">
-<meta name="description" content="Kickstarter is the world's largest funding platform for creative projects. A home for film, music, art, theater, games, comics, design, photography, and more.">
-<meta property="og:image" content="https://static.kickstarter.com/assets/site/social/ksr-hp-social-18363a83c0f7fd57f54e27802166cb673e74accbf4a7e0e0018875f7fb16f2fe.png">
-<meta property="og:type" content="website">
-<meta property="og:title" content="">
-<meta property="og:locale" content="en_US">
-<meta property="og:locale:alternate" content="en_US">
-<meta property="og:locale:alternate" content="de_DE">
-<meta property="og:locale:alternate" content="es_ES">
-<meta property="og:locale:alternate" content="fr_FR">
-<meta property="og:url" content="https://www.kickstarter.com/">
-<meta property="fb:app_id" content="69103156693">
-<meta property="twitter:account_id" content="16186995">
-<meta property="twitter:site" content="@kickstarter">
-<meta property="twitter:site:id" content="16186995">
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://www.kickstarter.com/">
-<meta property="twitter:text:title" content="Kickstarter">
-<meta property="twitter:image" content="https://static.kickstarter.com/assets/site/social/ksr-hp-social-18363a83c0f7fd57f54e27802166cb673e74accbf4a7e0e0018875f7fb16f2fe.png">
-<meta property="twitter:description" content="Kickstarter is the world's largest funding platform for creative projects. A home for film, music, art, theater, games, comics, design, photography, and more.">
 
-<link rel="alternate" href="https://www.kickstarter.com/" hreflang="en">
-<link rel="alternate" href="https://www.kickstarter.com/?lang=de" hreflang="de">
-<link rel="alternate" href="https://www.kickstarter.com/?lang=es" hreflang="es">
-<link rel="alternate" href="https://www.kickstarter.com/?lang=fr" hreflang="fr">
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="bEq7eds5/Qd0nl8DeWzM7zZ7P4hzIicbhP4b9k9HrZyQdZFtrJqxnHz+R4+162Sl/Z0nuQ3RTDX75xhiFju9fQ==">
+<script type="text/javascript">
+  var _sift = _sift || [];
+  _sift.push(['_setAccount', '637102']);
+  _sift.push(['_setUserId', '']);
+  _sift.push(['_trackPageview']);
 
-<script src="https://www.kickstarter.com/locale/bf8a/en.js"></script>
+  (function() {
+    function loadSift() {
+      var insertScript = function(url) {
+        var sift, s;
+        e = document.createElement('script');
+        e.type = 'text/javascript';
+        e.async = true;
+        e.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + url;
+        s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(e, s);
+      };
+      if (root.visitor_id) {
+        _sift.push(['_setSessionId', root.visitor_id]);
+      }
+      insertScript('dtlilztwypawv.cloudfront.net/s.js');
+      insertScript('cdn.siftscience.com/s.js');
+    }
+    if (window.attachEvent) {
+      window.attachEvent('onload', loadSift);
+    } else {
+      window.addEventListener('load', loadSift, false);
+    }
+  })();
+</script>
+
+<link rel="alternate" href="https://www.kickstarter.com/user_sessions/new" hreflang="en">
+<link rel="alternate" href="https://www.kickstarter.com/user_sessions/new?lang=de" hreflang="de">
+<link rel="alternate" href="https://www.kickstarter.com/user_sessions/new?lang=es" hreflang="es">
+<link rel="alternate" href="https://www.kickstarter.com/user_sessions/new?lang=fr" hreflang="fr">
+
+<script>
+  window.current_ip = '216.165.95.9';
+  window.current_ip_datacenter = 'false';
+  window.enabled_features = {"elasticsearch":true,"elasticsearch_sync":true,"elasticsearch_sync_diffs":true,"koala_tracking":true,"sns":true,"security_history_read":true,"security_history_write":true,"redshift":true,"advanced_discovery_es":true,"facebook_ajax_requests":true,"ios_crashlytics":true,"ios_koala":true,"ios_i18n":true,"ios_tappable_category_location":true,"ios_favorite_categories":true,"ios_live_streams":true,"ios_live_stream_discovery":true,"handbook_hero":true,"android_pay":true,"i18n_discovery_touts":true,"i18n_start_tout":true,"invent_touts":true,"password_reset_banner":true,"play_page":true,"watch_page":true,"spotlight_baseball_cards":true,"nyt_film":true,"recaptcha":true,"log_devices":true,"itemization":true,"impact_page":true,"follow_creators":true,"mexico_creator_launch":true,"summerfest_hero":true,"polygraph_hero":true,"huzza":true,"view_prototype_gallery":true,"edit_prototype_gallery":true,"huzza_creator_integration":true,"huzza_new_design":true,"discovery_overlay":true,"sassy_classifier":true,"guest_checkout":true,"ksr_live_homepage":true};
+  window.fb_app_id = '69103156693';
+
+  window.I18n = window.I18n || {};
+  window.apple_pay_countries = ["US", "GB", "CA", "AU", "FR", "CH", "SG", "HK", "ES", "NZ"];
+  I18n.enabled = true;
+  I18n.locale = 'en';
+  I18n.defaultLocale = 'en';
+  I18n.default_locale = I18n.defaultLocale;
+  I18n.browser_language = 'en';
+  I18n.chosen_language = '';
+  I18n.calculated_language = 'en';
+  I18n.display_language = 'en';
+
+  var _sf_startpt=(new Date()).getTime();
+
+
+
+
+
+  window.current_location = "{&quot;id&quot;:2459115,&quot;name&quot;:&quot;New York&quot;,&quot;slug&quot;:&quot;new-york-ny&quot;,&quot;short_name&quot;:&quot;New York, NY&quot;,&quot;displayable_name&quot;:&quot;New York, NY&quot;,&quot;country&quot;:&quot;US&quot;,&quot;state&quot;:&quot;NY&quot;,&quot;type&quot;:&quot;Town&quot;,&quot;is_root&quot;:false,&quot;urls&quot;:{&quot;web&quot;:{&quot;discover&quot;:&quot;https://www.kickstarter.com/discover/places/new-york-ny&quot;,&quot;location&quot;:&quot;https://www.kickstarter.com/locations/new-york-ny&quot;},&quot;api&quot;:{&quot;nearby_projects&quot;:&quot;https://api.kickstarter.com/v1/discover?signature=1493219073.819b2875e12ea834a8ae9e4f77ecdac484b49c61&amp;woe_id=2459115&quot;}}}";
+
+
+
+  window.timeRemaining = function timeRemaining(epochTime){
+
+    var diff = epochTime - ((new Date()).getTime() / 1000);
+    var num_unit = (diff < 60 && [Math.max(diff, 0), 'seconds']) ||
+      ((diff/=60) < 60 && [diff, 'minutes']) ||
+      ((diff/=60) < 72 && [diff, 'hours']) ||
+      [diff/=24, 'days'];
+
+    // Round down
+    num_unit[0] = Math.floor(num_unit[0]);
+    // Singularize unit
+    if (num_unit[0] == 1) { num_unit[1] = num_unit[1].replace(/s$/,""); }
+
+    return num_unit;
+  };
+</script>
+<script>
+  window.current_variants = ["koala_alt_frontend_tracking[control]"];
+</script>
+<script>
+  window.static_routes = {
+    login: "/login",
+    contact: "/contact"
+  };
+</script>
+
+<script src="https://www.kickstarter.com/locale/cfd2/en.js"></script>
 
 <style type="text/css"></style><script id="facebook-jssdk" async="" src="//connect.facebook.net/en_US/sdk.js"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
 .fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_loader{background-color:#f6f7f9;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29487d;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f9;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
 .fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}</style></head>
 
-<body class="frame site not-mobile not-phone not-mobile-safari not-chrome-ios not-forces-video-controls not-tablet not-ipad not-iphone not-ios not-android not-touchable not-native-app-request not-apple-pay-capable not-android-pay-capable responsive skip_autologin" id="site_index">
+<body class="frame user_sessions not-mobile not-phone not-mobile-safari not-chrome-ios not-forces-video-controls not-tablet not-ipad not-iphone not-ios not-android not-touchable not-native-app-request not-apple-pay-capable not-android-pay-capable responsive" id="user_sessions_new">
 
 
-<div class="NS_layouts__notifications">
-</div>
 
 <div class="site-nav-mobile mobile-show">
 <a class="site-nav__item site-nav__item--logo site-nav__item--logo--mobile" href="/?ref=nav">
@@ -129,8 +188,8 @@ Kickstarter
 <a class="site-nav__item site-nav__item--text" href="/learn?ref=nav">
 <span class="site-nav__item-label">Start <span class="mobile-hide">a project</span></span>
 </a>
-<a class="site-nav__item site-nav__item--text site-nav__item--about" href="/recommendations?ref=nav">
-<span class="site-nav__item-label">For you</span>
+<a class="site-nav__item site-nav__item--text site-nav__item--about" href="/about?ref=nav">
+<span class="site-nav__item-label">About us</span>
 </a>
 </div>
 <div class="site-nav__middle">
@@ -153,7 +212,6 @@ Kickstarter
 </a>
 
 </div>
-
 <div class="site-nav__right">
 <a aria-label="Enter Search" class="site-nav__item site-nav__item--search js-toggle-search" data-nav="search" href="#">
 <svg class="svg-icon__search" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#search"></use></svg>
@@ -168,75 +226,10 @@ Kickstarter
 </a>
 
 </div>
-<!-- <div class="site-nav__right">
-<a aria-label="Enter Search" class="site-nav__item site-nav__item--search js-toggle-search" data-nav="search" href="#">
-<svg class="svg-icon__search" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#search"></use></svg>
-<span class="site-nav__item-label">Enter Search</span>
-</a>
-
-<a id="js-user_nav_select" class="js-tab-expand site-nav__item site-nav__item--user js-user-menu-tab bg-navy-200 " aria-label="User dropdown menu" href="/profile/46676441?ref=nav" aria-haspopup="true" aria-expanded="false"><div class="notification-indicator-and-avatar">
-<img alt="Missing avatar" class="site-nav__user-avatar" src="https://ksr-ugc.imgix.net/missing_user_avatar.png?w=40&amp;h=40&amp;fit=crop&amp;v=&amp;auto=format&amp;q=92&amp;s=8c0db61c92692000c2678b375fc31714">
-</div>
-</a>
-</div> -->
 </nav>
 </div>
 
 </div>
-</div>
-<div class="user-menu">
-<div class="NS_layouts__user_dropdown column-span-2" data-user_dropdown_backer_creator_columns_path="/users/dropdown_backer_creator_columns" id="js-user_menu_dropdown" aria-expanded="false" aria-hidden="true">
-<div class="user-dropdown js-user-dropdown z9000">
-<div class="user-options" id="menu-me-children">
-<div class="menu-me-account dropdown-column" id="menu-me-account">
-<h3 class="dropdown-menu-header">
-My stuff
-</h3>
-<ul class="js-dropdown_group dropdown-menu">
-<li>
-<a href="/profile/following/find_creators?ref=user_menu">Follow creators</a>
-<span class="flag-callout">New</span>
-</li>
-<li>
-<a href="/profile/following/welcome?ref=user_menu">Follow Facebook friends</a>
-</li>
-<li><a href="/recommendations?ref=user_menu">Recommended for you</a></li>
-<li>
-<a title="Inbox" href="/messages?ref=user_menu">Messages
-</a></li>
-<li>
-<a title="Activity" href="/activity?ref=user_menu">Activity
-</a></li>
-<li><a href="/profile/46676441?ref=user_menu">Profile</a></li>
-<li><a href="/profile/backings?ref=user_menu">Backed projects</a></li>
-<li><a href="/profile/projects?ref=user_menu">My projects</a></li>
-<li>
-<a href="/profile/starred?ref=user_menu">Saved projects
-</a></li>
-</ul>
-<h3 class="dropdown-menu-header">
-Settings
-</h3>
-<ul class="js-dropdown_group dropdown-menu">
-<li><a href="/settings/account?ref=user_menu">Account</a></li>
-<li><a href="/settings/profile?ref=user_menu">Edit profile</a></li>
-<li><a href="/settings/notifications?ref=user_menu">Notifications</a></li>
-</ul>
-</div>
-</div>
-<div class="user-menu-footer">
-<div class="row">
-<div class="col">
-You're logged in as <b>Nandu</b>
-&nbsp;
-<span class="mobile-show"></span>
-<a href="/logout?ref=user_menu">Log out</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-
 </div>
 <div class="hide" id="NS_discovery_overlay">
 <div class="bg-grey-100_0 block fixed t0 r0 b0 l0 scroll-y webkit-scrolling transition-all transition-400 z9000" id="js-discovery-overlay">
@@ -265,14 +258,8 @@ Collections
 <div class="col-full">
 <div class="visually-hide" id="js-do-focusguard-1" tabindex="0"></div>
 <div class="mb4 pt3" id="js-collections">
-<div class="block js-test-do-recommendations">
-<a class="inline-block type-34 mb2 navy-700 hover-green-700 transition-all js-do-link" data-type="collection" data-selected-link="recommended_for_you" href="/recommendations?ref=discovery_overlay">Recommended For You
-</a></div>
 <div class="block">
 <a class="inline-block type-34 mb2 navy-700 hover-green-700 transition-all js-do-link" data-type="collection" data-selected-link="projects_we_love" href="/discover/recommended?ref=discovery_overlay">Projects We Love
-</a></div>
-<div class="block">
-<a class="inline-block type-34 mb2 navy-700 hover-green-700 transition-all js-do-link" data-type="collection" data-selected-link="saved" href="/discover/advanced?ref=discovery_overlay&amp;starred=1">Saved
 </a></div>
 <div class="block">
 <a class="inline-block type-34 mb2 navy-700 hover-green-700 transition-all js-do-link" data-type="collection" data-selected-link="trending" href="/discover/popular?ref=discovery_overlay">Trending
@@ -282,9 +269,6 @@ Collections
 </a></div>
 <div class="block">
 <a class="inline-block type-34 mb2 navy-700 hover-green-700 transition-all js-do-link" data-type="collection" data-selected-link="just_launched" href="/discover/newest?ref=discovery_overlay">Just Launched
-</a></div>
-<div class="block js-test-do-following">
-<a class="inline-block type-34 mb2 navy-700 hover-green-700 transition-all js-do-link" data-type="collection" data-selected-link="following" href="/discover/advanced?ref=discovery_overlay&amp;social=1">Backed By People You Follow
 </a></div>
 <div class="block">
 <a class="inline-block type-34 mb2 navy-700 hover-green-700 js-do-link" data-type="collection" data-selected-link="everything" href="/discover/advanced?ref=discovery_overlay">Everything
@@ -317,7 +301,7 @@ Categories
 <li>
 <a class="inline-block type-34 mb2 navy-700 hover-green-700 transition-all js-discovery-category" data-category="art" role="tab" aria-selected="false" aria-controls="aria-art" href="#">Art</a>
 <span class="green-700">
-324
+326
 </span>
 </li>
 <div aria-hidden="true" class="js-discovery-subcat-list visibility-hidden h0 o0p translate-y-3" data-category="art" id="aria-art" role="tabpanel">
@@ -390,7 +374,7 @@ Video Art
 <li>
 <a class="inline-block type-34 mb2 navy-700 hover-green-700 transition-all js-discovery-category" data-category="comics" role="tab" aria-selected="false" aria-controls="aria-comics" href="#">Comics</a>
 <span class="green-700">
-182
+181
 </span>
 </li>
 <div aria-hidden="true" class="js-discovery-subcat-list visibility-hidden h0 o0p translate-y-3" data-category="comics" id="aria-comics" role="tabpanel">
@@ -428,7 +412,7 @@ Webcomics
 <li>
 <a class="inline-block type-34 mb2 navy-700 hover-green-700 transition-all js-discovery-category" data-category="crafts" role="tab" aria-selected="false" aria-controls="aria-crafts" href="#">Crafts</a>
 <span class="green-700">
-143
+145
 </span>
 </li>
 <div aria-hidden="true" class="js-discovery-subcat-list visibility-hidden h0 o0p translate-y-3" data-category="crafts" id="aria-crafts" role="tabpanel">
@@ -539,7 +523,7 @@ Workshops
 <li>
 <a class="inline-block type-34 mb2 navy-700 hover-green-700 transition-all js-discovery-category" data-category="design" role="tab" aria-selected="false" aria-controls="aria-design" href="#">Design</a>
 <span class="green-700">
-524
+520
 </span>
 </li>
 <div aria-hidden="true" class="js-discovery-subcat-list visibility-hidden h0 o0p translate-y-3" data-category="design" id="aria-design" role="tabpanel">
@@ -582,7 +566,7 @@ Typography
 <li>
 <a class="inline-block type-34 mb2 navy-700 hover-green-700 transition-all js-discovery-category" data-category="fashion" role="tab" aria-selected="false" aria-controls="aria-fashion" href="#">Fashion</a>
 <span class="green-700">
-298
+312
 </span>
 </li>
 <div aria-hidden="true" class="js-discovery-subcat-list visibility-hidden h0 o0p translate-y-3" data-category="fashion" id="aria-fashion" role="tabpanel">
@@ -635,7 +619,7 @@ Ready-to-wear
 <li>
 <a class="inline-block type-34 mb2 navy-700 hover-green-700 transition-all js-discovery-category" data-category="film_&amp;_video" role="tab" aria-selected="false" aria-controls="aria-film_&amp;_video" href="#">Film &amp; Video</a>
 <span class="green-700">
-526
+532
 </span>
 </li>
 <div aria-hidden="true" class="js-discovery-subcat-list visibility-hidden h0 o0p translate-y-3" data-category="film_&amp;_video" id="aria-film_&amp;_video" role="tabpanel">
@@ -743,7 +727,7 @@ Webseries
 <li>
 <a class="inline-block type-34 mb2 navy-700 hover-green-700 transition-all js-discovery-category" data-category="food" role="tab" aria-selected="false" aria-controls="aria-food" href="#">Food</a>
 <span class="green-700">
-306
+312
 </span>
 </li>
 <div aria-hidden="true" class="js-discovery-subcat-list visibility-hidden h0 o0p translate-y-3" data-category="food" id="aria-food" role="tabpanel">
@@ -816,7 +800,7 @@ Vegan
 <li>
 <a class="inline-block type-34 mb2 navy-700 hover-green-700 transition-all js-discovery-category" data-category="games" role="tab" aria-selected="false" aria-controls="aria-games" href="#">Games</a>
 <span class="green-700">
-553
+563
 </span>
 </li>
 <div aria-hidden="true" class="js-discovery-subcat-list visibility-hidden h0 o0p translate-y-3" data-category="games" id="aria-games" role="tabpanel">
@@ -864,7 +848,7 @@ Video Games
 <li>
 <a class="inline-block type-34 mb2 navy-700 hover-green-700 transition-all js-discovery-category" data-category="journalism" role="tab" aria-selected="false" aria-controls="aria-journalism" href="#">Journalism</a>
 <span class="green-700">
-54
+57
 </span>
 </li>
 <div aria-hidden="true" class="js-discovery-subcat-list visibility-hidden h0 o0p translate-y-3" data-category="journalism" id="aria-journalism" role="tabpanel">
@@ -902,7 +886,7 @@ Web
 <li>
 <a class="inline-block type-34 mb2 navy-700 hover-green-700 transition-all js-discovery-category" data-category="music" role="tab" aria-selected="false" aria-controls="aria-music" href="#">Music</a>
 <span class="green-700">
-459
+460
 </span>
 </li>
 <div aria-hidden="true" class="js-discovery-subcat-list visibility-hidden h0 o0p translate-y-3" data-category="music" id="aria-music" role="tabpanel">
@@ -1005,7 +989,7 @@ World Music
 <li>
 <a class="inline-block type-34 mb2 navy-700 hover-green-700 transition-all js-discovery-category" data-category="photography" role="tab" aria-selected="false" aria-controls="aria-photography" href="#">Photography</a>
 <span class="green-700">
-90
+94
 </span>
 </li>
 <div aria-hidden="true" class="js-discovery-subcat-list visibility-hidden h0 o0p translate-y-3" data-category="photography" id="aria-photography" role="tabpanel">
@@ -1048,7 +1032,7 @@ Places
 <li>
 <a class="inline-block type-34 mb2 navy-700 hover-green-700 transition-all js-discovery-category" data-category="publishing" role="tab" aria-selected="false" aria-controls="aria-publishing" href="#">Publishing</a>
 <span class="green-700">
-483
+477
 </span>
 </li>
 <div aria-hidden="true" class="js-discovery-subcat-list visibility-hidden h0 o0p translate-y-3" data-category="publishing" id="aria-publishing" role="tabpanel">
@@ -1146,7 +1130,7 @@ Literary Spaces
 <li>
 <a class="inline-block type-34 mb2 navy-700 hover-green-700 transition-all js-discovery-category" data-category="technology" role="tab" aria-selected="false" aria-controls="aria-technology" href="#">Technology</a>
 <span class="green-700">
-560
+574
 </span>
 </li>
 <div aria-hidden="true" class="js-discovery-subcat-list visibility-hidden h0 o0p translate-y-3" data-category="technology" id="aria-technology" role="tabpanel">
@@ -1234,7 +1218,7 @@ Web
 <li>
 <a class="inline-block type-34 mb2 navy-700 hover-green-700 transition-all js-discovery-category" data-category="theater" role="tab" aria-selected="false" aria-controls="aria-theater" href="#">Theater</a>
 <span class="green-700">
-97
+101
 </span>
 </li>
 <div aria-hidden="true" class="js-discovery-subcat-list visibility-hidden h0 o0p translate-y-3" data-category="theater" id="aria-theater" role="tabpanel">
@@ -1375,1886 +1359,62 @@ On Our Radar
 
 <div id="growl_section" class="center jGrowl"></div><div id="main_content">
 
-<a rel="publisher" style="display:none" href="https://plus.google.com/118239121095465976293">Google+</a>
-<div class="NS_site__projects_hero bg-green-dark relative border-bottom" style="height: 491px;">
-<div class="pager-dots pager absolute center full-width z_overlap_slider dark-theme"><span class="">•</span><span class="cycle-pager-active">•</span><span>•</span><span>•</span><span class="">•</span></div>
-<div class="slides full-height cycle-slideshow" data-cycle-fx="fade" data-cycle-log="false" data-cycle-next=".js-carousel-next" data-cycle-pager=".pager-dots" data-cycle-prev=".js-carousel-previous" data-cycle-slides="> div" data-cycle-timeout="8000" style="position: relative;"><div class="js-cycle-slide hero-slide bg-white cycle-slide cycle-sentinel" data-theme="light-theme" data-title="Kickstarter PBC’s 2016 Benefit Statement" style="position: static; top: 0px; left: 0px; z-index: 100; opacity: 1; visibility: hidden; display: block;">
-<div class="relative border-top h100p" style="visibility: hidden;">
-<div class="absolute b0 w50p l0 bg-green-400 h60p" style="visibility: hidden;"></div>
-<div class="w100p h100p flex flex-column justify-center items-center relative z1" style="visibility: hidden;">
-<div class="type-48 type-60-sm type-100-md black bold text-center lh1" style="visibility: hidden;">
-<span class="relative inline-block" style="visibility: hidden;">Kickstarter <div class="absolute r0 b0 type-12 green-700 track-loose pbc-report__headline__tag text-uppercase lh1" style="visibility: hidden;"><span class="translation_missing" title="translation missing: en.years.twentysixteen_benefit_statement.pbc" style="visibility: hidden;">Pbc</span></div></span><br style="visibility: hidden;">2016 Benefit<br style="visibility: hidden;">Statement
-</div>
-<div class="mt2 mt4-sm" style="visibility: hidden;">
-<a class="bttn bttn-shadow-dark bttn-medium green-700 js-hero-link-1" href="/year/2016/benefit-statement?ref=hero" style="visibility: hidden;">Read more
-</a></div>
-</div>
-</div>
-</div>
-
-
-
-
-
-
-
-
-
-
-<div class="js-cycle-slide hero-slide bg-white cycle-slide" data-theme="light-theme" data-title="Kickstarter PBC’s 2016 Benefit Statement" style="position: absolute; top: 0px; left: 0px; z-index: 100; opacity: 0; display: none;">
-<div class="relative border-top h100p">
-<div class="absolute b0 w50p l0 bg-green-400 h60p"></div>
-<div class="w100p h100p flex flex-column justify-center items-center relative z1">
-<div class="type-48 type-60-sm type-100-md black bold text-center lh1">
-<span class="relative inline-block">Kickstarter <div class="absolute r0 b0 type-12 green-700 track-loose pbc-report__headline__tag text-uppercase lh1"><span class="translation_missing" title="translation missing: en.years.twentysixteen_benefit_statement.pbc">Pbc</span></div></span><br>2016 Benefit<br>Statement
-</div>
-<div class="mt2 mt4-sm">
-<a class="bttn bttn-shadow-dark bttn-medium green-700 js-hero-link-1" href="/year/2016/benefit-statement?ref=hero">Read more
-</a></div>
-</div>
-</div>
-</div><div class="hero-slide hero-slide--cora-ball-microfiber-catching-laundry-ball js-cycle-slide white cycle-slide cycle-slide-active" data-theme="dark-theme" data-title="Featured Project: The Cora Ball" style="background-image: url(&quot;https://d3mlfyygrfdi2i.cloudfront.net/Cora-Ball-Hero-Darker.jpg&quot;); background-position: center bottom; position: absolute; top: 0px; left: 0px; z-index: 99; display: block; opacity: 1;">
-<div class="hero-slide__content hero-slide__content--">
-<div class="hero-slide__interior hero-slide__interior--">
-<h1 class="hero-slide__title">
-The Cora Ball
-</h1>
-<div class="hero-slide__subtitle">
-Help protect public waterways with this coral-inspired laundry ball, which catches potentially harmful microfibers as they shed off in the&nbsp;washer.
-</div>
-<a class="btn btn--green btn--large  js-hero-link-2" href="/projects/879498424/cora-ball-microfiber-catching-laundry-ball?ref=hero">View project</a>
-</div>
-</div>
-</div><div class="js-cycle-slide hero-slide hero-slide--happening cycle-slide" data-theme="light-theme" data-title="Happening" style="position: absolute; top: 0px; left: 0px; z-index: 97; display: none;">
-<div class="hero-slide__content">
-<div class="hero-slide__interior">
-<div class="container-flex px3 px7-sm">
-<div class="col-center col-6">
-<img alt="Happening" class="fit" src="https://static.kickstarter.com/assets/happening/light-happening-title-treatment-aeb5f14419345bf367adda7386be47375ce0fb48d81e97ba4e9bf12b36f38ff3.svg">
-<div class="happening-subtitle mb3 mb7-sm">
-The latest in art, culture, and technology.
-</div>
-<a class="btn btn--green btn--large js-hero-link-3" href="/happening?ref=hero">Take a look!</a>
-</div>
-</div>
-</div>
-</div>
-</div><div class="hero-slide hero-slide--kate-nash-is-making-a-record js-cycle-slide white cycle-slide" data-theme="dark-theme" data-title="Featured Project: Make an Album with Kate&amp;nbsp;Nash" style="background-image: url(&quot;https://d3mlfyygrfdi2i.cloudfront.net/Kate-Zoom-05.jpg&quot;); background-position: center top; position: absolute; top: 0px; left: 0px; z-index: 96; display: none;">
-<div class="hero-slide__content hero-slide__content--">
-<div class="hero-slide__interior hero-slide__interior--">
-<h1 class="hero-slide__title">
-Make an Album with Kate&nbsp;Nash
-</h1>
-<div class="hero-slide__subtitle">
-The outspoken indie pop star is recording a new album — and she wants you to be a part&nbsp;of&nbsp;it.
-</div>
-<a class="btn btn--green btn--large  js-hero-link-4" href="/projects/919815019/kate-nash-is-making-a-record?ref=hero">View project</a>
-</div>
-</div>
-</div><div class="js-cycle-slide hero-slide gradient-sand-to-sage clip cycle-slide" data-theme="light-theme" data-title="iOS launch 3.0" style="position: absolute; top: 0px; left: 0px; z-index: 95; display: none; opacity: 0;">
-<div class="absolute t0 l0 l-auto-md r0-md b0 w100p w50p-sm mt12 clip hide mr5 center inline-block-md">
-<img src="https://d3mlfyygrfdi2i.cloudfront.net/d3fd/iOS_3.0_2.png" alt="Ios 3.0 2">
-</div>
-<div class="absolute t0 b0 w50p-md w100p">
-<div class="hero-slide__content text-center">
-<div class="hero-slide__interior">
-<h1 class="type-28 type-48-sm type-60-md medium teal-900 mt10-sm">
-Bring new ideas to life, anywhere.
-</h1>
-<div class="w75p-sm m-auto text-center">
-<p class="type-18 teal-900 mb2 mb6-sm hide block-md">
-Explore creative projects and help bring bold new ideas into the world with the Kickstarter app.
-</p>
-<div class="hide block-md">
-<a class="bttn bttn-white bttn-large js-hero-link-5" href="/mobile?d=true&amp;ref=hero">
-Get the app
-</a>
-</div>
-<div class="hide-md">
-<a class="bttn bttn-white bttn-medium js-hero-link-6" href="/download?d=true&amp;ref=hero">
-Get the app
-</a>
-</div>
-<div class="hide-md w80p mt5 mt10-sm center inline-block">
-<img src="https://d3mlfyygrfdi2i.cloudfront.net/755d/iOS_3.0_1.png" alt="Ios 3.0 1">
-</div>
-</div>
-</div>
-</div>
-</div>
-</div></div>
-<div class="pager next js-carousel-next absolute t0 b0 r0 pl3 pl7-sm pr3 pr7-sm transition-all z_overlap_slider dark-theme">
-<div class="table full-height align-right">
-<div class="table-cell align-middle">
-<svg class="mb3" enable-background="new 0 0 32 64" height="64px" version="1.1" viewBox="0 0 32 64" width="32px" x="0px" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" y="0px">
-<g display="none" id="Layer_2">
-<rect display="inline" fill="#ffffff" height="112" width="128" x="-71" y="-20"></rect>
-</g>
-<g id="Layer_1">
-<g>
-<path class="transition-all" d="M7.998,64c-0.41,0-0.824-0.126-1.181-0.387c-0.891-0.653-1.083-1.905-0.431-2.796l21.136-28.821L6.509,3.178c-0.65-0.893-0.455-2.144,0.438-2.794C7.84-0.266,9.091-0.07,9.741,0.822l21.875,30c0.513,0.704,0.512,1.659-0.003,2.361l-22,30C9.221,63.717,8.614,64,7.998,64z"></path>
-</g>
-</g>
-</svg>
-</div>
-</div>
-</div>
-<div class="pager previous js-carousel-previous absolute t0 b0 l0 pl3 pl7-sm pr3 pr7-sm transition-all z_overlap_slider dark-theme">
-<div class="table full-height">
-<div class="table-cell align-middle">
-<svg class="mb3" enable-background="new 0 0 32 64" height="64px" version="1.1" viewBox="0 0 32 64" width="32px" x="0px" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" y="0px">
-<g display="none" id="Layer_2">
-<rect display="inline" fill="#ffffff" height="112" width="128" x="-7" y="-20"></rect>
-</g>
-<g id="Layer_1">
-<g>
-<path class="transition-all" d="M23.877,64c-0.617,0-1.227-0.284-1.618-0.821l-21.875-30c-0.513-0.704-0.512-1.659,0.003-2.361l22-30c0.654-0.89,1.904-1.084,2.796-0.43c0.891,0.653,1.083,1.905,0.431,2.795L4.478,32.003l21.014,28.818c0.65,0.893,0.455,2.144-0.438,2.795C24.698,63.875,24.285,64,23.877,64z"></path>
-</g>
-</g>
-</svg>
-</div>
-</div>
-</div>
-</div>
-
-<div class="bg-white" id="content-wrap">
-<div class="NS_site__homepage_staff_picks py3 bg-white border-bottom">
-<div class="container-flex px3 py3 relative">
-<div class="row">
-<div class="col col-10">
-<h2 class="for-screenreader">Projects We Love</h2>
-<div class="has_potd js-projects-slider projects-slider" id="project-slide">
-<div class="row">
-<div class="col col-12 m0 project project0 relative">
-<div class="title pb3 pb5-sm mobile-hide">
-<div class="row">
-<div class="col">
-<h3 class="art m0 normal">
-<a class="green-dark" href="/discover/recommended?ref=home_staff_picks">Projects We Love:</a>
-<a class="green-dark" href="/discover/categories/art?ref=home_featured">Art</a>
-</h3>
-</div>
-<div class="col-right see-all-link">
-<a class="f6 bold grey-dark" href="/discover/categories/art?ref=home_featured">See all Art projects
-</a></div>
-</div>
-</div>
-<div class="project-card-wrap project-card-wide-wrap project-card-wide-wrap--potd bg-white rounded border ratio-16-9">
-<div class="project-card clearfix relative">
-<div class="project-thumbnail">
-<div class="mobile-show">
-<div class="projects-we-love-badge projects-we-love-badge--overlay">
-<div class="icon"><span class="ksr-icon__heart" aria-hidden="true"></span></div><div class="label">Project We Love</div>
-</div>
-
-</div>
-<a class="project-thumbnail-wrap" href="/projects/1940114350/the-2017-pothole-art-installation-project?ref=home_featured"><img alt="Project image" style="height: auto;" class="project-thumbnail__image" src="https://ksr-ugc.imgix.net/assets/016/037/583/ecf2cbb3616d3cbcb7d984a963a5726c_original.jpg?w=560&amp;h=315&amp;fit=fill&amp;bg=000000&amp;v=1490722352&amp;auto=format&amp;q=92&amp;s=cf24793adda848656bd1bf60c04ba636" width="560" height="315"></a>
-</div>
-<div class="project-card-interior">
-<h4 class="project-title ellipsis"><a class="green-dark" href="/projects/1940114350/the-2017-pothole-art-installation-project?ref=home_featured">THE 2017 Pothole Art Installation Project!</a></h4> <p class="f6 grey-dark mobile-hide">by bachor</p>
-<p class="blurb f5 grey-dark mb3 mb5-sm mobile-hide">
-I install glass &amp; marble mosaics in potholes. This artwork can't be purchased so I need your help. Please help fund the 2017 campaign!
-</p>
-<div class="project-card-footer absolute-bottom home-staff-picks-pr0 ratio-16-9">
-<div class="NS_projects__category_location ratio-16-9">
-<a class="grey-dark mr3 nowrap type-12" href="/discover/places/chicago-il?ref=city"><span class="ksr-icon__location" aria-hidden="true"></span>
-Chicago, IL
-</a><a class="grey-dark mr3 nowrap type-12" href="/discover/categories/art/public%20art?ref=category"><span class="ksr-icon__tag" aria-hidden="true"></span>
-Public Art
-</a></div>
-
-<div class="project-stats-wrap">
-<div class="project-pledged-successful bg-green white f6 pl2 pr2 mb2" style="display: none;">
-<strong>Successfully funded!</strong>
-</div>
-<div class="NS_project__baseball_card_stats">
-<div class="project-pledged-wrap bg-grey mb2 clip">
-<div class="project-pledged bg-green full-height" style="width: 100%"></div>
-</div>
-<ul class="project-stats list m0 f6 no-wrap">
-<li class="first funded inline-block mr3">
-<strong class="block f4">219%</strong> <span class="grey-dark">funded</span>
-</li>
-<li class="pledged inline-block mr3">
-<strong class="block f4"><span class="money">$10,952</span></strong> <span class="grey-dark">pledged</span>
-</li>
-<li class="backers inline-block mr3 mobile-hide">
-<strong class="block f4">216</strong> <span class="grey-dark">backers</span>
-</li>
-<li class="last successful inline-block" style="display: none;">
-<strong class="block f4">Funded</strong>
-<div class="deadline grey-dark">
-</div>
-</li>
-<li class="last ksr_page_timer inline-block" data-end_time="2017-04-30T11:55:34-04:00">
-<strong class="block f6">
-<div class="js-num f4">5</div>
-</strong>
-<div class="span js-text grey-dark" data-word="left">days to go</div>
-</li>
-</ul>
-</div>
-
-</div>
-</div>
-</div>
-</div>
-</div>
-
-
-</div>
-<div class="col col-12 m0 project project1 relative">
-<div class="title pb3 pb5-sm mobile-hide">
-<div class="row">
-<div class="col">
-<h3 class="comics m0 normal">
-<a class="green-dark" href="/discover/recommended?ref=home_staff_picks">Projects We Love:</a>
-<a class="green-dark" href="/discover/categories/comics?ref=home_featured">Comics</a>
-</h3>
-</div>
-<div class="col-right see-all-link">
-<a class="f6 bold grey-dark" href="/discover/categories/comics?ref=home_featured">See all Comics projects
-</a></div>
-</div>
-</div>
-<div class="project-card-wrap project-card-wide-wrap project-card-wide-wrap--potd bg-white rounded border ratio-16-9">
-<div class="project-card clearfix relative">
-<div class="project-thumbnail">
-<div class="mobile-show">
-<div class="projects-we-love-badge projects-we-love-badge--overlay">
-<div class="icon"><span class="ksr-icon__heart" aria-hidden="true"></span></div><div class="label">Project We Love</div>
-</div>
-
-</div>
-<a class="project-thumbnail-wrap" href="/projects/1937003126/blue-eyes-and-the-beastling-watercolor-graphic-nov?ref=home_featured"><img alt="Project image" style="height: auto;" class="project-thumbnail__image" src="https://ksr-ugc.imgix.net/assets/015/243/193/5921cc5d181d7506361168b258522ae5_original.jpg?w=560&amp;h=315&amp;fit=fill&amp;bg=000000&amp;v=1490375503&amp;auto=format&amp;q=92&amp;s=7745c30752adf73bf0fc1ff5253f8e34" width="560" height="315"></a>
-</div>
-<div class="project-card-interior">
-<h4 class="project-title ellipsis"><a class="green-dark" href="/projects/1937003126/blue-eyes-and-the-beastling-watercolor-graphic-nov?ref=home_featured">Blue Eyes and the Beastling Watercolor Graphic Novel</a></h4> <p class="f6 grey-dark mobile-hide">by Carla Wyzgala</p>
-<p class="blurb f5 grey-dark mb3 mb5-sm mobile-hide">
-A 160 page fairytale graphic novel illustrated in watercolor that revisits classic stories of romance, mystery and adventure.
-</p>
-<div class="project-card-footer absolute-bottom home-staff-picks-pr0 ratio-16-9">
-<div class="NS_projects__category_location ratio-16-9">
-<a class="grey-dark mr3 nowrap type-12" href="/discover/places/chicago-il?ref=city"><span class="ksr-icon__location" aria-hidden="true"></span>
-Chicago, IL
-</a><a class="grey-dark mr3 nowrap type-12" href="/discover/categories/comics/graphic%20novels?ref=category"><span class="ksr-icon__tag" aria-hidden="true"></span>
-Graphic Novels
-</a></div>
-
-<div class="project-stats-wrap">
-<div class="project-pledged-successful bg-green white f6 pl2 pr2 mb2" style="display: none;">
-<strong>Successfully funded!</strong>
-</div>
-<div class="NS_project__baseball_card_stats">
-<div class="project-pledged-wrap bg-grey mb2 clip">
-<div class="project-pledged bg-green full-height" style="width: 100%"></div>
-</div>
-<ul class="project-stats list m0 f6 no-wrap">
-<li class="first funded inline-block mr3">
-<strong class="block f4">164%</strong> <span class="grey-dark">funded</span>
-</li>
-<li class="pledged inline-block mr3">
-<strong class="block f4"><span class="money">$11,541</span></strong> <span class="grey-dark">pledged</span>
-</li>
-<li class="backers inline-block mr3 mobile-hide">
-<strong class="block f4">177</strong> <span class="grey-dark">backers</span>
-</li>
-<li class="last successful inline-block" style="display: none;">
-<strong class="block f4">Funded</strong>
-<div class="deadline grey-dark">
-</div>
-</li>
-<li class="last ksr_page_timer inline-block" data-end_time="2017-04-29T12:19:02-04:00">
-<strong class="block f6">
-<div class="js-num f4">4</div>
-</strong>
-<div class="span js-text grey-dark" data-word="left">days to go</div>
-</li>
-</ul>
-</div>
-
-</div>
-</div>
-</div>
-</div>
-</div>
-
-
-</div>
-<div class="col col-12 m0 project project2 relative">
-<div class="title pb3 pb5-sm mobile-hide">
-<div class="row">
-<div class="col">
-<h3 class="crafts m0 normal">
-<a class="green-dark" href="/discover/recommended?ref=home_staff_picks">Projects We Love:</a>
-<a class="green-dark" href="/discover/categories/crafts?ref=home_featured">Crafts</a>
-</h3>
-</div>
-<div class="col-right see-all-link">
-<a class="f6 bold grey-dark" href="/discover/categories/crafts?ref=home_featured">See all Crafts projects
-</a></div>
-</div>
-</div>
-<div class="project-card-wrap project-card-wide-wrap project-card-wide-wrap--potd bg-white rounded border ratio-16-9">
-<div class="project-card clearfix relative">
-<div class="project-thumbnail">
-<div class="mobile-show">
-<div class="projects-we-love-badge projects-we-love-badge--overlay">
-<div class="icon"><span class="ksr-icon__heart" aria-hidden="true"></span></div><div class="label">Project We Love</div>
-</div>
-
-</div>
-<a class="project-thumbnail-wrap" href="/projects/608363492/the-zoological-hanger?ref=home_featured"><img alt="Project image" style="height: auto;" class="project-thumbnail__image" src="https://ksr-ugc.imgix.net/assets/016/068/381/b3b6e5644a5b96745ff621b37a95d8e4_original.jpg?w=560&amp;h=315&amp;fit=fill&amp;bg=000000&amp;v=1491412703&amp;auto=format&amp;q=92&amp;s=c26890b0e0fdcdfbd6f53d59140621f7" width="560" height="315"></a>
-</div>
-<div class="project-card-interior">
-<h4 class="project-title ellipsis"><a class="green-dark" href="/projects/608363492/the-zoological-hanger?ref=home_featured">ZOOKS!</a></h4> <p class="f6 grey-dark mobile-hide">by charlotte reiter</p>
-<p class="blurb f5 grey-dark mb3 mb5-sm mobile-hide">
-This quirky concrete hanger, modeled after your favorite animals, takes care of organizational needs, and brings fun into any room!
-</p>
-<div class="project-card-footer absolute-bottom home-staff-picks-pr0 ratio-16-9">
-<div class="NS_projects__category_location ratio-16-9">
-<a class="grey-dark mr3 nowrap type-12" href="/discover/places/charlottesville-va?ref=city"><span class="ksr-icon__location" aria-hidden="true"></span>
-Charlottesville, VA
-</a><a class="grey-dark mr3 nowrap type-12" href="/discover/categories/crafts?ref=category"><span class="ksr-icon__tag" aria-hidden="true"></span>
-Crafts
-</a></div>
-
-<div class="project-stats-wrap">
-<div class="project-pledged-successful bg-green white f6 pl2 pr2 mb2" style="display: none;">
-<strong>Successfully funded!</strong>
-</div>
-<div class="NS_project__baseball_card_stats">
-<div class="project-pledged-wrap bg-grey mb2 clip">
-<div class="project-pledged bg-green full-height" style="width: 100%"></div>
-</div>
-<ul class="project-stats list m0 f6 no-wrap">
-<li class="first funded inline-block mr3">
-<strong class="block f4">102%</strong> <span class="grey-dark">funded</span>
-</li>
-<li class="pledged inline-block mr3">
-<strong class="block f4"><span class="money">$823</span></strong> <span class="grey-dark">pledged</span>
-</li>
-<li class="backers inline-block mr3 mobile-hide">
-<strong class="block f4">31</strong> <span class="grey-dark">backers</span>
-</li>
-<li class="last successful inline-block" style="display: none;">
-<strong class="block f4">Funded</strong>
-<div class="deadline grey-dark">
-</div>
-</li>
-<li class="last ksr_page_timer inline-block" data-end_time="2017-05-03T09:05:50-04:00">
-<strong class="block f6">
-<div class="js-num f4">8</div>
-</strong>
-<div class="span js-text grey-dark" data-word="left">days to go</div>
-</li>
-</ul>
-</div>
-
-</div>
-</div>
-</div>
-</div>
-</div>
-
-
-</div>
-<div class="col col-12 m0 project project3 relative">
-<div class="title pb3 pb5-sm mobile-hide">
-<div class="row">
-<div class="col">
-<h3 class="dance m0 normal">
-<a class="green-dark" href="/discover/recommended?ref=home_staff_picks">Projects We Love:</a>
-<a class="green-dark" href="/discover/categories/dance?ref=home_featured">Dance</a>
-</h3>
-</div>
-<div class="col-right see-all-link">
-<a class="f6 bold grey-dark" href="/discover/categories/dance?ref=home_featured">See all Dance projects
-</a></div>
-</div>
-</div>
-<div class="project-card-wrap project-card-wide-wrap project-card-wide-wrap--potd bg-white rounded border ratio-16-9">
-<div class="project-card clearfix relative">
-<div class="project-thumbnail">
-<div class="mobile-show">
-<div class="projects-we-love-badge projects-we-love-badge--overlay">
-<div class="icon"><span class="ksr-icon__heart" aria-hidden="true"></span></div><div class="label">Project We Love</div>
-</div>
-
-</div>
-<a class="project-thumbnail-wrap" href="/projects/brainpiece/the-brain-piece?ref=home_featured"><img alt="Project image" style="height: auto;" class="project-thumbnail__image" src="https://ksr-ugc.imgix.net/assets/015/638/132/4b8621498cc46996e963c96d65751607_original.jpg?w=560&amp;h=315&amp;fit=fill&amp;bg=000000&amp;v=1488082445&amp;auto=format&amp;q=92&amp;s=60bd771ed62fae7a59bd0c44ed8cdde2" width="560" height="315"></a>
-</div>
-<div class="project-card-interior">
-<h4 class="project-title ellipsis"><a class="green-dark" href="/projects/brainpiece/the-brain-piece?ref=home_featured">The Brain Piece</a></h4> <p class="f6 grey-dark mobile-hide">by Jody Oberfelder Projects</p>
-<p class="blurb f5 grey-dark mb3 mb5-sm mobile-hide">
-The Brain Piece, an immersive theater project, creates tangible experiences illuminating the “dance” that takes place in our minds.
-</p>
-<div class="project-card-footer absolute-bottom home-staff-picks-pr0 ratio-16-9">
-<div class="NS_projects__category_location ratio-16-9">
-<a class="grey-dark mr3 nowrap type-12" href="/discover/places/manhattan-ny?ref=city"><span class="ksr-icon__location" aria-hidden="true"></span>
-Manhattan, NY
-</a><a class="grey-dark mr3 nowrap type-12" href="/discover/categories/dance/performances?ref=category"><span class="ksr-icon__tag" aria-hidden="true"></span>
-Performances
-</a></div>
-
-<div class="project-stats-wrap">
-<div class="project-pledged-successful bg-green white f6 pl2 pr2 mb2" style="display: none;">
-<strong>Successfully funded!</strong>
-</div>
-<div class="NS_project__baseball_card_stats">
-<div class="project-pledged-wrap bg-grey mb2 clip">
-<div class="project-pledged bg-green full-height" style="width: 58.72%"></div>
-</div>
-<ul class="project-stats list m0 f6 no-wrap">
-<li class="first funded inline-block mr3">
-<strong class="block f4">58%</strong> <span class="grey-dark">funded</span>
-</li>
-<li class="pledged inline-block mr3">
-<strong class="block f4"><span class="money">$7,340</span></strong> <span class="grey-dark">pledged</span>
-</li>
-<li class="backers inline-block mr3 mobile-hide">
-<strong class="block f4">37</strong> <span class="grey-dark">backers</span>
-</li>
-<li class="last successful inline-block" style="display: none;">
-<strong class="block f4">Funded</strong>
-<div class="deadline grey-dark">
-</div>
-</li>
-<li class="last ksr_page_timer inline-block" data-end_time="2017-05-05T12:00:00-04:00">
-<strong class="block f6">
-<div class="js-num f4">10</div>
-</strong>
-<div class="span js-text grey-dark" data-word="left">days to go</div>
-</li>
-</ul>
-</div>
-
-</div>
-</div>
-</div>
-</div>
-</div>
-
-
-</div>
-<div class="col col-12 m0 project project4 relative">
-<div class="title pb3 pb5-sm mobile-hide">
-<div class="row">
-<div class="col">
-<h3 class="design m0 normal">
-<a class="green-dark" href="/discover/recommended?ref=home_staff_picks">Projects We Love:</a>
-<a class="green-dark" href="/discover/categories/design?ref=home_featured">Design</a>
-</h3>
-</div>
-<div class="col-right see-all-link">
-<a class="f6 bold grey-dark" href="/discover/categories/design?ref=home_featured">See all Design projects
-</a></div>
-</div>
-</div>
-<div class="project-card-wrap project-card-wide-wrap project-card-wide-wrap--potd bg-white rounded border ratio-16-9">
-<div class="project-card clearfix relative">
-<div class="project-thumbnail">
-<div class="mobile-show">
-<div class="projects-we-love-badge projects-we-love-badge--overlay">
-<div class="icon"><span class="ksr-icon__heart" aria-hidden="true"></span></div><div class="label">Project We Love</div>
-</div>
-
-</div>
-<a class="project-thumbnail-wrap" href="/projects/479753666/led-candles-by-morilondon?ref=home_featured"><img alt="Project image" style="height: auto;" class="project-thumbnail__image" src="https://ksr-ugc.imgix.net/assets/015/572/774/c60f1106b9548f1c917ccfc0ac1aeb4f_original.jpg?w=560&amp;h=315&amp;fit=fill&amp;bg=000000&amp;v=1490523039&amp;auto=format&amp;q=92&amp;s=bef616db1f6cb1e383d857c5182e23f2" width="560" height="315"></a>
-</div>
-<div class="project-card-interior">
-<h4 class="project-title ellipsis"><a class="green-dark" href="/projects/479753666/led-candles-by-morilondon?ref=home_featured">LED candles by mori.london</a></h4> <p class="f6 grey-dark mobile-hide">by Moritz Waldemeyer</p>
-<p class="blurb f5 grey-dark mb3 mb5-sm mobile-hide">
-mori.london merges the raw emotion of a flame with the highest grade of technology, traditional craftsmanship and contemporary design
-</p>
-<div class="project-card-footer absolute-bottom home-staff-picks-pr0 ratio-16-9">
-<div class="NS_projects__category_location ratio-16-9">
-<a class="grey-dark mr3 nowrap type-12" href="/discover/places/london-gb?ref=city"><span class="ksr-icon__location" aria-hidden="true"></span>
-London, UK
-</a><a class="grey-dark mr3 nowrap type-12" href="/discover/categories/design/product%20design?ref=category"><span class="ksr-icon__tag" aria-hidden="true"></span>
-Product Design
-</a></div>
-
-<div class="project-stats-wrap">
-<div class="project-pledged-successful bg-green white f6 pl2 pr2 mb2" style="display: none;">
-<strong>Successfully funded!</strong>
-</div>
-<div class="NS_project__baseball_card_stats">
-<div class="project-pledged-wrap bg-grey mb2 clip">
-<div class="project-pledged bg-green full-height" style="width: 100%"></div>
-</div>
-<ul class="project-stats list m0 f6 no-wrap">
-<li class="first funded inline-block mr3">
-<strong class="block f4">223%</strong> <span class="grey-dark">funded</span>
-</li>
-<li class="pledged inline-block mr3">
-<strong class="block f4"><span class="money">£22,349</span></strong> <span class="grey-dark">pledged</span>
-</li>
-<li class="backers inline-block mr3 mobile-hide">
-<strong class="block f4">123</strong> <span class="grey-dark">backers</span>
-</li>
-<li class="last successful inline-block" style="display: none;">
-<strong class="block f4">Funded</strong>
-<div class="deadline grey-dark">
-</div>
-</li>
-<li class="last ksr_page_timer inline-block" data-end_time="2017-04-28T06:01:13-04:00">
-<strong class="block f6">
-<div class="js-num f4">3</div>
-</strong>
-<div class="span js-text grey-dark" data-word="left">days to go</div>
-</li>
-</ul>
-</div>
-
-</div>
-</div>
-</div>
-</div>
-</div>
-
-
-</div>
-<div class="col col-12 m0 project project5 relative">
-<div class="title pb3 pb5-sm mobile-hide">
-<div class="row">
-<div class="col">
-<h3 class="fashion m0 normal">
-<a class="green-dark" href="/discover/recommended?ref=home_staff_picks">Projects We Love:</a>
-<a class="green-dark" href="/discover/categories/fashion?ref=home_featured">Fashion</a>
-</h3>
-</div>
-<div class="col-right see-all-link">
-<a class="f6 bold grey-dark" href="/discover/categories/fashion?ref=home_featured">See all Fashion projects
-</a></div>
-</div>
-</div>
-<div class="project-card-wrap project-card-wide-wrap project-card-wide-wrap--potd bg-white rounded border ratio-16-9">
-<div class="project-card clearfix relative">
-<div class="project-thumbnail">
-<div class="mobile-show">
-<div class="projects-we-love-badge projects-we-love-badge--overlay">
-<div class="icon"><span class="ksr-icon__heart" aria-hidden="true"></span></div><div class="label">Project We Love</div>
-</div>
-
-</div>
-<a class="project-thumbnail-wrap" href="/projects/organicbasics/redefining-womens-underwear-silvertech?ref=home_featured"><img alt="Project image" style="height: auto;" class="project-thumbnail__image" src="https://ksr-ugc.imgix.net/assets/015/761/028/5fc069950903a08c687e5a19a222bd17_original.jpg?w=560&amp;h=315&amp;fit=fill&amp;bg=000000&amp;v=1492017658&amp;auto=format&amp;q=92&amp;s=f689b486db3167b1d5f734a9416ac7f2" width="560" height="315"></a>
-</div>
-<div class="project-card-interior">
-<h4 class="project-title ellipsis"><a class="green-dark" href="/projects/organicbasics/redefining-womens-underwear-silvertech?ref=home_featured">Redefining Women's Underwear - SilverTech</a></h4> <p class="f6 grey-dark mobile-hide">by Organic Basics</p>
-<p class="blurb f5 grey-dark mb3 mb5-sm mobile-hide">
-Technology enforced pure silver – The SilverTech line keeps you cool and permanently prevent the growth of unwanted bacteria.
-</p>
-<div class="project-card-footer absolute-bottom home-staff-picks-pr0 ratio-16-9">
-<div class="NS_projects__category_location ratio-16-9">
-<a class="grey-dark mr3 nowrap type-12" href="/discover/places/san-francisco-ca?ref=city"><span class="ksr-icon__location" aria-hidden="true"></span>
-San Francisco, CA
-</a><a class="grey-dark mr3 nowrap type-12" href="/discover/categories/fashion/apparel?ref=category"><span class="ksr-icon__tag" aria-hidden="true"></span>
-Apparel
-</a></div>
-
-<div class="project-stats-wrap">
-<div class="project-pledged-successful bg-green white f6 pl2 pr2 mb2" style="display: none;">
-<strong>Successfully funded!</strong>
-</div>
-<div class="NS_project__baseball_card_stats">
-<div class="project-pledged-wrap bg-grey mb2 clip">
-<div class="project-pledged bg-green full-height" style="width: 81.84%"></div>
-</div>
-<ul class="project-stats list m0 f6 no-wrap">
-<li class="first funded inline-block mr3">
-<strong class="block f4">81%</strong> <span class="grey-dark">funded</span>
-</li>
-<li class="pledged inline-block mr3">
-<strong class="block f4"><span class="money">$28,645</span></strong> <span class="grey-dark">pledged</span>
-</li>
-<li class="backers inline-block mr3 mobile-hide">
-<strong class="block f4">328</strong> <span class="grey-dark">backers</span>
-</li>
-<li class="last successful inline-block" style="display: none;">
-<strong class="block f4">Funded</strong>
-<div class="deadline grey-dark">
-</div>
-</li>
-<li class="last ksr_page_timer inline-block" data-end_time="2017-05-25T14:00:00-04:00">
-<strong class="block f6">
-<div class="js-num f4">30</div>
-</strong>
-<div class="span js-text grey-dark" data-word="left">days to go</div>
-</li>
-</ul>
-</div>
-
-</div>
-</div>
-</div>
-</div>
-</div>
-
-
-</div>
-<div class="col col-12 m0 project project6 relative">
-<div class="title pb3 pb5-sm mobile-hide">
-<div class="row">
-<div class="col">
-<h3 class="film m0 normal">
-<a class="green-dark" href="/discover/recommended?ref=home_staff_picks">Projects We Love:</a>
-<a class="green-dark" href="/discover/categories/film%20&amp;%20video?ref=home_featured">Film &amp; Video</a>
-</h3>
-</div>
-<div class="col-right see-all-link">
-<a class="f6 bold grey-dark" href="/discover/categories/film%20&amp;%20video?ref=home_featured">See all Film &amp; Video projects
-</a></div>
-</div>
-</div>
-<div class="project-card-wrap project-card-wide-wrap project-card-wide-wrap--potd bg-white rounded border ratio-16-9">
-<div class="project-card clearfix relative">
-<div class="project-thumbnail">
-<div class="mobile-show">
-<div class="projects-we-love-badge projects-we-love-badge--overlay">
-<div class="icon"><span class="ksr-icon__heart" aria-hidden="true"></span></div><div class="label">Project We Love</div>
-</div>
-
-</div>
-<a class="project-thumbnail-wrap" href="/projects/salonika/salonika-a-city-with-amnesia?ref=home_featured"><img alt="Project image" style="height: auto;" class="project-thumbnail__image" src="https://ksr-ugc.imgix.net/assets/015/836/331/ab868856b75e386d630aaebc335cf078_original.png?w=560&amp;h=315&amp;fit=fill&amp;bg=000000&amp;v=1490218483&amp;auto=format&amp;q=92&amp;s=bc1a9696822bce0d757b873aaac3cfe0" width="560" height="315"></a>
-</div>
-<div class="project-card-interior">
-<h4 class="project-title ellipsis"><a class="green-dark" href="/projects/salonika/salonika-a-city-with-amnesia?ref=home_featured">SALONIKA - A City with Amnesia</a></h4> <p class="f6 grey-dark mobile-hide">by Salonika</p>
-<p class="blurb f5 grey-dark mb3 mb5-sm mobile-hide">
-A documentary film about the former Jerusalem of the Balkans (Thessaloniki) and the loss of its history.
-</p>
-<div class="project-card-footer absolute-bottom home-staff-picks-pr0 ratio-16-9">
-<div class="NS_projects__category_location ratio-16-9">
-<a class="grey-dark mr3 nowrap type-12" href="/discover/places/cologne-de?ref=city"><span class="ksr-icon__location" aria-hidden="true"></span>
-Cologne, Germany
-</a><a class="grey-dark mr3 nowrap type-12" href="/discover/categories/film%20&amp;%20video/documentary?ref=category"><span class="ksr-icon__tag" aria-hidden="true"></span>
-Documentary
-</a></div>
-
-<div class="project-stats-wrap">
-<div class="project-pledged-successful bg-green white f6 pl2 pr2 mb2" style="display: none;">
-<strong>Successfully funded!</strong>
-</div>
-<div class="NS_project__baseball_card_stats">
-<div class="project-pledged-wrap bg-grey mb2 clip">
-<div class="project-pledged bg-green full-height" style="width: 50.53%"></div>
-</div>
-<ul class="project-stats list m0 f6 no-wrap">
-<li class="first funded inline-block mr3">
-<strong class="block f4">50%</strong> <span class="grey-dark">funded</span>
-</li>
-<li class="pledged inline-block mr3">
-<strong class="block f4"><span class="money">€6,063</span></strong> <span class="grey-dark">pledged</span>
-</li>
-<li class="backers inline-block mr3 mobile-hide">
-<strong class="block f4">70</strong> <span class="grey-dark">backers</span>
-</li>
-<li class="last successful inline-block" style="display: none;">
-<strong class="block f4">Funded</strong>
-<div class="deadline grey-dark">
-</div>
-</li>
-<li class="last ksr_page_timer inline-block" data-end_time="2017-05-14T15:07:20-04:00">
-<strong class="block f6">
-<div class="js-num f4">19</div>
-</strong>
-<div class="span js-text grey-dark" data-word="left">days to go</div>
-</li>
-</ul>
-</div>
-
-</div>
-</div>
-</div>
-</div>
-</div>
-
-
-</div>
-<div class="col col-12 m0 project project7 relative">
-<div class="title pb3 pb5-sm mobile-hide">
-<div class="row">
-<div class="col">
-<h3 class="food m0 normal">
-<a class="green-dark" href="/discover/recommended?ref=home_staff_picks">Projects We Love:</a>
-<a class="green-dark" href="/discover/categories/food?ref=home_featured">Food</a>
-</h3>
-</div>
-<div class="col-right see-all-link">
-<a class="f6 bold grey-dark" href="/discover/categories/food?ref=home_featured">See all Food projects
-</a></div>
-</div>
-</div>
-<div class="project-card-wrap project-card-wide-wrap project-card-wide-wrap--potd bg-white rounded border ratio-16-9">
-<div class="project-card clearfix relative">
-<div class="project-thumbnail">
-<div class="mobile-show">
-<div class="projects-we-love-badge projects-we-love-badge--overlay">
-<div class="icon"><span class="ksr-icon__heart" aria-hidden="true"></span></div><div class="label">Project We Love</div>
-</div>
-
-</div>
-<a class="project-thumbnail-wrap" href="/projects/1823534204/city-counter-quality-luncheonette?ref=home_featured"><img alt="Project image" style="height: auto;" class="project-thumbnail__image" src="https://ksr-ugc.imgix.net/assets/016/083/109/36c1a420bc623b9b818cc95a211e6e34_original.jpg?w=560&amp;h=315&amp;fit=fill&amp;bg=000000&amp;v=1492378558&amp;auto=format&amp;q=92&amp;s=a30e4808c8854ebb862b7c3d52666ccb" width="560" height="315"></a>
-</div>
-<div class="project-card-interior">
-<h4 class="project-title ellipsis"><a class="green-dark" href="/projects/1823534204/city-counter-quality-luncheonette?ref=home_featured">City Counter - Quality Luncheonette</a></h4> <p class="f6 grey-dark mobile-hide">by Harper Matheson</p>
-<p class="blurb f5 grey-dark mb3 mb5-sm mobile-hide">
-City Counter is a modern luncheonette inspired by the classic Woolworth’s lunch counters, serving New American salads &amp; sandwiches.
-</p>
-<div class="project-card-footer absolute-bottom home-staff-picks-pr0 ratio-16-9">
-<div class="NS_projects__category_location ratio-16-9">
-<a class="grey-dark mr3 nowrap type-12" href="/discover/places/san-francisco-ca?ref=city"><span class="ksr-icon__location" aria-hidden="true"></span>
-San Francisco, CA
-</a><a class="grey-dark mr3 nowrap type-12" href="/discover/categories/food/restaurants?ref=category"><span class="ksr-icon__tag" aria-hidden="true"></span>
-Restaurants
-</a></div>
-
-<div class="project-stats-wrap">
-<div class="project-pledged-successful bg-green white f6 pl2 pr2 mb2" style="display: none;">
-<strong>Successfully funded!</strong>
-</div>
-<div class="NS_project__baseball_card_stats">
-<div class="project-pledged-wrap bg-grey mb2 clip">
-<div class="project-pledged bg-green full-height" style="width: 84.41%"></div>
-</div>
-<ul class="project-stats list m0 f6 no-wrap">
-<li class="first funded inline-block mr3">
-<strong class="block f4">84%</strong> <span class="grey-dark">funded</span>
-</li>
-<li class="pledged inline-block mr3">
-<strong class="block f4"><span class="money">$23,635</span></strong> <span class="grey-dark">pledged</span>
-</li>
-<li class="backers inline-block mr3 mobile-hide">
-<strong class="block f4">65</strong> <span class="grey-dark">backers</span>
-</li>
-<li class="last successful inline-block" style="display: none;">
-<strong class="block f4">Funded</strong>
-<div class="deadline grey-dark">
-</div>
-</li>
-<li class="last ksr_page_timer inline-block" data-end_time="2017-05-01T02:59:00-04:00">
-<strong class="block f6">
-<div class="js-num f4">6</div>
-</strong>
-<div class="span js-text grey-dark" data-word="left">days to go</div>
-</li>
-</ul>
-</div>
-
-</div>
-</div>
-</div>
-</div>
-</div>
-
-
-</div>
-<div class="col col-12 m0 project project8 relative">
-<div class="title pb3 pb5-sm mobile-hide">
-<div class="row">
-<div class="col">
-<h3 class="games m0 normal">
-<a class="green-dark" href="/discover/recommended?ref=home_staff_picks">Projects We Love:</a>
-<a class="green-dark" href="/discover/categories/games?ref=home_featured">Games</a>
-</h3>
-</div>
-<div class="col-right see-all-link">
-<a class="f6 bold grey-dark" href="/discover/categories/games?ref=home_featured">See all Games projects
-</a></div>
-</div>
-</div>
-<div class="project-card-wrap project-card-wide-wrap project-card-wide-wrap--potd bg-white rounded border ratio-16-9">
-<div class="project-card clearfix relative">
-<div class="project-thumbnail">
-<div class="mobile-show">
-<div class="projects-we-love-badge projects-we-love-badge--overlay">
-<div class="icon"><span class="ksr-icon__heart" aria-hidden="true"></span></div><div class="label">Project We Love</div>
-</div>
-
-</div>
-<a class="project-thumbnail-wrap" href="/projects/1031232934/peak-oil-a-tabletop-game-about-crisis-and-profit?ref=home_featured"><img alt="Project image" style="height: auto;" class="project-thumbnail__image" src="https://ksr-ugc.imgix.net/assets/015/847/508/c2df3bb6fa08b79b0b281ed641565255_original.png?w=560&amp;h=315&amp;fit=fill&amp;bg=000000&amp;v=1493025328&amp;auto=format&amp;q=92&amp;s=cb8ae93a195a4e3f151057127bd4eb51" width="560" height="315"></a>
-</div>
-<div class="project-card-interior">
-<h4 class="project-title ellipsis"><a class="green-dark" href="/projects/1031232934/peak-oil-a-tabletop-game-about-crisis-and-profit?ref=home_featured">Peak Oil, a tabletop game about Crisis and Profit</a></h4> <p class="f6 grey-dark mobile-hide">by 2TOMATOES</p>
-<p class="blurb f5 grey-dark mb3 mb5-sm mobile-hide">
-Drill and ship oil, buy hi-tech start-ups and meddle with the media to lead your crumbling oil giant into a future without oil.
-</p>
-<div class="project-card-footer absolute-bottom home-staff-picks-pr0 ratio-16-9">
-<div class="NS_projects__category_location ratio-16-9">
-<a class="grey-dark mr3 nowrap type-12" href="/discover/places/barcelona-barcelona-catalonia?ref=city"><span class="ksr-icon__location" aria-hidden="true"></span>
-Barcelona, Spain
-</a><a class="grey-dark mr3 nowrap type-12" href="/discover/categories/games/tabletop%20games?ref=category"><span class="ksr-icon__tag" aria-hidden="true"></span>
-Tabletop Games
-</a></div>
-
-<div class="project-stats-wrap">
-<div class="project-pledged-successful bg-green white f6 pl2 pr2 mb2" style="display: none;">
-<strong>Successfully funded!</strong>
-</div>
-<div class="NS_project__baseball_card_stats">
-<div class="project-pledged-wrap bg-grey mb2 clip">
-<div class="project-pledged bg-green full-height" style="width: 100%"></div>
-</div>
-<ul class="project-stats list m0 f6 no-wrap">
-<li class="first funded inline-block mr3">
-<strong class="block f4">540%</strong> <span class="grey-dark">funded</span>
-</li>
-<li class="pledged inline-block mr3">
-<strong class="block f4"><span class="money">$54,017</span></strong> <span class="grey-dark">pledged</span>
-</li>
-<li class="backers inline-block mr3 mobile-hide">
-<strong class="block f4">1,050</strong> <span class="grey-dark">backers</span>
-</li>
-<li class="last successful inline-block" style="display: none;">
-<strong class="block f4">Funded</strong>
-<div class="deadline grey-dark">
-</div>
-</li>
-<li class="last ksr_page_timer inline-block" data-end_time="2017-04-27T02:00:00-04:00">
-<strong class="block f6">
-<div class="js-num f4">58</div>
-</strong>
-<div class="span js-text grey-dark" data-word="left">hours to go</div>
-</li>
-</ul>
-</div>
-
-</div>
-</div>
-</div>
-</div>
-</div>
-
-
-</div>
-<div class="col col-12 m0 project project9 relative">
-<div class="title pb3 pb5-sm mobile-hide">
-<div class="row">
-<div class="col">
-<h3 class="journalism m0 normal">
-<a class="green-dark" href="/discover/recommended?ref=home_staff_picks">Projects We Love:</a>
-<a class="green-dark" href="/discover/categories/journalism?ref=home_featured">Journalism</a>
-</h3>
-</div>
-<div class="col-right see-all-link">
-<a class="f6 bold grey-dark" href="/discover/categories/journalism?ref=home_featured">See all Journalism projects
-</a></div>
-</div>
-</div>
-<div class="project-card-wrap project-card-wide-wrap project-card-wide-wrap--potd bg-white rounded border ratio-16-9">
-<div class="project-card clearfix relative">
-<div class="project-thumbnail">
-<div class="mobile-show">
-<div class="projects-we-love-badge projects-we-love-badge--overlay">
-<div class="icon"><span class="ksr-icon__heart" aria-hidden="true"></span></div><div class="label">Project We Love</div>
-</div>
-
-</div>
-<a class="project-thumbnail-wrap" href="/projects/870712911/report-on-the-state-of-the-animal?ref=home_featured"><img alt="Project image" style="height: auto;" class="project-thumbnail__image" src="https://ksr-ugc.imgix.net/assets/015/698/996/6c2b8b67faf362b8e8c416188b606af7_original.jpg?w=560&amp;h=315&amp;fit=fill&amp;bg=000000&amp;v=1492561055&amp;auto=format&amp;q=92&amp;s=a0f9ce39a4cee4e0bbea8b2de721beef" width="560" height="315"></a>
-</div>
-<div class="project-card-interior">
-<h4 class="project-title ellipsis"><a class="green-dark" href="/projects/870712911/report-on-the-state-of-the-animal?ref=home_featured">State of the Animal</a></h4> <p class="f6 grey-dark mobile-hide">by National Observer</p>
-<p class="blurb f5 grey-dark mb3 mb5-sm mobile-hide">
-Stories of hope and drama are quietly taking place in remote wilderness areas. We'll bring them home to you.
-</p>
-<div class="project-card-footer absolute-bottom home-staff-picks-pr0 ratio-16-9">
-<div class="NS_projects__category_location ratio-16-9">
-<a class="grey-dark mr3 nowrap type-12" href="/discover/places/vancouver-ca?ref=city"><span class="ksr-icon__location" aria-hidden="true"></span>
-Vancouver, Canada
-</a><a class="grey-dark mr3 nowrap type-12" href="/discover/categories/journalism?ref=category"><span class="ksr-icon__tag" aria-hidden="true"></span>
-Journalism
-</a></div>
-
-<div class="project-stats-wrap">
-<div class="project-pledged-successful bg-green white f6 pl2 pr2 mb2" style="display: none;">
-<strong>Successfully funded!</strong>
-</div>
-<div class="NS_project__baseball_card_stats">
-<div class="project-pledged-wrap bg-grey mb2 clip">
-<div class="project-pledged bg-green full-height" style="width: 90.02%"></div>
-</div>
-<ul class="project-stats list m0 f6 no-wrap">
-<li class="first funded inline-block mr3">
-<strong class="block f4">90%</strong> <span class="grey-dark">funded</span>
-</li>
-<li class="pledged inline-block mr3">
-<strong class="block f4"><span class="money">CA$ 13,503</span></strong> <span class="grey-dark">pledged</span>
-</li>
-<li class="backers inline-block mr3 mobile-hide">
-<strong class="block f4">214</strong> <span class="grey-dark">backers</span>
-</li>
-<li class="last successful inline-block" style="display: none;">
-<strong class="block f4">Funded</strong>
-<div class="deadline grey-dark">
-</div>
-</li>
-<li class="last ksr_page_timer inline-block" data-end_time="2017-04-30T11:52:22-04:00">
-<strong class="block f6">
-<div class="js-num f4">5</div>
-</strong>
-<div class="span js-text grey-dark" data-word="left">days to go</div>
-</li>
-</ul>
-</div>
-
-</div>
-</div>
-</div>
-</div>
-</div>
-
-
-</div>
-<div class="col col-12 m0 potd project project10 relative selected">
-<div class="title pb3 pb5-sm mobile-hide">
-<div class="row">
-<div class="col">
-<h3 class="m0 music normal">
-<a class="green-dark" href="/discover/recommended?ref=home_staff_picks">Projects We Love:</a>
-<a class="green-dark" href="/discover/categories/music?ref=home_potd">Music</a>
-</h3>
-</div>
-<div class="col-right see-all-link">
-<a class="f6 bold grey-dark" href="/discover/categories/music?ref=home_potd">See all Music projects
-</a></div>
-</div>
-</div>
-<div class="project-ribbon tiny bg-green pl2 pr2 f6 absolute ratio-16-9">
-<svg class="svg-icon__kickstarter" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#kickstarter"></use></svg>
-<span class="text white bold">Project of the Day</span>
-</div>
-<div class="project-card-wrap project-card-wide-wrap project-card-wide-wrap--potd bg-white rounded border ratio-16-9">
-<div class="project-card clearfix relative">
-<div class="project-thumbnail">
-<div class="mobile-show">
-<div class="projects-we-love-badge projects-we-love-badge--overlay">
-<div class="icon"><span class="ksr-icon__heart" aria-hidden="true"></span></div><div class="label">Project We Love</div>
-</div>
-
-</div>
-<a class="project-thumbnail-wrap" href="/projects/emmamcgann/brave-debut-album-emma-mcgann?ref=home_potd"><img alt="Project image" style="height: auto;" class="project-thumbnail__image" src="https://ksr-ugc.imgix.net/assets/016/115/681/7fbb79f30107387df13ed6f97bbf79e1_original.jpg?w=560&amp;h=315&amp;fit=fill&amp;bg=000000&amp;v=1491235126&amp;auto=format&amp;q=92&amp;s=b3e66134c4762e5f0b7c250f7ada0029" width="560" height="315"></a>
-</div>
-<div class="project-card-interior">
-<h4 class="project-title ellipsis"><a class="green-dark" href="/projects/emmamcgann/brave-debut-album-emma-mcgann?ref=home_potd">'B.R.A.V.E' Debut Album - Emma McGann</a></h4> <p class="f6 grey-dark mobile-hide">by Emma McGann</p>
-<p class="blurb f5 grey-dark mb3 mb5-sm mobile-hide">
-Help UK based singer-songwriter Emma McGann fund the marketing, PR and physical production for her upcoming album - 'B.R.A.V.E'
-</p>
-<div class="project-card-footer absolute-bottom home-staff-picks-pr0 ratio-16-9">
-<div class="NS_projects__category_location ratio-16-9">
-<a class="grey-dark mr3 nowrap type-12" href="/discover/places/coventry-gb?ref=city"><span class="ksr-icon__location" aria-hidden="true"></span>
-Coventry, UK
-</a><a class="grey-dark mr3 nowrap type-12" href="/discover/categories/music/pop?ref=category"><span class="ksr-icon__tag" aria-hidden="true"></span>
-Pop
-</a></div>
-
-<div class="project-stats-wrap">
-<div class="project-pledged-successful bg-green white f6 pl2 pr2 mb2" style="display: none;">
-<strong>Successfully funded!</strong>
-</div>
-<div class="NS_project__baseball_card_stats">
-<div class="project-pledged-wrap bg-grey mb2 clip">
-<div class="project-pledged bg-green full-height" style="width: 48.62%"></div>
-</div>
-<ul class="project-stats list m0 f6 no-wrap">
-<li class="first funded inline-block mr3">
-<strong class="block f4">48%</strong> <span class="grey-dark">funded</span>
-</li>
-<li class="pledged inline-block mr3">
-<strong class="block f4"><span class="money">£7,292</span></strong> <span class="grey-dark">pledged</span>
-</li>
-<li class="backers inline-block mr3 mobile-hide">
-<strong class="block f4">145</strong> <span class="grey-dark">backers</span>
-</li>
-<li class="last successful inline-block" style="display: none;">
-<strong class="block f4">Funded</strong>
-<div class="deadline grey-dark">
-</div>
-</li>
-<li class="last ksr_page_timer inline-block" data-end_time="2017-05-12T15:03:20-04:00">
-<strong class="block f6">
-<div class="js-num f4">17</div>
-</strong>
-<div class="span js-text grey-dark" data-word="left">days to go</div>
-</li>
-</ul>
-</div>
-
-</div>
-</div>
-</div>
-</div>
-</div>
-
-
-</div>
-<div class="col col-12 m0 project project11 relative">
-<div class="title pb3 pb5-sm mobile-hide">
-<div class="row">
-<div class="col">
-<h3 class="m0 normal photography">
-<a class="green-dark" href="/discover/recommended?ref=home_staff_picks">Projects We Love:</a>
-<a class="green-dark" href="/discover/categories/photography?ref=home_featured">Photography</a>
-</h3>
-</div>
-<div class="col-right see-all-link">
-<a class="f6 bold grey-dark" href="/discover/categories/photography?ref=home_featured">See all Photography projects
-</a></div>
-</div>
-</div>
-<div class="project-card-wrap project-card-wide-wrap project-card-wide-wrap--potd bg-white rounded border ratio-16-9">
-<div class="project-card clearfix relative">
-<div class="project-thumbnail">
-<div class="mobile-show">
-<div class="projects-we-love-badge projects-we-love-badge--overlay">
-<div class="icon"><span class="ksr-icon__heart" aria-hidden="true"></span></div><div class="label">Project We Love</div>
-</div>
-
-</div>
-<a class="project-thumbnail-wrap" href="/projects/368698869/seenlondon-a-photographic-book-by-richard-morrison?ref=home_featured"><img alt="Project image" style="height: auto;" class="project-thumbnail__image" src="https://ksr-ugc.imgix.net/assets/015/672/966/4ef50fb00a3dce85bf6d823c97d60af8_original.jpg?w=560&amp;h=315&amp;fit=fill&amp;bg=000000&amp;v=1488283619&amp;auto=format&amp;q=92&amp;s=c1e8653b0c9f32e59c7daf61c57b30d0" width="560" height="315"></a>
-</div>
-<div class="project-card-interior">
-<h4 class="project-title ellipsis"><a class="green-dark" href="/projects/368698869/seenlondon-a-photographic-book-by-richard-morrison?ref=home_featured">SeenLondon - a Photographic Book by Richard Morrison</a></h4> <p class="f6 grey-dark mobile-hide">by Richard Morrison</p>
-<p class="blurb f5 grey-dark mb3 mb5-sm mobile-hide">
-This project is to publish a hardback book of naturally taken images of people, places and streets shot across London.
-</p>
-<div class="project-card-footer absolute-bottom home-staff-picks-pr0 ratio-16-9">
-<div class="NS_projects__category_location ratio-16-9">
-<a class="grey-dark mr3 nowrap type-12" href="/discover/places/london-gb?ref=city"><span class="ksr-icon__location" aria-hidden="true"></span>
-London, UK
-</a><a class="grey-dark mr3 nowrap type-12" href="/discover/categories/photography?ref=category"><span class="ksr-icon__tag" aria-hidden="true"></span>
-Photography
-</a></div>
-
-<div class="project-stats-wrap">
-<div class="project-pledged-successful bg-green white f6 pl2 pr2 mb2" style="display: none;">
-<strong>Successfully funded!</strong>
-</div>
-<div class="NS_project__baseball_card_stats">
-<div class="project-pledged-wrap bg-grey mb2 clip">
-<div class="project-pledged bg-green full-height" style="width: 79.63%"></div>
-</div>
-<ul class="project-stats list m0 f6 no-wrap">
-<li class="first funded inline-block mr3">
-<strong class="block f4">79%</strong> <span class="grey-dark">funded</span>
-</li>
-<li class="pledged inline-block mr3">
-<strong class="block f4"><span class="money">£7,565</span></strong> <span class="grey-dark">pledged</span>
-</li>
-<li class="backers inline-block mr3 mobile-hide">
-<strong class="block f4">103</strong> <span class="grey-dark">backers</span>
-</li>
-<li class="last successful inline-block" style="display: none;">
-<strong class="block f4">Funded</strong>
-<div class="deadline grey-dark">
-</div>
-</li>
-<li class="last ksr_page_timer inline-block" data-end_time="2017-05-07T06:07:06-04:00">
-<strong class="block f6">
-<div class="js-num f4">12</div>
-</strong>
-<div class="span js-text grey-dark" data-word="left">days to go</div>
-</li>
-</ul>
-</div>
-
-</div>
-</div>
-</div>
-</div>
-</div>
-
-
-</div>
-<div class="col col-12 m0 project project12 relative">
-<div class="title pb3 pb5-sm mobile-hide">
-<div class="row">
-<div class="col">
-<h3 class="m0 normal publishing">
-<a class="green-dark" href="/discover/recommended?ref=home_staff_picks">Projects We Love:</a>
-<a class="green-dark" href="/discover/categories/publishing?ref=home_featured">Publishing</a>
-</h3>
-</div>
-<div class="col-right see-all-link">
-<a class="f6 bold grey-dark" href="/discover/categories/publishing?ref=home_featured">See all Publishing projects
-</a></div>
-</div>
-</div>
-<div class="project-card-wrap project-card-wide-wrap project-card-wide-wrap--potd bg-white rounded border ratio-16-9">
-<div class="project-card clearfix relative">
-<div class="project-thumbnail">
-<div class="mobile-show">
-<div class="projects-we-love-badge projects-we-love-badge--overlay">
-<div class="icon"><span class="ksr-icon__heart" aria-hidden="true"></span></div><div class="label">Project We Love</div>
-</div>
-
-</div>
-<a class="project-thumbnail-wrap" href="/projects/1036543319/the-future-sausage?ref=home_featured"><img alt="Project image" style="height: auto;" class="project-thumbnail__image" src="https://ksr-ugc.imgix.net/assets/016/112/149/702b23f0241b0ef93aaeebfb58df4f45_original.jpg?w=560&amp;h=315&amp;fit=fill&amp;bg=000000&amp;v=1491213595&amp;auto=format&amp;q=92&amp;s=62c2223708d907eb461a88182800089b" width="560" height="315"></a>
-</div>
-<div class="project-card-interior">
-<h4 class="project-title ellipsis"><a class="green-dark" href="/projects/1036543319/the-future-sausage?ref=home_featured">The Future Sausage</a></h4> <p class="f6 grey-dark mobile-hide">by Carolien Niebling</p>
-<p class="blurb f5 grey-dark mb3 mb5-sm mobile-hide">
-A book on the design of the sausage, one of our oldest created food items and a medium to eat less meat in the future.
-</p>
-<div class="project-card-footer absolute-bottom home-staff-picks-pr0 ratio-16-9">
-<div class="NS_projects__category_location ratio-16-9">
-<a class="grey-dark mr3 nowrap type-12" href="/discover/places/lausanne-lausanne-canton-of-vaud?ref=city"><span class="ksr-icon__location" aria-hidden="true"></span>
-Lausanne, Switzerland
-</a><a class="grey-dark mr3 nowrap type-12" href="/discover/categories/publishing?ref=category"><span class="ksr-icon__tag" aria-hidden="true"></span>
-Publishing
-</a></div>
-
-<div class="project-stats-wrap">
-<div class="project-pledged-successful bg-green white f6 pl2 pr2 mb2" style="display: none;">
-<strong>Successfully funded!</strong>
-</div>
-<div class="NS_project__baseball_card_stats">
-<div class="project-pledged-wrap bg-grey mb2 clip">
-<div class="project-pledged bg-green full-height" style="width: 31.5%"></div>
-</div>
-<ul class="project-stats list m0 f6 no-wrap">
-<li class="first funded inline-block mr3">
-<strong class="block f4">31%</strong> <span class="grey-dark">funded</span>
-</li>
-<li class="pledged inline-block mr3">
-<strong class="block f4"><span class="money">€7,875</span></strong> <span class="grey-dark">pledged</span>
-</li>
-<li class="backers inline-block mr3 mobile-hide">
-<strong class="block f4">87</strong> <span class="grey-dark">backers</span>
-</li>
-<li class="last successful inline-block" style="display: none;">
-<strong class="block f4">Funded</strong>
-<div class="deadline grey-dark">
-</div>
-</li>
-<li class="last ksr_page_timer inline-block" data-end_time="2017-05-14T06:00:00-04:00">
-<strong class="block f6">
-<div class="js-num f4">19</div>
-</strong>
-<div class="span js-text grey-dark" data-word="left">days to go</div>
-</li>
-</ul>
-</div>
-
-</div>
-</div>
-</div>
-</div>
-</div>
-
-
-</div>
-<div class="col col-12 m0 project project13 relative">
-<div class="title pb3 pb5-sm mobile-hide">
-<div class="row">
-<div class="col">
-<h3 class="m0 normal technology">
-<a class="green-dark" href="/discover/recommended?ref=home_staff_picks">Projects We Love:</a>
-<a class="green-dark" href="/discover/categories/technology?ref=home_featured">Technology</a>
-</h3>
-</div>
-<div class="col-right see-all-link">
-<a class="f6 bold grey-dark" href="/discover/categories/technology?ref=home_featured">See all Technology projects
-</a></div>
-</div>
-</div>
-<div class="project-card-wrap project-card-wide-wrap project-card-wide-wrap--potd bg-white rounded border ratio-16-9">
-<div class="project-card clearfix relative">
-<div class="project-thumbnail">
-<div class="mobile-show">
-<div class="projects-we-love-badge projects-we-love-badge--overlay">
-<div class="icon"><span class="ksr-icon__heart" aria-hidden="true"></span></div><div class="label">Project We Love</div>
-</div>
-
-</div>
-<a class="project-thumbnail-wrap" href="/projects/849041190/goliath-16-hands-in-one?ref=home_featured"><img alt="Project image" style="height: auto;" class="project-thumbnail__image" src="https://ksr-ugc.imgix.net/assets/016/048/441/be091ffc1e3a590f4efcefa1e609e095_original.jpg?w=560&amp;h=315&amp;fit=fill&amp;bg=000000&amp;v=1491203757&amp;auto=format&amp;q=92&amp;s=e7c24d4334c20f8d32eec053dd0bee3d" width="560" height="315"></a>
-</div>
-<div class="project-card-interior">
-<h4 class="project-title ellipsis"><a class="green-dark" href="/projects/849041190/goliath-16-hands-in-one?ref=home_featured">Goliath - 16 hands in one</a></h4> <p class="f6 grey-dark mobile-hide">by Gibbon Digital</p>
-<p class="blurb f5 grey-dark mb3 mb5-sm mobile-hide">
-The Goliath is a standard MIDI controller. It lets you take control of multiple parameters at once with just one encoder!
-</p>
-<div class="project-card-footer absolute-bottom home-staff-picks-pr0 ratio-16-9">
-<div class="NS_projects__category_location ratio-16-9">
-<a class="grey-dark mr3 nowrap type-12" href="/discover/places/berlin-berlin-de?ref=city"><span class="ksr-icon__location" aria-hidden="true"></span>
-Berlin, Germany
-</a><a class="grey-dark mr3 nowrap type-12" href="/discover/categories/technology/gadgets?ref=category"><span class="ksr-icon__tag" aria-hidden="true"></span>
-Gadgets
-</a></div>
-
-<div class="project-stats-wrap">
-<div class="project-pledged-successful bg-green white f6 pl2 pr2 mb2" style="display: none;">
-<strong>Successfully funded!</strong>
-</div>
-<div class="NS_project__baseball_card_stats">
-<div class="project-pledged-wrap bg-grey mb2 clip">
-<div class="project-pledged bg-green full-height" style="width: 100%"></div>
-</div>
-<ul class="project-stats list m0 f6 no-wrap">
-<li class="first funded inline-block mr3">
-<strong class="block f4">115%</strong> <span class="grey-dark">funded</span>
-</li>
-<li class="pledged inline-block mr3">
-<strong class="block f4"><span class="money">€2,881</span></strong> <span class="grey-dark">pledged</span>
-</li>
-<li class="backers inline-block mr3 mobile-hide">
-<strong class="block f4">43</strong> <span class="grey-dark">backers</span>
-</li>
-<li class="last successful inline-block" style="display: none;">
-<strong class="block f4">Funded</strong>
-<div class="deadline grey-dark">
-</div>
-</li>
-<li class="last ksr_page_timer inline-block" data-end_time="2017-05-03T10:02:16-04:00">
-<strong class="block f6">
-<div class="js-num f4">8</div>
-</strong>
-<div class="span js-text grey-dark" data-word="left">days to go</div>
-</li>
-</ul>
-</div>
-
-</div>
-</div>
-</div>
-</div>
-</div>
-
-
-</div>
-<div class="col col-12 m0 project project14 relative">
-<div class="title pb3 pb5-sm mobile-hide">
-<div class="row">
-<div class="col">
-<h3 class="m0 normal theater">
-<a class="green-dark" href="/discover/recommended?ref=home_staff_picks">Projects We Love:</a>
-<a class="green-dark" href="/discover/categories/theater?ref=home_featured">Theater</a>
-</h3>
-</div>
-<div class="col-right see-all-link">
-<a class="f6 bold grey-dark" href="/discover/categories/theater?ref=home_featured">See all Theater projects
-</a></div>
-</div>
-</div>
-<div class="project-card-wrap project-card-wide-wrap project-card-wide-wrap--potd bg-white rounded border ratio-16-9">
-<div class="project-card clearfix relative">
-<div class="project-thumbnail">
-<div class="mobile-show">
-<div class="projects-we-love-badge projects-we-love-badge--overlay">
-<div class="icon"><span class="ksr-icon__heart" aria-hidden="true"></span></div><div class="label">Project We Love</div>
-</div>
-
-</div>
-<a class="project-thumbnail-wrap" href="/projects/1160116655/divided-a-one-woman-show?ref=home_featured"><img alt="Project image" style="height: auto;" class="project-thumbnail__image" src="https://ksr-ugc.imgix.net/assets/016/216/923/45a91cb6323d13da41c2be147fc2b296_original.jpg?w=560&amp;h=315&amp;fit=fill&amp;bg=000000&amp;v=1491918404&amp;auto=format&amp;q=92&amp;s=554d2389dd59d6b5eee28d6ab770982c" width="560" height="315"></a>
-</div>
-<div class="project-card-interior">
-<h4 class="project-title ellipsis"><a class="green-dark" href="/projects/1160116655/divided-a-one-woman-show?ref=home_featured">Divided: A one woman show</a></h4> <p class="f6 grey-dark mobile-hide">by Subika Anwar-Khan</p>
-<p class="blurb f5 grey-dark mb3 mb5-sm mobile-hide">
-Amina must decide whether freedom is better than the abusive family she has just left behind. But with freedom comes struggle.
-</p>
-<div class="project-card-footer absolute-bottom home-staff-picks-pr0 ratio-16-9">
-<div class="NS_projects__category_location ratio-16-9">
-<a class="grey-dark mr3 nowrap type-12" href="/discover/places/northampton-gb?ref=city"><span class="ksr-icon__location" aria-hidden="true"></span>
-Northampton, UK
-</a><a class="grey-dark mr3 nowrap type-12" href="/discover/categories/theater?ref=category"><span class="ksr-icon__tag" aria-hidden="true"></span>
-Theater
-</a></div>
-
-<div class="project-stats-wrap">
-<div class="project-pledged-successful bg-green white f6 pl2 pr2 mb2" style="display: none;">
-<strong>Successfully funded!</strong>
-</div>
-<div class="NS_project__baseball_card_stats">
-<div class="project-pledged-wrap bg-grey mb2 clip">
-<div class="project-pledged bg-green full-height" style="width: 18.5%"></div>
-</div>
-<ul class="project-stats list m0 f6 no-wrap">
-<li class="first funded inline-block mr3">
-<strong class="block f4">18%</strong> <span class="grey-dark">funded</span>
-</li>
-<li class="pledged inline-block mr3">
-<strong class="block f4"><span class="money">£185</span></strong> <span class="grey-dark">pledged</span>
-</li>
-<li class="backers inline-block mr3 mobile-hide">
-<strong class="block f4">15</strong> <span class="grey-dark">backers</span>
-</li>
-<li class="last successful inline-block" style="display: none;">
-<strong class="block f4">Funded</strong>
-<div class="deadline grey-dark">
-</div>
-</li>
-<li class="last ksr_page_timer inline-block" data-end_time="2017-05-14T10:09:10-04:00">
-<strong class="block f6">
-<div class="js-num f4">19</div>
-</strong>
-<div class="span js-text grey-dark" data-word="left">days to go</div>
-</li>
-</ul>
-</div>
-
-</div>
-</div>
-</div>
-</div>
-</div>
-
-
-</div>
-</div>
-</div>
-</div>
-<div class="col col-2 mobile-hide">
-<div class="js-category-nav category-nav border-left mt3 mb3 ml2 mr2">
-<ul class="nav f5 list">
-<li>
-<a class="green-dark link" href="/discover/categories/art">
-Art
-</a>
-</li>
-<li>
-<a class="green-dark link" href="/discover/categories/comics">
-Comics
-</a>
-</li>
-<li>
-<a class="green-dark link" href="/discover/categories/crafts">
-Crafts
-</a>
-</li>
-<li>
-<a class="green-dark link" href="/discover/categories/dance">
-Dance
-</a>
-</li>
-<li>
-<a class="green-dark link" href="/discover/categories/design">
-Design
-</a>
-</li>
-<li>
-<a class="green-dark link" href="/discover/categories/fashion">
-Fashion
-</a>
-</li>
-<li>
-<a class="green-dark link" href="/discover/categories/film%20&amp;%20video">
-Film &amp; Video
-</a>
-</li>
-<li>
-<a class="green-dark link" href="/discover/categories/food">
-Food
-</a>
-</li>
-<li>
-<a class="green-dark link" href="/discover/categories/games">
-Games
-</a>
-</li>
-<li>
-<a class="green-dark link" href="/discover/categories/journalism">
-Journalism
-</a>
-</li>
-<li class="selected">
-<a class="green-dark link" href="/discover/categories/music">
-Music
-</a>
-</li>
-<li>
-<a class="green-dark link" href="/discover/categories/photography">
-Photography
-</a>
-</li>
-<li>
-<a class="green-dark link" href="/discover/categories/publishing">
-Publishing
-</a>
-</li>
-<li>
-<a class="green-dark link" href="/discover/categories/technology">
-Technology
-</a>
-</li>
-<li>
-<a class="green-dark link" href="/discover/categories/theater">
-Theater
-</a>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-<div class="py3 py7-sm js-project-cards-module js-project-group" data-ref="home_recs" data-url="https://api.kickstarter.com/v1/projects/recommended?signature=1493148400.775f843c4847b5f47184f45a4d61d066cddf27a0" id="recommended-projects">
-<div class="container-flex px3 py3 test-homepage-recommendations">
-<div class="title-card pb3">
-<div class="row">
-<div class="mobile-col">
-<h2 class="f3 mb0 normal">
-<a class="green-dark" href="https://www.kickstarter.com/recommendations?ref=home_recs">Recommended for you</a>
+<div class="bg-grey-light" id="login-signup">
+<div class="py3 py10-sm px3">
+<div id="user-account-form">
+<div class="rounded-content-frame rounded-content-frame--white">
+<div class="rounded-content-frame__content current" id="login">
+<h2 class="title">
+Log in
 </h2>
+<div class="mb3">
+<form class="form-simple" id="new_user_session" action="/user_sessions" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="bEq7eds5/Qd0nl8DeWzM7zZ7P4hzIicbhP4b9k9HrZyQdZFtrJqxnHz+R4+162Sl/Z0nuQ3RTDX75xhiFju9fQ==" class="hidden"><input type="hidden" name="ref" id="ref" value="nav" class="hidden">
+<input type="hidden" name="project_pid" id="project_pid" class="hidden">
+
+<fieldset class="mb2">
+<ol>
+<li class="mb3">
+<label class="offscreen" for="user_session_email">Email</label>
+<input class="input-text full-width js-auto_focus email" spellcheck="false" autocorrect="off" autocapitalize="off" placeholder="Email" autofocus="autofocus" type="email" name="user_session[email]" id="user_session_email">
+</li>
+<li class="mb3 relative">
+<label class="offscreen" for="user_session_password">Password</label>
+<div class="relative">
+<input class="input-text full-width js-auto_focus fs-hide password" placeholder="Password" type="password" name="user_session[password]" id="user_session_password">
 </div>
-<div class="col-right right">
-<a class="bttn bttn-small bttn-white-border" href="https://www.kickstarter.com/recommendations?ref=home_recs">
-See all
+<a class="forgot-password-link remote_modal_dialog link_to_forgot-password-dialog f5 tipsy_s" data-modal-theme="tall" data-modal-title="Forgot your password?" href="https://www.kickstarter.com/password/forgot?context=login">
+Forgot your password?
 </a>
+</li>
+<li class="clearfix">
+<input type="submit" name="commit" value="Log me in!" class="btn btn--green btn--block submit">
+<div class="remember-me">
+<div class="pt2">
+<input name="user_session[remember_me]" type="hidden" value="0" class="hidden"><input type="checkbox" value="1" checked="checked" name="user_session[remember_me]" id="user_session_remember_me" class="checkbox">
+<label class="label-checkbox f5 grey-dark" for="user_session_remember_me">Remember me</label>
 </div>
 </div>
+</li>
+</ol>
+</fieldset>
+</form>
+
 </div>
+<div class="text-strikethru">
+<div class="line"></div>
+<div class="text"><span class="translation_missing" title="translation missing: en.user_sessions.login.or">Or</span></div>
 </div>
-<div class="container-flex px3 mobile-scroll-container pb3 js-recs">
-<div class="js-slider slider loading hide" style="display: block;">
-<div class="js-project-list mobile-scroll-row row"><div class="project col col-4 mobile-scroll-row-item"><div class="project-card js-score-tracking js-track-project-card ratio-16-9  project-card-tall-big" data-pid="95795193" data-section="home_recs" data-weighted_score="" data-raw_score="" data-model_name="" data-project_pid="95795193" data-project_state="live" data-project_backers_count="3697" data-project_percent_raised="743.01084" data-project_pledged="371505.42" data-user_has_starred="false" data-user_is_backer="false">
-
-  <div class="project-thumbnail">
-      <div class="projects-we-love-badge projects-we-love-badge--overlay">
-        <div class="icon">
-          <span class="ksr-icon__heart"></span>
-        </div>
-        <div class="label">
-          Project We Love
-        </div>
-      </div>
-
-    <a href="https://www.kickstarter.com/projects/roadietuner/roadie-2-and-roadie-bass-automatic-instrument-tune?ref=home_recs" class="project-thumbnail-wrap" target="" data-score="" data-version="" data-pid="95795193">
-      <img alt="Project image" class="project-thumbnail-img" src="https://ksr-ugc.imgix.net/assets/015/981/905/ac0ee633fd3672b783e9d16dee08b4d3_original.jpg?w=338&amp;h=190&amp;fit=fill&amp;bg=000000&amp;v=1490309372&amp;auto=format&amp;q=92&amp;s=4fee16d6a9fb57339ca2307e3c4cbc51" width="100%">
-    </a>
-  </div>
-
-  <div class="project-card-content">
-    <h6 class="project-title"><a href="https://www.kickstarter.com/projects/roadietuner/roadie-2-and-roadie-bass-automatic-instrument-tune?ref=home_recs" target="" data-score="" data-version="" data-pid="95795193">Roadie 2 and Roadie Bass Automatic Instrument Tuners</a></h6><p class="project-byline">by Band Industries</p>
-    <p class="project-blurb">
-      Fully standalone, vibration detection to tune in the noisiest environments and compatible with almost all stringed instruments
-    </p>
-  </div>
-
-  <div class="project-card-footer">
-
-      <div class="project-location">
-        <a href="https://www.kickstarter.com/discover/places/port-townsend-wa" data-location="{&quot;id&quot;:2475511,&quot;name&quot;:&quot;Port Townsend&quot;,&quot;slug&quot;:&quot;port-townsend-wa&quot;,&quot;short_name&quot;:&quot;Port Townsend, WA&quot;,&quot;displayable_name&quot;:&quot;Port Townsend, WA&quot;,&quot;country&quot;:&quot;US&quot;,&quot;state&quot;:&quot;WA&quot;,&quot;type&quot;:&quot;Town&quot;,&quot;is_root&quot;:false,&quot;urls&quot;:{&quot;web&quot;:{&quot;discover&quot;:&quot;https://www.kickstarter.com/discover/places/port-townsend-wa&quot;,&quot;location&quot;:&quot;https://www.kickstarter.com/locations/port-townsend-wa&quot;},&quot;api&quot;:{&quot;nearby_projects&quot;:&quot;https://api.kickstarter.com/v1/discover?signature=1493147980.274914a2efa5dce719c2b750b191b6a3812fa598&amp;woe_id=2475511&quot;}}}">
-          <span class="ksr-icon__location" aria-hidden="true"></span>
-          <span class="location-name">Port Townsend, WA</span>
-        </a>
-      </div>
-
-    <div class="project-stats-container">
-
-
-
-
-
-          <div class="project-progress-bar">
-            <div class="project-percent-pledged" style="width: 100%"></div>
-          </div>
-
-        <ul class="project-stats">
-          <li>
-            <div class="project-stats-value">743%</div><span class="project-stats-label">funded</span>
-          </li>
-
-          <li class="js-amount-pledged">
-            <div class="project-stats-value">$371,505</div><span class="project-stats-label">pledged</span>
-          </li>
-
-
-            <li class="ksr_page_timer" data-end_time="1494050400000">
-              <div class="project-stats-value js-num">11</div><div data-word="left" class="project-stats-label js-text">days to go</div>
-            </li>
-        </ul>
-    </div>
-  </div>
-</div>
-</div><div class="project col col-4 mobile-scroll-row-item"><div class="project-card js-score-tracking js-track-project-card ratio-16-9  project-card-tall-big" data-pid="12190819" data-section="home_recs" data-weighted_score="" data-raw_score="" data-model_name="" data-project_pid="12190819" data-project_state="live" data-project_backers_count="8000" data-project_percent_raised="3285.7677000000003" data-project_pledged="328576.77" data-user_has_starred="false" data-user_is_backer="false">
-
-  <div class="project-thumbnail">
-      <div class="projects-we-love-badge projects-we-love-badge--overlay">
-        <div class="icon">
-          <span class="ksr-icon__heart"></span>
-        </div>
-        <div class="label">
-          Project We Love
-        </div>
-      </div>
-
-    <a href="https://www.kickstarter.com/projects/879498424/cora-ball-microfiber-catching-laundry-ball?ref=home_recs" class="project-thumbnail-wrap" target="" data-score="" data-version="" data-pid="12190819">
-      <img alt="Project image" class="project-thumbnail-img" src="https://ksr-ugc.imgix.net/assets/015/947/412/891d325c6e96d9736a84c649dc313d14_original.jpeg?w=338&amp;h=190&amp;fit=fill&amp;bg=000000&amp;v=1490662039&amp;auto=format&amp;q=92&amp;s=b122b4ca3ab17c4318f4be90b92c1de9" width="100%">
-    </a>
-  </div>
-
-  <div class="project-card-content">
-    <h6 class="project-title"><a href="https://www.kickstarter.com/projects/879498424/cora-ball-microfiber-catching-laundry-ball?ref=home_recs" target="" data-score="" data-version="" data-pid="12190819">Cora Ball - Microfiber Catching Laundry Ball</a></h6><p class="project-byline">by Rozalia Project</p>
-    <p class="project-blurb">
-      Protect the ocean environment with this easy-to-use laundry ball that catches microfibers shedding off our clothes in the washer.
-    </p>
-  </div>
-
-  <div class="project-card-footer">
-
-      <div class="project-location">
-        <a href="https://www.kickstarter.com/discover/places/burlington-vt" data-location="{&quot;id&quot;:2372071,&quot;name&quot;:&quot;Burlington&quot;,&quot;slug&quot;:&quot;burlington-vt&quot;,&quot;short_name&quot;:&quot;Burlington, VT&quot;,&quot;displayable_name&quot;:&quot;Burlington, VT&quot;,&quot;country&quot;:&quot;US&quot;,&quot;state&quot;:&quot;VT&quot;,&quot;type&quot;:&quot;Town&quot;,&quot;is_root&quot;:false,&quot;urls&quot;:{&quot;web&quot;:{&quot;discover&quot;:&quot;https://www.kickstarter.com/discover/places/burlington-vt&quot;,&quot;location&quot;:&quot;https://www.kickstarter.com/locations/burlington-vt&quot;},&quot;api&quot;:{&quot;nearby_projects&quot;:&quot;https://api.kickstarter.com/v1/discover?signature=1493147980.8bc7b5431eeb4e00ee4b0b20e65e55d5d22f6d55&amp;woe_id=2372071&quot;}}}">
-          <span class="ksr-icon__location" aria-hidden="true"></span>
-          <span class="location-name">Burlington, VT</span>
-        </a>
-      </div>
-
-    <div class="project-stats-container">
-
-
-
-
-
-          <div class="project-progress-bar">
-            <div class="project-percent-pledged" style="width: 100%"></div>
-          </div>
-
-        <ul class="project-stats">
-          <li>
-            <div class="project-stats-value">3285%</div><span class="project-stats-label">funded</span>
-          </li>
-
-          <li class="js-amount-pledged">
-            <div class="project-stats-value">$328,576</div><span class="project-stats-label">pledged</span>
-          </li>
-
-
-            <li class="ksr_page_timer" data-end_time="1493154000000">
-              <div class="project-stats-value js-num">25</div><div data-word="left" class="project-stats-label js-text">hours to go</div>
-            </li>
-        </ul>
-    </div>
-  </div>
-</div>
-</div><div class="project col col-4 mobile-scroll-row-item"><div class="project-card js-score-tracking js-track-project-card ratio-16-9  project-card-tall-big" data-pid="802965535" data-section="home_recs" data-weighted_score="" data-raw_score="" data-model_name="" data-project_pid="802965535" data-project_state="live" data-project_backers_count="308" data-project_percent_raised="128.97799999999998" data-project_pledged="64489" data-user_has_starred="false" data-user_is_backer="false">
-
-  <div class="project-thumbnail">
-      <div class="projects-we-love-badge projects-we-love-badge--overlay">
-        <div class="icon">
-          <span class="ksr-icon__heart"></span>
-        </div>
-        <div class="label">
-          Project We Love
-        </div>
-      </div>
-
-    <a href="https://www.kickstarter.com/projects/2143289055/mu-table-the-multi-functional-childrens-play-table?ref=home_recs" class="project-thumbnail-wrap" target="" data-score="" data-version="" data-pid="802965535">
-      <img alt="Project image" class="project-thumbnail-img" src="https://ksr-ugc.imgix.net/assets/016/231/413/81b99914b3ed53d891a3b9ee42bc3350_original.png?w=338&amp;h=190&amp;fit=fill&amp;bg=000000&amp;v=1492700991&amp;auto=format&amp;q=92&amp;s=451779f4a62d3adb754352b3e52550eb" width="100%">
-    </a>
-  </div>
-
-  <div class="project-card-content">
-    <h6 class="project-title"><a href="https://www.kickstarter.com/projects/2143289055/mu-table-the-multi-functional-childrens-play-table?ref=home_recs" target="" data-score="" data-version="" data-pid="802965535">[MU]Table: The Multi-Functional Children's Play Table</a></h6><p class="project-byline">by Martina and Elisa Mukako</p>
-    <p class="project-blurb">
-      [MU]table conveniently transforms from a beautifully-designed table into an all-in-one play table for children ages one through eight!
-    </p>
-  </div>
-
-  <div class="project-card-footer">
-
-      <div class="project-location">
-        <a href="https://www.kickstarter.com/discover/places/milan-milan-lombardy" data-location="{&quot;id&quot;:718345,&quot;name&quot;:&quot;Milan&quot;,&quot;slug&quot;:&quot;milan-milan-lombardy&quot;,&quot;short_name&quot;:&quot;Milan, Italy&quot;,&quot;displayable_name&quot;:&quot;Milan, Italy&quot;,&quot;country&quot;:&quot;IT&quot;,&quot;state&quot;:&quot;Lombardy&quot;,&quot;type&quot;:&quot;Town&quot;,&quot;is_root&quot;:false,&quot;urls&quot;:{&quot;web&quot;:{&quot;discover&quot;:&quot;https://www.kickstarter.com/discover/places/milan-milan-lombardy&quot;,&quot;location&quot;:&quot;https://www.kickstarter.com/locations/milan-milan-lombardy&quot;},&quot;api&quot;:{&quot;nearby_projects&quot;:&quot;https://api.kickstarter.com/v1/discover?signature=1493147981.13edd39a9e7c766d35b8edfa0d28b894d7dcc7b3&amp;woe_id=718345&quot;}}}">
-          <span class="ksr-icon__location" aria-hidden="true"></span>
-          <span class="location-name">Milan, Italy</span>
-        </a>
-      </div>
-
-    <div class="project-stats-container">
-
-
-
-
-
-          <div class="project-progress-bar">
-            <div class="project-percent-pledged" style="width: 100%"></div>
-          </div>
-
-        <ul class="project-stats">
-          <li>
-            <div class="project-stats-value">128%</div><span class="project-stats-label">funded</span>
-          </li>
-
-          <li class="js-amount-pledged">
-            <div class="project-stats-value">€64,489</div><span class="project-stats-label">pledged</span>
-          </li>
-
-
-            <li class="ksr_page_timer" data-end_time="1495553317000">
-              <div class="project-stats-value js-num">28</div><div data-word="left" class="project-stats-label js-text">days to go</div>
-            </li>
-        </ul>
-    </div>
-  </div>
-</div>
-</div></div>
-</div>
-</div>
-</div>
-
-<div class="NS_site__homepage_popular py3 py7-sm js-project-group" id="trending-projects">
-<div class="container-flex px3 py3">
-<div class="title-card pb3">
-<div class="row">
-<div class="mobile-col">
-<h2 class="f3 mb0 normal">
-<a class="green-dark" href="/discover/popular?ref=home_popular">What's popular</a>
-</h2>
-</div>
-<div class="col-right right">
-<a class="bttn bttn-small bttn-white-border" href="/discover/popular?ref=home_popular">
-See all
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="container-flex px3 mobile-scroll-container pb3">
-<div class="row mobile-scroll-row">
-<div class="mobile-scroll-row-item col col-4">
-<div class="js-score-tracking js-track-project-card project-card project-card-tall-big project-card-wrap ratio-16-9" data-pid="854658041" data-project_backers_count="288" data-project_percent_raised="336.44" data-project_pid="854658041" data-project_pledged="8411.0" data-project_state="live" data-section="home_popular">
-<div class="project-thumbnail">
-<div class="projects-we-love-badge projects-we-love-badge--overlay">
-<div class="icon"><span class="ksr-icon__heart" aria-hidden="true"></span></div><div class="label">Project We Love</div>
-</div>
-
-<a class="project-thumbnail-wrap" data-pid="854658041" href="/projects/samcornwell/the-solarcan?ref=home_popular" target="">
-<img class="project-thumbnail-img" width="100%" alt="Project image" src="https://ksr-ugc.imgix.net/assets/015/862/068/ada6ac329dfed70bec2bf286da23d63d_original.jpg?w=352&amp;h=198&amp;fit=fill&amp;bg=000000&amp;v=1489508842&amp;auto=format&amp;q=92&amp;s=152650c8d0e027e224051f7c53a76b19">
-</a>
-</div>
-<div class="project-card-content">
-<h6 class="project-title"><a target="" data-score="null" data-version="null" data-pid="854658041" href="/projects/samcornwell/the-solarcan?ref=home_popular">The Solarcan</a></h6> <p class="project-byline">Sam Cornwell</p>
-<p class="project-blurb">
-Solarcan is a unique camera designed to produce extreme time exposures that capture the Sun's path through the sky over many months
+<div class="mb2"><a href="https://www.kickstarter.com/fb/login.json" class="js-facebook-login btn btn--facebook btn--with-svg btn--block"><svg aria-hidden="true" class="svg-icon__facebook"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#facebook"></use></svg> Log in with Facebook</a></div>
+<p class="center f6 grey-dark">
+We'll never post anything on Facebook<br>without your permission.
 </p>
-</div>
-<div class="project-card-footer">
-<div class="project-location">
-<a data-location="{&quot;id&quot;:12696186,&quot;name&quot;:&quot;The Scottish Borders&quot;,&quot;slug&quot;:&quot;the-scottish-borders-gb&quot;,&quot;short_name&quot;:&quot;The Scottish Borders, UK&quot;,&quot;displayable_name&quot;:&quot;The Scottish Borders, UK&quot;,&quot;country&quot;:&quot;GB&quot;,&quot;state&quot;:&quot;Scotland&quot;,&quot;type&quot;:&quot;LocalAdmin&quot;,&quot;is_root&quot;:false,&quot;urls&quot;:{&quot;web&quot;:{&quot;discover&quot;:&quot;https://www.kickstarter.com/discover/places/the-scottish-borders-gb&quot;,&quot;location&quot;:&quot;https://www.kickstarter.com/locations/the-scottish-borders-gb&quot;},&quot;api&quot;:{&quot;nearby_projects&quot;:&quot;https://api.kickstarter.com/v1/discover?signature=1493148400.bf27966919f58be10211a28cdcf0471369de5b43&amp;woe_id=12696186&quot;}}}" href="/discover/places/the-scottish-borders-gb?ref=city" target="">
-<span aria-hidden="true" class="ksr-icon__location"></span>
-<span class="location-name">The Scottish Borders, UK</span>
-</a>
-</div>
-<div class="project-stats-container">
-<div class="project-pledged-successful">
-<strong>Successfully funded!</strong>
-</div>
-<div class="project-progress-bar">
-<div class="project-percent-pledged" style="width: 100%"></div>
-</div>
-<ul class="project-stats">
-<li>
-<div class="project-stats-value">336%</div> <span class="project-stats-label">funded</span>
-</li>
-<li class="js-amount-pledged">
-<div class="project-stats-value"><span class="money">£8,411</span></div> <span class="project-stats-label">pledged</span>
-</li>
-<li style="display: none;">
-<div class="project-stats-value">Funded</div>
-<span class="project-stats-label">
-</span>
-</li>
-<li class="ksr_page_timer" data-end_time="2017-05-17T22:27:38-04:00">
-<div class="project-stats-value">
-<div class="js-num">23</div>
-</div>
-<div class="project-stats-label js-text" data-word="left">days to go</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-
 
 </div>
-<div class="mobile-scroll-row-item col col-4">
-<div class="js-score-tracking js-track-project-card project-card project-card-tall-big project-card-wrap ratio-16-9" data-pid="286992658" data-project_backers_count="70" data-project_percent_raised="102.57142857142858" data-project_pid="286992658" data-project_pledged="3590.0" data-project_state="live" data-section="home_popular">
-<div class="project-thumbnail">
-<div class="projects-we-love-badge projects-we-love-badge--overlay">
-<div class="icon"><span class="ksr-icon__heart" aria-hidden="true"></span></div><div class="label">Project We Love</div>
+<div class="rounded-content-frame__footer">
+New to Kickstarter?
+<a class="bold js-switch-to-signup" href="/signup">Sign up!</a>
 </div>
 
-<a class="project-thumbnail-wrap" data-pid="286992658" href="/projects/1024945189/send-talya-to-vienna-for-danceweb-2017?ref=home_popular" target="">
-<img class="project-thumbnail-img" width="100%" alt="Project image" src="https://ksr-ugc.imgix.net/assets/015/791/988/f6a6ac1bfb01f72111a2d915f11f7e27_original.JPG?w=352&amp;h=198&amp;fit=fill&amp;bg=000000&amp;v=1489165802&amp;auto=format&amp;q=92&amp;s=c6109b7ae1878bf7cde5f6a3e1ab9e46">
-</a>
-</div>
-<div class="project-card-content">
-<h6 class="project-title"><a target="" data-score="null" data-version="null" data-pid="286992658" href="/projects/1024945189/send-talya-to-vienna-for-danceweb-2017?ref=home_popular">Send Talya to Vienna for danceWEB 2017!</a></h6> <p class="project-byline">Talya Epstein</p>
-<p class="project-blurb">
-For dance artist, Talya Epstein, to accept her danceWEB scholarship invitation &amp; go to Vienna this summer for an international exchange
-</p>
-</div>
-<div class="project-card-footer">
-<div class="project-location">
-<a data-location="{&quot;id&quot;:551801,&quot;name&quot;:&quot;Vienna&quot;,&quot;slug&quot;:&quot;vienna-at&quot;,&quot;short_name&quot;:&quot;Vienna, Austria&quot;,&quot;displayable_name&quot;:&quot;Vienna, Austria&quot;,&quot;country&quot;:&quot;AT&quot;,&quot;state&quot;:&quot;Vienna&quot;,&quot;type&quot;:&quot;Town&quot;,&quot;is_root&quot;:false,&quot;urls&quot;:{&quot;web&quot;:{&quot;discover&quot;:&quot;https://www.kickstarter.com/discover/places/vienna-at&quot;,&quot;location&quot;:&quot;https://www.kickstarter.com/locations/vienna-at&quot;},&quot;api&quot;:{&quot;nearby_projects&quot;:&quot;https://api.kickstarter.com/v1/discover?signature=1493148400.c7b426aea1e8734c8cc70d07d0f15620d560ad12&amp;woe_id=551801&quot;}}}" href="/discover/places/vienna-at?ref=city" target="">
-<span aria-hidden="true" class="ksr-icon__location"></span>
-<span class="location-name">Vienna, Austria</span>
-</a>
-</div>
-<div class="project-stats-container">
-<div class="project-pledged-successful">
-<strong>Successfully funded!</strong>
-</div>
-<div class="project-progress-bar">
-<div class="project-percent-pledged" style="width: 100%"></div>
-</div>
-<ul class="project-stats">
-<li>
-<div class="project-stats-value">102%</div> <span class="project-stats-label">funded</span>
-</li>
-<li class="js-amount-pledged">
-<div class="project-stats-value"><span class="money">$3,590</span></div> <span class="project-stats-label">pledged</span>
-</li>
-<li style="display: none;">
-<div class="project-stats-value">Funded</div>
-<span class="project-stats-label">
-</span>
-</li>
-<li class="ksr_page_timer" data-end_time="2017-05-07T15:56:37-04:00">
-<div class="project-stats-value">
-<div class="js-num">13</div>
-</div>
-<div class="project-stats-label js-text" data-word="left">days to go</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-
-
-</div>
-<div class="mobile-scroll-row-item col col-4">
-<div class="js-score-tracking js-track-project-card project-card project-card-tall-big project-card-wrap ratio-16-9" data-pid="926993498" data-project_backers_count="463" data-project_percent_raised="328.7" data-project_pid="926993498" data-project_pledged="16435.0" data-project_state="live" data-section="home_popular">
-<div class="project-thumbnail">
-<a class="project-thumbnail-wrap" data-pid="926993498" href="/projects/2033061111/only-in-japan-hitchhiking-adventure-2017?ref=home_popular" target="">
-<img class="project-thumbnail-img" width="100%" alt="Project image" src="https://ksr-ugc.imgix.net/assets/015/961/515/0855f9eba7a5c02852fe09a0c8d14d3a_original.jpg?w=352&amp;h=198&amp;fit=fill&amp;bg=000000&amp;v=1490188461&amp;auto=format&amp;q=92&amp;s=25676b958aadb51d01f219957d19c3fb">
-</a>
-</div>
-<div class="project-card-content">
-<h6 class="project-title"><a target="" data-score="null" data-version="null" data-pid="926993498" href="/projects/2033061111/only-in-japan-hitchhiking-adventure-2017?ref=home_popular">ONLY in JAPAN: Hitchhiking Adventure 2017</a></h6> <p class="project-byline">John Daub</p>
-<p class="project-blurb">
-Get ready for the ride of your life as ONLY in JAPAN's series producer John Daub hitchhikes the country for a month.
-</p>
-</div>
-<div class="project-card-footer">
-<div class="project-location">
-<a data-location="{&quot;id&quot;:1118370,&quot;name&quot;:&quot;Tokyo&quot;,&quot;slug&quot;:&quot;tokyo-jp&quot;,&quot;short_name&quot;:&quot;Tokyo, Japan&quot;,&quot;displayable_name&quot;:&quot;Tokyo, Japan&quot;,&quot;country&quot;:&quot;JP&quot;,&quot;state&quot;:&quot;Tokyo Prefecture&quot;,&quot;type&quot;:&quot;Town&quot;,&quot;is_root&quot;:false,&quot;urls&quot;:{&quot;web&quot;:{&quot;discover&quot;:&quot;https://www.kickstarter.com/discover/places/tokyo-jp&quot;,&quot;location&quot;:&quot;https://www.kickstarter.com/locations/tokyo-jp&quot;},&quot;api&quot;:{&quot;nearby_projects&quot;:&quot;https://api.kickstarter.com/v1/discover?signature=1493148400.c6acf904d85981ace6d5cb260436f28f8e53dff8&amp;woe_id=1118370&quot;}}}" href="/discover/places/tokyo-jp?ref=city" target="">
-<span aria-hidden="true" class="ksr-icon__location"></span>
-<span class="location-name">Tokyo, Japan</span>
-</a>
-</div>
-<div class="project-stats-container">
-<div class="project-pledged-successful">
-<strong>Successfully funded!</strong>
-</div>
-<div class="project-progress-bar">
-<div class="project-percent-pledged" style="width: 100%"></div>
-</div>
-<ul class="project-stats">
-<li>
-<div class="project-stats-value">328%</div> <span class="project-stats-label">funded</span>
-</li>
-<li class="js-amount-pledged">
-<div class="project-stats-value"><span class="money">$16,435</span></div> <span class="project-stats-label">pledged</span>
-</li>
-<li style="display: none;">
-<div class="project-stats-value">Funded</div>
-<span class="project-stats-label">
-</span>
-</li>
-<li class="ksr_page_timer" data-end_time="2017-04-29T22:59:00-04:00">
-<div class="project-stats-value">
-<div class="js-num">5</div>
-</div>
-<div class="project-stats-label js-text" data-word="left">days to go</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-
-
-</div>
-</div>
-</div>
-</div>
-
-<script>
-  window.ksr_live_projects = [{"id":15872,"name":"LIVE Workout with Kristi - New Time!","project_name":"BodyBoss 2.0: The World's 1st Home Gym You Can Take Anywhere","project_image":"https://ksr-ugc.imgix.net/assets/012/263/466/5478d5dcced0d14d256179a9ee42186d_original.png?w=1536&h=864&fit=fill&bg=FFFFFF&v=1473267661&auto=format&q=92&s=9ba7eabd29bc94a25926ea203e5cac51","project_url":"https://www.kickstarter.com/projects/bodyboss/bodyboss-20-a-fun-home-gym-you-can-take-anywhere","creator_name":"BodyBoss Portable Gym","creator_avatar":"https://s3.amazonaws.com/huzza-web/artists/avatars/000/004/529/medium/open-uri20161014-33-95fqxb?1476473740","description":"Join us for a live BodyBoss 2.0 workout at 7 pm EST, Tuesday, April 25th!","start_date":"2017-04-26T00:00:00+01:00","live_now":false,"replay":false,"event_over":false,"web_url":"https://live.kickstarter.com/bodyboss-portable-gym/live/live-workout-with-kristi-new-time","background_image_url":"https://s3.amazonaws.com/huzza-web/events/background_images/000/015/872/large/Copy_of_logo_%281%29.png?1493057196"},{"id":15864,"name":"A live demonstration of Cold Butt elimination!","project_name":"INFERNO | a Cocoon of Warmth for your Hammock!","project_image":"https://ksr-ugc.imgix.net/assets/015/743/716/16cf325b613eec1b44e4652683499052_original.png?w=1536&h=864&fit=fill&bg=000000&v=1489294227&auto=format&q=92&s=97b73c781103732b1cb599548f513c65","project_url":"https://www.kickstarter.com/projects/sierra-madre/inferno-a-cocoon-of-warmth-for-your-hammock","creator_name":"Sierra Madre Research","creator_avatar":"https://s3.amazonaws.com/huzza-web/artists/avatars/000/006/683/medium/data?1480534240","description":"Our last Inferno Demo and a Q&A - join us!","start_date":"2017-04-26T00:30:00+01:00","live_now":false,"replay":false,"event_over":false,"web_url":"https://live.kickstarter.com/sierra-madre-research/live/a-live-demonstration-of-cold-butt-elimination","background_image_url":"https://s3.amazonaws.com/huzza-web/events/background_images/000/015/864/large/Life_style_collage_3.jpg?1493048827"},{"id":15752,"name":"Freecast @ NAB Show","project_name":"FREECAST: Broadcast High-Quality Video on the Fly","project_image":"https://ksr-ugc.imgix.net/assets/015/310/140/15a318a06b4add4078796555ede619df_original.png?w=1536&h=864&fit=fill&bg=000000&v=1491396342&auto=format&q=92&s=02fb203d76523170b8204c0b44f2bb6a","project_url":"https://www.kickstarter.com/projects/freecast/freecast-broadcast-high-quality-video-on-the-fly","creator_name":"Freecast, Inc","creator_avatar":"https://s3.amazonaws.com/huzza-web/artists/avatars/000/009/899/medium/data?1492036809","description":"We will be at NAB in Las Vegas from April 24-27th. While we are there, we wanted to do a Live Stream with all of you. ","start_date":"2017-04-25T18:00:00+01:00","live_now":false,"replay":false,"event_over":false,"web_url":"https://live.kickstarter.com/freecast-inc/live/freecast-at-nab-show","background_image_url":"https://s3.amazonaws.com/huzza-web/events/background_images/000/015/752/large/livestream.jpg?1492715830"},{"id":15353,"name":"Data and Support","project_name":"SDX: Take your support skills to the next level","project_image":"https://ksr-ugc.imgix.net/assets/016/042/690/1b90a810504b6aa36ae2fc118ddce4cd_original.png?w=1536&h=864&fit=fill&bg=000000&v=1491109024&auto=format&q=92&s=40ada7947301fdfb81b365d262ae624e","project_url":"https://www.kickstarter.com/projects/supportdriven/sdx-take-your-support-skills-to-the-next-level","creator_name":"Support Driven","creator_avatar":"https://s3.amazonaws.com/huzza-web/artists/avatars/000/009/763/medium/data?1491322000","description":"","start_date":"2017-04-26T20:00:00+01:00","live_now":false,"replay":false,"event_over":false,"web_url":"https://live.kickstarter.com/support-driven/live/leading-and-managing-in-support","background_image_url":"https://s3.amazonaws.com/huzza-web/events/background_images/000/015/353/large/open-uri20170407-18-s6ev8b?1491592133"},{"id":15843,"name":"Koenig All-In-One on grills.","project_name":"The Only All-In-One Polish From the Makers of EZDetailer","project_image":"https://ksr-ugc.imgix.net/assets/015/900/988/aec0b9d99ec7e349daf3bece7af927bc_original.jpg?w=1536&h=864&fit=fill&bg=000000&v=1489751777&auto=format&q=92&s=0c1d735df3c925436764d003ccae5f0f","project_url":"https://www.kickstarter.com/projects/koenig-all-in-one/the-only-all-in-one-polish-from-the-makers-of-ezde","creator_name":"Dan Clark","creator_avatar":"https://s3.amazonaws.com/huzza-web/artists/avatars/000/009/986/medium/open-uri20170418-18-1sdpbkw?1492541788","description":"Did you know that Koenig All-In-One will work great to clean up and shine your outdoor grill? Dan Clark gives us a great Koenig Demo. ","start_date":"2017-04-25T00:00:00+01:00","live_now":false,"replay":false,"event_over":false,"web_url":"https://live.kickstarter.com/dan-clark/live/koenig-all-in-one-on-grills","background_image_url":"https://s3.amazonaws.com/huzza-web/events/background_images/000/015/843/large/KONIG_AMAZON_2CANTOWEL_HRES.jpg?1492983007"},{"id":15865,"name":"Koenig All-In-One on Electronics","project_name":"The Only All-In-One Polish From the Makers of EZDetailer","project_image":"https://ksr-ugc.imgix.net/assets/015/900/988/aec0b9d99ec7e349daf3bece7af927bc_original.jpg?w=1536&h=864&fit=fill&bg=000000&v=1489751777&auto=format&q=92&s=0c1d735df3c925436764d003ccae5f0f","project_url":"https://www.kickstarter.com/projects/koenig-all-in-one/the-only-all-in-one-polish-from-the-makers-of-ezde","creator_name":"Dan Clark","creator_avatar":"https://s3.amazonaws.com/huzza-web/artists/avatars/000/009/986/medium/open-uri20170418-18-1sdpbkw?1492541788","description":"Watch Dan demonstrate Koenig All-In-One on home electronics!","start_date":"2017-04-26T00:00:00+01:00","live_now":false,"replay":false,"event_over":false,"web_url":"https://live.kickstarter.com/dan-clark/live/koenig-all-in-one-on-electronics","background_image_url":"https://s3.amazonaws.com/huzza-web/events/background_images/000/015/865/large/KONIG_AMAZON_2CANTOWEL_HRES.jpg?1493049408"},{"id":15873,"name":"LAST CHANCE: Going, Going, Gone","project_name":"The most fun you will have in the water this summer.","project_image":"https://ksr-ugc.imgix.net/assets/015/895/683/9bb171dc67df4ddb3a551020f7e17a23_original.jpg?w=1536&h=864&fit=fill&bg=000000&v=1490388989&auto=format&q=92&s=2215334a29de4c08f039765918e949d3","project_url":"https://www.kickstarter.com/projects/slydehandboards/the-most-fun-you-will-have-in-the-water-this-summe","creator_name":"Slyde Handboards","creator_avatar":"https://s3.amazonaws.com/huzza-web/artists/avatars/000/009/640/medium/open-uri20170328-18-13yb9ke?1490709819","description":"You've had 30days to decide to add the Grom board as your favorite surf toy this summer, time is running out!! Going Going Grom","start_date":"2017-04-25T21:00:00+01:00","live_now":false,"replay":false,"event_over":false,"web_url":"https://live.kickstarter.com/slyde-handboards/live/last-chance-going-going-gone","background_image_url":"https://s3.amazonaws.com/huzza-web/events/background_images/000/015/873/large/Screen_Shot_2017-04-21_at_2.28.45_PM.png?1493060047"},{"id":15677,"name":"Open House Livestream #4 - with a special guest!","project_name":"BaRPiG - The Adventure Party Game","project_image":"https://ksr-ugc.imgix.net/assets/014/651/990/84e8b3ef2388e0efdb6fed5417458848_original.jpg?w=1536&h=864&fit=fill&bg=000000&v=1484244703&auto=format&q=92&s=fe1ededae6ed36058ba8ed57059177d1","project_url":"https://www.kickstarter.com/projects/barpig/barpig-the-adventure-party-game","creator_name":"Johno & Phil - BaRPiG Gurus","creator_avatar":"https://s3.amazonaws.com/huzza-web/artists/avatars/000/009/367/medium/open-uri20170312-27-lm8izf?1489323389","description":"Our fourth open house development update, with more updates on the design revamp, as well as a special guest!","start_date":"2017-04-26T16:00:00+01:00","live_now":false,"replay":false,"event_over":false,"web_url":"https://live.kickstarter.com/johno-and-phil-barpig-gurus/live/open-house-livestream-4-with-a-special-guest","background_image_url":"https://s3.amazonaws.com/huzza-web/events/background_images/000/015/677/large/livestream_3_screenshot_with_pig.png?1492607417"},{"id":15821,"name":"Meet Kniterate, the digital knitting machine","project_name":"Kniterate: The Digital Knitting Machine","project_image":"https://ksr-ugc.imgix.net/assets/015/863/423/4dee8cc00c6d38f21506cca566d0b33a_original.jpg?w=1536&h=864&fit=fill&bg=000000&v=1490891058&auto=format&q=92&s=8e546a76e92c04aec3138af746010386","project_url":"https://www.kickstarter.com/projects/kniterate/kniterate-the-digital-knitting-machine","creator_name":"Kniterate","creator_avatar":"https://s3.amazonaws.com/huzza-web/artists/avatars/000/010/073/medium/data?1492939460","description":"Let the team guide you through Kniterate, a compact digital knitting machine to bring fashion fabrication back to your neighborhood. ","start_date":"2017-04-26T17:00:00+01:00","live_now":false,"replay":false,"event_over":false,"web_url":"https://live.kickstarter.com/kniterate/live/meet-kniterate-the-digital-knitting-machine","background_image_url":"https://s3.amazonaws.com/huzza-web/events/background_images/000/015/821/large/open-uri20170423-35-gk6xs8?1492939879"},{"id":15808,"name":"Creating the Mighty Stash Pack from ideation to realization","project_name":"mighty stash pack™","project_image":"https://ksr-ugc.imgix.net/assets/012/069/021/456a2fc573dc6010f169c199163f299e_original.jpg?w=1536&h=864&fit=fill&bg=FFFFFF&v=1490847669&auto=format&q=92&s=2cb781c5973d78b04d0f55a3a9301201","project_url":"https://www.kickstarter.com/projects/bemighty/mighty-stash-packtm","creator_name":"Dynomighty Design","creator_avatar":"https://s3.amazonaws.com/huzza-web/artists/avatars/000/010/068/medium/open-uri20170422-35-xrmfer?1492835487","description":"I'll start with the story of the idea, how it came about and some of the development then answer any questions you have LIVE - see you soon BE MIGHTY!","start_date":"2017-04-24T20:30:00+01:00","live_now":false,"replay":false,"event_over":false,"web_url":"https://live.kickstarter.com/dynomighty-design/live/creating-the-mighty-stash-pack-from-ideation-to-realization","background_image_url":"https://s3.amazonaws.com/huzza-web/events/background_images/000/015/808/large/KS_main_1024_x_576_Thumbnail_MSP_mighty_stash_pack.jpg?1492836142"},{"id":15848,"name":"Simple Breathing Technique to Improve Your Day + Office Tour","project_name":"The Everyday Smart Bra: Your Intuitive Wellness Coach","project_image":"https://ksr-ugc.imgix.net/assets/016/006/535/d718f27a472b744a9f7908f90cfb94b5_original.jpg?w=1536&h=864&fit=fill&bg=000000&v=1492227651&auto=format&q=92&s=5db9178f4fbb9c1dd7f3c74daa4e5ebf","project_url":"https://www.kickstarter.com/projects/vitaliwear/the-everyday-smart-bra-your-intuitive-wellness-coa","creator_name":"VITALI Wear","creator_avatar":"https://s3.amazonaws.com/huzza-web/artists/avatars/000/010/081/medium/data?1492983741","description":"VITALI founder Cindy sharing a couple practical breathing exercises that can help you increase energy level, relieve stress and improve your day. ","start_date":"2017-04-25T01:00:00+01:00","live_now":false,"replay":false,"event_over":false,"web_url":"https://live.kickstarter.com/vitali-wear/live/simple-breathing-technique-to-improve-your-day-office-tour","background_image_url":"https://s3.amazonaws.com/huzza-web/events/background_images/000/015/848/large/cindygu1920-e1479250318268.png?1492987818"},{"id":15796,"name":"Kickstarter Mid-point Living-Room Live-Stream Concert/hang!","project_name":"Searra Jade's new album \"Wave of Birdsong\"","project_image":"https://ksr-ugc.imgix.net/assets/015/971/595/082c4d4e9adcd09b1b33cad13feb8ed3_original.jpg?w=1536&h=864&fit=fill&bg=000000&v=1490241335&auto=format&q=92&s=d0adbc10a06fd2d2aa88400b4f980905","project_url":"https://www.kickstarter.com/projects/748878911/searra-jades-new-album-wave-of-birdsong","creator_name":"Searra Jade","creator_avatar":"https://s3.amazonaws.com/huzza-web/artists/avatars/000/009/807/medium/open-uri20170406-18-1u70ulu?1491507753","description":"Let's celebrate this midpoint with a up-close and intimate virtual hang, I'll take requests, play fun games, make up songs for you if you pledge :)","start_date":"2017-04-25T23:00:00+01:00","live_now":false,"replay":false,"event_over":false,"web_url":"https://live.kickstarter.com/searra-jade/live/kickstarter-mid-point-living-room-live-stream-concert-hang","background_image_url":"https://s3.amazonaws.com/huzza-web/events/background_images/000/015/796/large/galacticsearra.jpg?1492793524"},{"id":15842,"name":"Silence TV WORLD PREMIUM","project_name":"Silence TV WORLD. Premium","project_image":"https://ksr-ugc.imgix.net/assets/016/023/133/55e43e024376b51f26d28e0e5c78b1bb_original.png?w=1536&h=864&fit=fill&bg=000000&v=1490634665&auto=format&q=92&s=605bcd4310255004f4cc8b5a15f250da","project_url":"https://www.kickstarter.com/projects/silence4k/silence-tv-world-premium","creator_name":"Silence TV WORLD","creator_avatar":"https://s3.amazonaws.com/huzza-web/artists/avatars/000/009/923/medium/open-uri20170414-35-1oejqhd?1492193066","description":"“Silence is a source of Great Strength.”  Lao Tzu","start_date":"2017-04-25T20:00:00+01:00","live_now":false,"replay":false,"event_over":false,"web_url":"https://live.kickstarter.com/silence-tv-world/live/silence-tv-world-premium","background_image_url":"https://s3.amazonaws.com/huzza-web/events/background_images/000/015/842/large/Logo0.png?1492981262"},{"id":15815,"name":"On Location for #Swimtothelimit","project_name":"THE LONGEST SWIM across the Pacific Ocean","project_image":"https://ksr-ugc.imgix.net/assets/015/534/648/c8f10eeac5e3d3862c1f5bc50cc8a526_original.jpg?w=1536&h=864&fit=fill&bg=000000&v=1489765649&auto=format&q=92&s=430881fa1edaa31c850b3b4d281105aa","project_url":"https://www.kickstarter.com/projects/thelongestswim/the-longest-swim-across-the-pacific-ocean","creator_name":"Ben Lecomte","creator_avatar":"https://s3.amazonaws.com/huzza-web/artists/avatars/000/010/062/medium/open-uri20170421-18-tw9oew?1492817982","description":"Checking Harbor Island and the mile Ben will swim up and down to raise awareness for #thelongestswim and our Kickstarter Campaign.","start_date":"2017-04-26T19:00:00+01:00","live_now":false,"replay":false,"event_over":false,"web_url":"https://live.kickstarter.com/ben-lecomte/live/on-location-for-swimtothelimit","background_image_url":"https://s3.amazonaws.com/huzza-web/events/background_images/000/015/815/large/18076578_10212630570496421_3340675926279610352_o.png?1492902696"},{"id":15814,"name":"Chat with our Ocean Swimmer Ben Lecomte","project_name":"THE LONGEST SWIM across the Pacific Ocean","project_image":"https://ksr-ugc.imgix.net/assets/015/534/648/c8f10eeac5e3d3862c1f5bc50cc8a526_original.jpg?w=1536&h=864&fit=fill&bg=000000&v=1489765649&auto=format&q=92&s=430881fa1edaa31c850b3b4d281105aa","project_url":"https://www.kickstarter.com/projects/thelongestswim/the-longest-swim-across-the-pacific-ocean","creator_name":"Ben Lecomte","creator_avatar":"https://s3.amazonaws.com/huzza-web/artists/avatars/000/010/062/medium/open-uri20170421-18-tw9oew?1492817982","description":"Ben Lecomte swam across the Atlantic Ocean in 1998 and next year he will attempt to be the first man to swim across the Pacific Ocean.","start_date":"2017-04-26T04:00:00+01:00","live_now":false,"replay":false,"event_over":false,"web_url":"https://live.kickstarter.com/ben-lecomte/live/chat-with-our-ocean-swimmer-ben-lecomte","background_image_url":"https://s3.amazonaws.com/huzza-web/events/background_images/000/015/814/large/18076578_10212630570496421_3340675926279610352_o.png?1492902665"},{"id":15847,"name":"Simple Breathing Technique to Improve your Day ","project_name":"The Everyday Smart Bra: Your Intuitive Wellness Coach","project_image":"https://ksr-ugc.imgix.net/assets/016/006/535/d718f27a472b744a9f7908f90cfb94b5_original.jpg?w=1536&h=864&fit=fill&bg=000000&v=1492227651&auto=format&q=92&s=5db9178f4fbb9c1dd7f3c74daa4e5ebf","project_url":"https://www.kickstarter.com/projects/vitaliwear/the-everyday-smart-bra-your-intuitive-wellness-coa","creator_name":"VITALI Wear","creator_avatar":"https://s3.amazonaws.com/huzza-web/artists/avatars/000/010/081/medium/data?1492983741","description":"VITALI Founder Cindy sharing a couple practical breathing techniques that can help you increase energy level, relieve stress and improve your day. ","start_date":"2017-04-26T02:00:00+01:00","live_now":false,"replay":false,"event_over":false,"web_url":"https://live.kickstarter.com/vitali-wear/live/simple-breathing-technique-to-improve-your-day","background_image_url":"https://s3.amazonaws.com/huzza-web/events/background_images/000/015/847/large/cindygu1920-e1479250318268.png?1492987664"},{"id":15871,"name":"Halfway There! Live from APT CCVI","project_name":"The Last Gemini","project_image":"https://ksr-ugc.imgix.net/assets/016/023/752/a1b3aad885150443c3af1b62aa61088d_original.jpg?w=1536&h=864&fit=fill&bg=000000&v=1490632962&auto=format&q=92&s=d77272faf26b03fa3337b80b1ab77714","project_url":"https://www.kickstarter.com/projects/575948552/the-last-gemini","creator_name":"Jared Mitchell","creator_avatar":"https://s3.amazonaws.com/huzza-web/artists/avatars/000/010/093/medium/open-uri20170424-18-s58gou?1493055264","description":"Hey Voyagers! I'm doing a quick live stream for you today to say thank you for your support. We have official raised over half the funds for our goal!","start_date":"2017-04-24T23:00:00+01:00","live_now":false,"replay":false,"event_over":false,"web_url":"https://live.kickstarter.com/jared-mitchell/live/halfway-there-live-from-apt-ccvi","background_image_url":"https://s3.amazonaws.com/huzza-web/events/background_images/000/015/871/large/20160922_091355-01.jpeg?1493055885"},{"id":15587,"name":"End of CaptoGlove's campaign. Conclusions ","project_name":"CaptoGlove. Wearable Gaming, VR, PC, & Mobile Controller.","project_image":"https://ksr-ugc.imgix.net/assets/014/432/980/c34e8aaa28fd4aa5435c088ebea3a0dd_original.jpg?w=1536&h=864&fit=fill&bg=000000&v=1489741780&auto=format&q=92&s=a377ab95f31f6110a89dd69c8bb21aae","project_url":"https://www.kickstarter.com/projects/146300353/captoglove","creator_name":"CaptoGlove LLC","creator_avatar":"https://s3.amazonaws.com/huzza-web/artists/avatars/000/009/612/medium/open-uri20170326-23-1no3tth?1490550061","description":"Hello everybody! in our last live session we will talk about the results of our campaign and give you updates on what is next.","start_date":"2017-04-23T19:00:00+01:00","live_now":false,"replay":false,"event_over":false,"web_url":"https://live.kickstarter.com/captoglove-llc/live/end-of-captogloves-campaign--conclusions","background_image_url":"https://s3.amazonaws.com/huzza-web/events/background_images/000/015/587/large/open-uri20170416-35-1jrcokp?1492367702"},{"id":15740,"name":"STEM heroes manga book 1 AMA #2","project_name":"STEM heroes manga - book 1","project_image":"https://ksr-ugc.imgix.net/assets/015/724/641/fe422aa1f3b1bf9612b1bca4085afbec_original.png?w=1536&h=864&fit=fill&bg=000000&v=1488944053&auto=format&q=92&s=5e6607b286fe3611864e045b7c811ef2","project_url":"https://www.kickstarter.com/projects/1501794305/stem-heroes-manga-book-1","creator_name":"Ana Verissimo","creator_avatar":"https://s3.amazonaws.com/huzza-web/artists/avatars/000/007/771/medium/open-uri20170107-24-15wyz3y?1483792529","description":"","start_date":"2017-04-23T23:00:00+01:00","live_now":false,"replay":false,"event_over":false,"web_url":"https://live.kickstarter.com/ana-verissimo/live/stem-heroes-manga-book-1-ama-2","background_image_url":"https://s3.amazonaws.com/huzza-web/events/background_images/000/015/740/large/kidpaint.jpg?1492697244"},{"id":15788,"name":"Tips for travelers & photographers - FINAL COUNTDOWN","project_name":"Travel Photography Notebook","project_image":"https://ksr-ugc.imgix.net/assets/016/256/179/24e0bea59d2527431467407e29907e10_original.png?w=1536&h=864&fit=fill&bg=000000&v=1492164971&auto=format&q=92&s=b2b92c51f2aeb3d49c2e80f30a16c771","project_url":"https://www.kickstarter.com/projects/tpn/travel-photography-notebook","creator_name":"Photlercom","creator_avatar":"https://s3.amazonaws.com/huzza-web/artists/avatars/000/010/008/medium/data?1492595428","description":"Sit down with a cup of coffee with us and listen to our best tips after years of traveling, photographing and building portfolios. Let's rock it! <3","start_date":"2017-04-24T15:00:00+01:00","live_now":false,"replay":false,"event_over":false,"web_url":"https://live.kickstarter.com/photlercom/live/tips-for-travelers-and-photographers-final-countdown","background_image_url":"https://s3.amazonaws.com/huzza-web/events/background_images/000/015/788/large/Teampic.png?1492770562"},{"id":15800,"name":"The Crux","project_name":"GreenTraveler: World's Best Travel-Friendly Food Container","project_image":"https://ksr-ugc.imgix.net/assets/014/071/193/57df042ed04c381d6f3ecc9b44736be2_original.jpg?w=1536&h=864&fit=fill&bg=000000&v=1476796018&auto=format&q=92&s=78ab1a744b187275280f4e565f5c1c76","project_url":"https://www.kickstarter.com/projects/76377603/greentraveler-worlds-best-travel-friendly-food-con","creator_name":"James Robinson","creator_avatar":"https://s3.amazonaws.com/huzza-web/artists/avatars/000/010/058/medium/data?1492803392","description":"You all have experience with manufacturing now. You know because you have done it yourselves, worked with a company that has, or backed a project.","start_date":"2017-04-23T15:00:00+01:00","live_now":false,"replay":false,"event_over":false,"web_url":"https://live.kickstarter.com/james-robinson/live/the-crux","background_image_url":"https://s3.amazonaws.com/huzza-web/events/background_images/000/015/800/large/Tooling_parts.png?1492804436"},{"id":15592,"name":"Live ring crafting!","project_name":"Make/100 US quarter coin rings","project_image":"https://ksr-ugc.imgix.net/assets/015/713/936/820f5a7474ac09676aa8900e3f7c537f_original.jpg?w=1536&h=864&fit=fill&bg=000000&v=1488734345&auto=format&q=92&s=86e166c088ddad70b7ec2e121a250507","project_url":"https://www.kickstarter.com/projects/gordieharris/make-100-us-quarter-coin-rings","creator_name":"Gordie Harris","creator_avatar":"https://s3.amazonaws.com/huzza-web/artists/avatars/000/008/792/medium/open-uri20170212-18-1g6hhuu?1486928534","description":"I will be crafting a few of the backers rings live! Caution: may have profanity.","start_date":"2017-04-23T23:00:00+01:00","live_now":false,"replay":false,"event_over":false,"web_url":"https://live.kickstarter.com/gordie-harris/live/live-ring-crafting","background_image_url":"https://s3.amazonaws.com/huzza-web/events/background_images/000/015/592/large/20170315_185155.jpg?1492402175"},{"id":15798,"name":"Let's draw a The Man Came Around NPC + Ask Me Anything","project_name":"The Man Came Around - A Thought-Provoking Survival Adventure","project_image":"https://ksr-ugc.imgix.net/assets/013/604/836/6d782b81167cd8e7c0e594a157600c5a_original.jpg?w=1536&h=864&fit=fill&bg=000000&v=1473067896&auto=format&q=92&s=5d16580ddd218ca7799412a141f94ba7","project_url":"https://www.kickstarter.com/projects/pipetteinc/the-man-came-around-a-survival-game-and-political","creator_name":"Pipette Inc.","creator_avatar":"https://s3.amazonaws.com/huzza-web/artists/avatars/000/010/057/medium/data?1492798075","description":"I'll draw an NPC live and talk about the creative process behind The Man Came Around. ","start_date":"2017-04-23T15:00:00+01:00","live_now":false,"replay":false,"event_over":false,"web_url":"https://live.kickstarter.com/pipette-inc/live/lets-draw-a-the-man-came-around-npc-ama-session","background_image_url":"https://s3.amazonaws.com/huzza-web/events/background_images/000/015/798/large/TMCA_Header.jpg?1492799015"},{"id":15860,"name":"Cello Day!!!","project_name":"Goodness & Mercy EP - Marty Mikles","project_image":"https://ksr-ugc.imgix.net/assets/015/369/343/9d798553b10de2d56d391534aac37e77_original.jpg?w=1536&h=864&fit=fill&bg=000000&v=1486872734&auto=format&q=92&s=57f4c3ebb42887b6b0f9375810eac0f0","project_url":"https://www.kickstarter.com/projects/martymikles/goodness-and-mercy-ep-marty-mikles","creator_name":"Marty Mikles","creator_avatar":"https://s3.amazonaws.com/huzza-web/artists/avatars/000/009/005/medium/open-uri20170224-18-1ruwxwd?1487894476","description":"Brian Sanders is in to track some cello!","start_date":"2017-04-24T16:12:32+01:00","live_now":false,"replay":false,"event_over":false,"web_url":"https://live.kickstarter.com/marty-mikles/live/cello-day","background_image_url":"https://s3.amazonaws.com/huzza-web/events/background_images/000/015/860/large/open-uri20170424-25-tfto11?1493046597"},{"id":15782,"name":"ROMEO REPLAYED - Political Thriller - Short Film by Nikhil K","project_name":"ROMEO REPLAYED: A Political Thriller - Short Film (NEW YORK)","project_image":"https://ksr-ugc.imgix.net/assets/011/600/560/3fee11c8935945cd6c9c5fe95e0056ce_original.jpg?w=1536&h=864&fit=fill&bg=000000&v=1492433674&auto=format&q=92&s=06403d64ad94743e3a88065059ca2141","project_url":"https://www.kickstarter.com/projects/indiancowboy/romeo-replayed","creator_name":"Nikhil Kamkolkar","creator_avatar":"https://s3.amazonaws.com/huzza-web/artists/avatars/000/010/050/medium/open-uri20170421-18-1aw6wlc?1492745066","description":"Nikhil will be online to demo the RED EPIC-W camera's lightweight configuration for the shoot, answer questions, and offer a LIMITED TIME reward!","start_date":"2017-04-23T20:00:00+01:00","live_now":false,"replay":false,"event_over":false,"web_url":"https://live.kickstarter.com/nikhil-kamkolkar/live/romeo-replayed-political-thriller-short-film-by-nikhil-k","background_image_url":"https://s3.amazonaws.com/huzza-web/events/background_images/000/015/782/large/nikhil-dazzle.jpg?1492746034"},{"id":15810,"name":"Box Assembly","project_name":"Deep Dungeon Dice Boxes","project_image":"https://ksr-ugc.imgix.net/assets/016/272/335/2ad60fa1a81c8e00d06b1b61710291ae_original.JPG?w=1536&h=864&fit=fill&bg=000000&v=1492466944&auto=format&q=92&s=18ca949c1cacd02be7f3827e24218431","project_url":"https://www.kickstarter.com/projects/597626934/deep-dungeon-dice-boxes","creator_name":"Hobie Hill","creator_avatar":"https://s3.amazonaws.com/huzza-web/artists/avatars/000/010/012/medium/open-uri20170419-22-qycil9?1492611817","description":"Want to know how Deep Dungeon Assembles a box, Now is the time!!!","start_date":"2017-04-22T21:05:11+01:00","live_now":false,"replay":false,"event_over":false,"web_url":"https://live.kickstarter.com/hobie-hill/live/box-assembly","background_image_url":"https://s3.amazonaws.com/huzza-web/events/background_images/000/015/810/large/open-uri20170422-18-jxnr0r?1492891385"},{"id":15813,"name":"Bachman Blue Harvest Sketchbook Kickstarter LIVE!","project_name":"Make/100: Bachman Blue Harvest - Star Wars Sketchbook","project_image":"https://ksr-ugc.imgix.net/assets/015/458/299/fb83ac6d6ce65cb874c86e7c459cca18_original.jpg?w=1536&h=864&fit=fill&bg=000000&v=1490675288&auto=format&q=92&s=2b707deaffd01b9871c92e25a56cffac","project_url":"https://www.kickstarter.com/projects/anthonybachman/make-100-bachman-blue-harvest-star-wars-sketchbook","creator_name":"Anthony Bachman","creator_avatar":"https://s3.amazonaws.com/huzza-web/artists/avatars/000/010/071/medium/open-uri20170422-35-1rxqi65?1492880809","description":"A little get together to celebrate this great project winding down and to talk about Star Wars, art, and whatever else. Maybe show off some sketches..","start_date":"2017-04-23T01:00:00+01:00","live_now":false,"replay":false,"event_over":false,"web_url":"https://live.kickstarter.com/anthony-bachman/live/bachman-blue-harvest-sketchbook-kickstarter-live","background_image_url":"https://s3.amazonaws.com/huzza-web/events/background_images/000/015/813/large/An_Elegant_Weapon_Final.jpg?1492898871"},{"id":15857,"name":"First Broadcast","project_name":"Pizza Boy Rell - Short film","project_image":"https://ksr-ugc.imgix.net/assets/016/047/644/26669d62838047029644979d2702e8c0_original.jpg?w=1536&h=864&fit=fill&bg=000000&v=1492921856&auto=format&q=92&s=9e31588b61c2a8d9831e3e181e7e298b","project_url":"https://www.kickstarter.com/projects/1528823040/pizza-boy-rell-short-film","creator_name":"Terrell Lipscomb","creator_avatar":"https://s3.amazonaws.com/huzza-web/artists/avatars/000/010/085/medium/open-uri20170424-24-1n9l72u?1493012274","description":"","start_date":"2017-04-24T07:03:36+01:00","live_now":false,"replay":false,"event_over":false,"web_url":"https://live.kickstarter.com/terrell-lipscomb/live/first-broadcast-1","background_image_url":"https://s3.amazonaws.com/huzza-web/events/background_images/000/015/857/large/open-uri20170424-18-vr04vy?1493013746"}]
-</script>
-<section class="py3 pt7-sm pb10-sm">
-<div class="container-flex px3 py3">
-<div class="row">
-<div class="col col-7 col-pre-1 pb3 pb6-md">
-<h2 class="type-34 type-48-sm type-60-md type-80-lg medium">
-<a target="_blank" class="black" href="https://live.kickstarter.com/explore?ref=homepage">Explore Kickstarter Live</a>
-</h2>
-<div class="col-6">
-<p class="type-14 type-16-sm medium black mt4 mt8-sm">
-Upcoming live streams from creators across the community.
-</p>
-</div>
-</div>
-</div>
-<div id="ksr-live-cards"><div data-reactroot=""><div class="row"><div class="col col-10 col-pre-2"><div class="ksr-live-card border flex flex-column flex-row-md mb2 mb0-md pl0-md pr0-md py5-md"><div class="ksr-live-card__image bg-grey-200 bg-cover" style="background-image: url(&quot;https://s3.amazonaws.com/huzza-web/events/background_images/000/015/872/large/Copy_of_logo_%281%29.png?1493057196&quot;);"></div><div class="flex-auto p2 pt0-md pb0-md pr0-md pl3-md pr4-md m-auto text-center text-left-md"><h3 class="type-18 medium lh4 mb2"><a class="black" href="https://live.kickstarter.com/bodyboss-portable-gym/live/live-workout-with-kristi-new-time" target="_blank">LIVE Workout with Kristi - New Time!</a></h3><div class="flex-md"><p class="margin-auto type-12 navy-500 mb0"><a href="https://www.kickstarter.com/projects/bodyboss/bodyboss-20-a-fun-home-gym-you-can-take-anywhere" class="medium navy-600">BodyBoss 2.0: The World's 1st Home Gym You Can Take Anywhere</a> by <b class="navy-600">BodyBoss Portable Gym</b></p></div></div><div class="display-none-md h1_6 border-top">&nbsp;</div><div class="shrink-0 m-auto"><div class="flex p2 p0-md"><div class="flex-auto my-auto px6-md text-nowrap"><div class="navy-700"><div class="inline-block text-center w4"><div class="navy-700 type-14 type-16-md medium"><!-- react-text: 18 -->0<!-- /react-text --><!-- react-text: 19 -->1<!-- /react-text --></div><div class="type-10 text-uppercase navy-500">days</div></div><div class="inline-block"><div class="nay-700 medium type-14 type-16-md">&nbsp;:&nbsp;</div><div class="type-10">&nbsp;</div></div><div class="inline-block text-center w4"><div class="navy-700 type-14 type-16-md medium"><!-- react-text: 26 -->0<!-- /react-text --><!-- react-text: 27 -->3<!-- /react-text --></div><div class="type-10 text-uppercase navy-500">hrs</div></div><div class="inline-block"><div class="nay-700 medium type-14 type-16-md">&nbsp;:&nbsp;</div><div class="type-10">&nbsp;</div></div><div class="inline-block text-center w4"><div class="navy-700 type-14 type-16-md medium"><!-- react-text: 34 --><!-- /react-text --><!-- react-text: 35 -->32<!-- /react-text --></div><div class="type-10 text-uppercase navy-500">min</div></div><div class="inline-block"><div class="nay-700 medium type-14 type-16-md">&nbsp;:&nbsp;</div><div class="type-10">&nbsp;</div></div><div class="inline-block text-center w4"><div class="navy-700 type-14 type-16-md medium"><!-- react-text: 42 --><!-- /react-text --><!-- react-text: 43 -->44<!-- /react-text --></div><div class="type-10 text-uppercase navy-500">sec</div></div></div></div><div class="flex-auto m-auto text-right"><a target="_blank" class="bttn bttn-small no-wrap bttn-grey" href="https://live.kickstarter.com/bodyboss-portable-gym/live/live-workout-with-kristi-new-time">Subscribe</a></div></div></div></div></div></div><div class="row"><div class="col col-10 col-pre-2"><div class="ksr-live-card border flex flex-column flex-row-md mb2 mb0-md pl0-md pr0-md py5-md"><div class="ksr-live-card__image bg-grey-200 bg-cover" style="background-image: url(&quot;https://s3.amazonaws.com/huzza-web/events/background_images/000/015/864/large/Life_style_collage_3.jpg?1493048827&quot;);"></div><div class="flex-auto p2 pt0-md pb0-md pr0-md pl3-md pr4-md m-auto text-center text-left-md"><h3 class="type-18 medium lh4 mb2"><a class="black" href="https://live.kickstarter.com/sierra-madre-research/live/a-live-demonstration-of-cold-butt-elimination" target="_blank">A live demonstration of Cold Butt elimination!</a></h3><div class="flex-md"><p class="margin-auto type-12 navy-500 mb0"><a href="https://www.kickstarter.com/projects/sierra-madre/inferno-a-cocoon-of-warmth-for-your-hammock" class="medium navy-600">INFERNO | a Cocoon of Warmth for your Hammock!</a> by <b class="navy-600">Sierra Madre Research</b></p></div></div><div class="display-none-md h1_6 border-top">&nbsp;</div><div class="shrink-0 m-auto"><div class="flex p2 p0-md"><div class="flex-auto my-auto px6-md text-nowrap"><div class="navy-700"><div class="inline-block text-center w4"><div class="navy-700 type-14 type-16-md medium"><!-- react-text: 63 -->0<!-- /react-text --><!-- react-text: 64 -->1<!-- /react-text --></div><div class="type-10 text-uppercase navy-500">days</div></div><div class="inline-block"><div class="nay-700 medium type-14 type-16-md">&nbsp;:&nbsp;</div><div class="type-10">&nbsp;</div></div><div class="inline-block text-center w4"><div class="navy-700 type-14 type-16-md medium"><!-- react-text: 71 -->0<!-- /react-text --><!-- react-text: 72 -->4<!-- /react-text --></div><div class="type-10 text-uppercase navy-500">hrs</div></div><div class="inline-block"><div class="nay-700 medium type-14 type-16-md">&nbsp;:&nbsp;</div><div class="type-10">&nbsp;</div></div><div class="inline-block text-center w4"><div class="navy-700 type-14 type-16-md medium"><!-- react-text: 79 -->0<!-- /react-text --><!-- react-text: 80 -->2<!-- /react-text --></div><div class="type-10 text-uppercase navy-500">min</div></div><div class="inline-block"><div class="nay-700 medium type-14 type-16-md">&nbsp;:&nbsp;</div><div class="type-10">&nbsp;</div></div><div class="inline-block text-center w4"><div class="navy-700 type-14 type-16-md medium"><!-- react-text: 87 --><!-- /react-text --><!-- react-text: 88 -->44<!-- /react-text --></div><div class="type-10 text-uppercase navy-500">sec</div></div></div></div><div class="flex-auto m-auto text-right"><a target="_blank" class="bttn bttn-small no-wrap bttn-grey" href="https://live.kickstarter.com/sierra-madre-research/live/a-live-demonstration-of-cold-butt-elimination">Subscribe</a></div></div></div></div></div></div><div class="row"><div class="col col-10 col-pre-2"><div class="ksr-live-card border flex flex-column flex-row-md mb2 mb0-md pl0-md pr0-md py5-md"><div class="ksr-live-card__image bg-grey-200 bg-cover" style="background-image: url(&quot;https://s3.amazonaws.com/huzza-web/events/background_images/000/015/752/large/livestream.jpg?1492715830&quot;);"></div><div class="flex-auto p2 pt0-md pb0-md pr0-md pl3-md pr4-md m-auto text-center text-left-md"><h3 class="type-18 medium lh4 mb2"><a class="black" href="https://live.kickstarter.com/freecast-inc/live/freecast-at-nab-show" target="_blank">Freecast @ NAB Show</a></h3><div class="flex-md"><p class="margin-auto type-12 navy-500 mb0"><a href="https://www.kickstarter.com/projects/freecast/freecast-broadcast-high-quality-video-on-the-fly" class="medium navy-600">FREECAST: Broadcast High-Quality Video on the Fly</a> by <b class="navy-600">Freecast, Inc</b></p></div></div><div class="display-none-md h1_6 border-top">&nbsp;</div><div class="shrink-0 m-auto"><div class="flex p2 p0-md"><div class="flex-auto my-auto px6-md text-nowrap"><div class="navy-700"><div class="inline-block text-center w4"><div class="navy-700 type-14 type-16-md medium"><!-- react-text: 108 -->0<!-- /react-text --><!-- react-text: 109 -->0<!-- /react-text --></div><div class="type-10 text-uppercase navy-500">days</div></div><div class="inline-block"><div class="nay-700 medium type-14 type-16-md">&nbsp;:&nbsp;</div><div class="type-10">&nbsp;</div></div><div class="inline-block text-center w4"><div class="navy-700 type-14 type-16-md medium"><!-- react-text: 116 --><!-- /react-text --><!-- react-text: 117 -->21<!-- /react-text --></div><div class="type-10 text-uppercase navy-500">hrs</div></div><div class="inline-block"><div class="nay-700 medium type-14 type-16-md">&nbsp;:&nbsp;</div><div class="type-10">&nbsp;</div></div><div class="inline-block text-center w4"><div class="navy-700 type-14 type-16-md medium"><!-- react-text: 124 --><!-- /react-text --><!-- react-text: 125 -->32<!-- /react-text --></div><div class="type-10 text-uppercase navy-500">min</div></div><div class="inline-block"><div class="nay-700 medium type-14 type-16-md">&nbsp;:&nbsp;</div><div class="type-10">&nbsp;</div></div><div class="inline-block text-center w4"><div class="navy-700 type-14 type-16-md medium"><!-- react-text: 132 --><!-- /react-text --><!-- react-text: 133 -->44<!-- /react-text --></div><div class="type-10 text-uppercase navy-500">sec</div></div></div></div><div class="flex-auto m-auto text-right"><a target="_blank" class="bttn bttn-small no-wrap bttn-grey" href="https://live.kickstarter.com/freecast-inc/live/freecast-at-nab-show">Subscribe</a></div></div></div></div></div></div></div></div>
-<div class="row">
-<div class="col col-10 col-pre-2 pt3 pt1-md">
-<a class="bttn bttn-black bttn-medium block" href="https://live.kickstarter.com/explore?ref=homepage" target="_blank">
-See all
-</a>
-</div>
-</div>
-</div>
-</section>
-
-<div class="NS_site__homepage_curated_pages curated-pages py3 py7-sm">
-<div class="container-flex py3 px3">
-<div class="title-card pb3">
-<div class="row">
-<div class="mobile-col">
-<h2 class="f3 normal mb0">
-<a class="green-dark" href="/discover/curated-pages?ref=home_curated">Curated pages</a>
-</h2>
-</div>
-<div class="col-right right">
-<a class="bttn bttn-small bttn-white-border" href="/discover/curated-pages?ref=home_curated">
-See all
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="container-flex px3 pb3 mobile-scroll-container">
-<div class="row mobile-scroll-row">
-<div class="curated-page mobile-scroll-row-item col col-2">
-<a href="https://www.kickstarter.com/make"><img class="image border fit full-width" alt="MAKE" src="https://ksr-ugc.imgix.net/photos/295/MakeLogo_kickstarter.original.png?w=220&amp;h=220&amp;fit=crop&amp;v=&amp;auto=format&amp;q=92&amp;s=2cca0e2bbc75624f7e30bcd7f141db8a"></a>
-</div>
-<div class="curated-page mobile-scroll-row-item col col-2">
-<a href="https://www.kickstarter.com/artbasel"><img class="image border fit full-width" alt="Art Basel" src="https://ksr-ugc.imgix.net/photos/349/AB_Crowndfunding_Logo_Pos_RGB_Color_SQUARE_NEW.original.png?w=220&amp;h=220&amp;fit=crop&amp;v=&amp;auto=format&amp;q=92&amp;s=3949ade8a128e22612fc514b62e6406a"></a>
-</div>
-<div class="curated-page mobile-scroll-row-item col col-2">
-<a href="https://www.kickstarter.com/hax"><img class="image border fit full-width" alt="HAX" src="https://ksr-ugc.imgix.net/photos/312/HAX-(tm)-noback.original.png?w=220&amp;h=220&amp;fit=crop&amp;v=&amp;auto=format&amp;q=92&amp;s=6182ab3e1df41203f8f8b886cb41d281"></a>
-</div>
-<div class="curated-page mobile-scroll-row-item col col-2">
-<a href="https://www.kickstarter.com/RISD"><img class="image border fit full-width" alt="Rhode Island School of Design" src="https://ksr-ugc.imgix.net/photos/23/RISD_KICKSTARTER.original.jpg?w=220&amp;h=220&amp;fit=crop&amp;v=&amp;auto=format&amp;q=92&amp;s=b311484022db9bf18590bc105ae4dbff"></a>
-</div>
-<div class="curated-page mobile-scroll-row-item col col-2">
-<a href="https://www.kickstarter.com/sundanceinstitute"><img class="image border fit full-width" alt="Sundance Institute Artists" src="https://ksr-ugc.imgix.net/photos/34/SUndance_Logo.original.png?w=220&amp;h=220&amp;fit=crop&amp;v=&amp;auto=format&amp;q=92&amp;s=47c74013242af1eac1cb1d32e2905f19"></a>
-</div>
-<div class="curated-page mobile-scroll-row-item col col-2">
-<a href="https://www.kickstarter.com/CreativeCapital"><img class="image border fit full-width" alt="Creative Capital" src="https://ksr-ugc.imgix.net/photos/33/Creative_Capital_icon.original.png?w=220&amp;h=220&amp;fit=crop&amp;v=&amp;auto=format&amp;q=92&amp;s=cd883722c81209bcb523d2393a5e6f22"></a>
-</div>
-</div>
-</div>
-</div>
-
-<div class="py3 py7-sm bg-violet-light border-top" id="bottom-area">
-<div class="grid-container">
-<div class="center px3 py3">
-<h2 class="normal">Where projects come from</h2>
-<div class="grey-dark mb3 type-16">
-Each and every Kickstarter project is the independent creation of someone like you. <div class="mobile-inline">Want to know more about how projects happen, or start your own?</div>
-</div>
-<a class="btn btn--green type-14" href="/learn?ref=home_start">Learn more</a>
 </div>
 </div>
 </div>
@@ -3270,11 +1430,12 @@ Each and every Kickstarter project is the independent creation of someone like y
 <h2 class="f2">Eureka! You've found<br> our little secret.</h2>
 <p>Sign up for our Happening email for all the inside info about arts and culture in the Kickstarter universe and beyond.</p>
 <div class="newsletter-signup">
-<form class="overlabels" action="/newsletters/happening/signup" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="lOojTwWLytaWnHrfwVnb45JLNRoHNsp875Z7+odV2pXgKEteoTJuDnXenNiylHzL62RTN8grlXoX+gxVT1N8Bw==" class="hidden"><input type="hidden" name="location" id="location" value="footer" class="hidden">
+<form class="overlabels" action="/newsletters/happening/signup" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="bEq7eds5/Qd0nl8DeWzM7zZ7P4hzIicbhP4b9k9HrZyQdZFtrJqxnHz+R4+162Sl/Z0nuQ3RTDX75xhiFju9fQ==" class="hidden"><input type="hidden" name="location" id="location" value="footer" class="hidden">
 <textarea name="comment" id="comment" class="hide textarea"></textarea>
-<input type="submit" name="commit" value="Subscribe" class="btn  subscribe_current_user button_submit submit">
-<div class="newsletter-signup__meta">
-This email will be sent to nandukalidindi@gmail.com
+<input type="submit" name="commit" value="Subscribe" class="btn  button_submit submit_no_user appended-button-right submit">
+<div class="field append-button-right">
+<label class="overlabel z1 overlabel-newsletter ellipsis-line overlabel-apply">Email address</label>
+<input type="text" name="email" id="email" class="newsletter_email_input append-button-right__input text">
 </div>
 </form>
 </div>
@@ -3372,7 +1533,7 @@ This email will be sent to nandukalidindi@gmail.com
 </p>
 </div>
 <div class="col-sm-12-24">
-<form class="js-change-language" action="https://www.kickstarter.com/remember_language" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="lOojTwWLytaWnHrfwVnb45JLNRoHNsp875Z7+odV2pXgKEteoTJuDnXenNiylHzL62RTN8grlXoX+gxVT1N8Bw==" class="hidden">
+<form class="js-change-language" action="https://www.kickstarter.com/remember_language" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="bEq7eds5/Qd0nl8DeWzM7zZ7P4hzIicbhP4b9k9HrZyQdZFtrJqxnHz+R4+162Sl/Z0nuQ3RTDX75xhiFju9fQ==" class="hidden">
 <div class="ksr-select js-ksr-select ondark right mobile-left f5">
 <div class="title">English</div>
 <svg class="svg-icon__arrow-down icon-medium fill-navy-400 w2 h2 t2 r2 absolute" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-down"></use></svg>
@@ -3412,15 +1573,39 @@ This email will be sent to nandukalidindi@gmail.com
 </div>
 </footer>
 
+<script>
+  try{(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');}catch(e){}
+
+  var analytics_vars = {
+    google_analytics_id : "UA-7621056-1",
+    logged_in : "false",
+    social_user: "false"
+  }
+</script>
+
+<script>
+  window.koala_endpoint = 'https://t.kck.st/web/track';
+  window.koala_debug = false;
+</script>
+
+<script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1647394995565822');
+  fbq('track', 'PageView');
+</script>
 <noscript>
 &lt;img width="1" height="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1647394995565822&amp;amp;ev=PageView&amp;amp;noscript=1" /&gt;
 </noscript>
 
-<script src="https://static.kickstarter.com/assets/modules/ksr-live.e1ac552008ab13c3fd9f.js"></script>
+<script src="https://static.kickstarter.com/assets/modules/manifest.c8ce747b640115cc11d1.js"></script>
+<script src="https://static.kickstarter.com/assets/modules/core.b7e9e8d07e5eb80f3a4a.js"></script>
+<script src="https://static.kickstarter.com/assets/modules/base.3135ca79f643d8d142ff.js"></script>
 
+<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><</div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
 
-
-<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
 
 <!-- / embedded svg icon system -->
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -3642,7 +1827,7 @@ This email will be sent to nandukalidindi@gmail.com
     </symbol>
     <symbol id="loading-spin" viewBox="0 0 32 32">
       <title>loading-spin icon</title>
-      <path opacity=".25" d="M16 0a16 16 0 0 0 0 32 16 16 0 0 0 0-32m0 4a12 12 0 0 1 0 24 12 12 0 0 1 0-24"></path><path d="M16 0a16 16 0 0 1 16 16h-4A12 12 0 0 0 16 4z" transform="rotate(330.169 16 16)"><animateTransform attributeName="transform" type="rotate" from="0 16 16" to="360 16 16" dur="0.8s" repeatCount="indefinite"></animateTransform></path>
+      <path opacity=".25" d="M16 0a16 16 0 0 0 0 32 16 16 0 0 0 0-32m0 4a12 12 0 0 1 0 24 12 12 0 0 1 0-24"></path><path d="M16 0a16 16 0 0 1 16 16h-4A12 12 0 0 0 16 4z" transform="rotate(82.5 16 16)"><animateTransform attributeName="transform" type="rotate" from="0 16 16" to="360 16 16" dur="0.8s" repeatCount="indefinite"></animateTransform></path>
     </symbol>
     <symbol id="lock" viewBox="0 0 14 16">
       <title>lock icon</title>
@@ -3776,5 +1961,8 @@ This email will be sent to nandukalidindi@gmail.com
       <title>youtube icon</title>
       <path d="M22.226 2.91C21.796 1.19 20.99.527 19.504.287 18.648.162 14.54 0 11.278 0h.014c-3.26 0-7.37.162-8.226.287C1.58.527.774 1.19.344 2.91.2 3.49 0 6.658 0 7.868v.264c0 1.21.2 4.38.344 4.958.43 1.72 1.237 2.383 2.722 2.623.856.125 4.965.287 8.226.287h-.014c3.26 0 7.37-.162 8.226-.287 1.485-.24 2.292-.903 2.722-2.623.145-.58.344-3.748.344-4.958v-.264c0-1.21-.2-4.38-.344-4.958zM8.94 4.758l5.996 3.13-5.996 3.28v-6.41z" fill-rule="evenodd"></path>
     </symbol></svg>
+
+
+
 
 <div id="jquery-clipster-overlay" style="display: none;"><div><p>Press ⌘C to copy</p><p><textarea></textarea></p></div></div></body></html>
