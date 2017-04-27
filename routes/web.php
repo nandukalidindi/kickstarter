@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::resource('home', 'HomeController');
 
 Route::resource('login', 'LoginController');
+
+Route::resource('signup', 'SignupController');
+
+Route::resource('project', 'ProjectController');
