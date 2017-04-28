@@ -11,6 +11,12 @@ Rails.application.routes.draw do
 
   get 'signup' => 'login#signup'
 
+  get 'projects' => 'project#index'
+
+  get 'projects/new' => 'project#new'
+
+  get 'projects/:id' => 'project#show'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
