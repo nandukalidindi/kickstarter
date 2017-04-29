@@ -6,7 +6,7 @@
          Log in —
          Kickstarter
       </title>
-      
+
       <link href="https://static.kickstarter.com/favicon.ico" rel="icon" type="image/x-icon">
 
       <meta name="csrf-param" content="authenticity_token">
@@ -104,36 +104,35 @@
                            Log in
                         </h2>
                         <div class="mb3">
-                           <form class="form-simple" id="new_user_session" accept-charset="UTF-8" method="post">
-                              <input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="bEq7eds5/Qd0nl8DeWzM7zZ7P4hzIicbhP4b9k9HrZyQdZFtrJqxnHz+R4+162Sl/Z0nuQ3RTDX75xhiFju9fQ==" class="hidden"><input type="hidden" name="ref" id="ref" value="nav" class="hidden">
-                              <input type="hidden" name="project_pid" id="project_pid" class="hidden">
-                              <fieldset class="mb2">
-                                 <ol>
-                                    <li class="mb3">
-                                       <label class="offscreen" for="user_session_email">Email</label>
-                                       <input class="input-text full-width js-auto_focus email" spellcheck="false" autocorrect="off" autocapitalize="off" placeholder="Email" autofocus="autofocus" type="email" name="user_session[email]" id="user_session_email">
-                                    </li>
-                                    <li class="mb3 relative">
-                                       <label class="offscreen" for="user_session_password">Password</label>
-                                       <div class="relative">
-                                          <input class="input-text full-width js-auto_focus fs-hide password" placeholder="Password" type="password" name="user_session[password]" id="user_session_password">
-                                       </div>
-                                       <a class="forgot-password-link remote_modal_dialog link_to_forgot-password-dialog f5 tipsy_s" data-modal-theme="tall" data-modal-title="Forgot your password?" href="https://www.kickstarter.com/password/forgot?context=login">
-                                       Forgot your password?
-                                       </a>
-                                    </li>
-                                    <li class="clearfix">
-                                      <%= button_to 'Log me in!', login_path, action: "authenticate", method: :post, class: 'btn btn--green btn--block submit' %>
-                                       <div class="remember-me">
-                                          <div class="pt2">
-                                             <input name="user_session[remember_me]" type="hidden" value="0" class="hidden"><input type="checkbox" value="1" checked="checked" name="user_session[remember_me]" id="user_session_remember_me" class="checkbox">
-                                             <label class="label-checkbox f5 grey-dark" for="user_session_remember_me">Remember me</label>
-                                          </div>
-                                       </div>
-                                    </li>
-                                 </ol>
-                              </fieldset>
-                           </form>
+                          <%= form_tag login_path, class: 'form-simple', role: 'form', id: "new_user_session", "accept-charset"=> "UTF-8", method: :post do %>
+                            <fieldset class="mb2">
+                              <ol>
+                                <li class="mb3">
+                                   <%= text_field_tag :email, '', class: 'input-text full-width js-auto_focus email', placeholder: 'Email', spellcheck: 'false', autocorrect: 'off', autocapitalize: 'off', autofocus: 'autofocus', id: 'user_session_email' %>
+                                </li>
+                                <li class="mb3 relative">
+                                  <div class="relative">
+                                    <%= text_field_tag :password, '', class: 'input-text full-width js-auto_focus fs-hide password', type: 'password', placeholder: 'Password', id: 'user_session_password' %>
+                                  </div>
+                                </li>
+                                <li class="clearfix">
+                                  <button type="submit" class="btn btn--green btn--block submit">Log me in!</button>
+                                   <div class="remember-me">
+                                      <div class="pt2">
+                                         <input name="user_session[remember_me]" type="hidden" value="0" class="hidden"><input type="checkbox" value="1" checked="checked" name="user_session[remember_me]" id="user_session_remember_me" class="checkbox">
+                                         <label class="label-checkbox f5 grey-dark" for="user_session_remember_me">Remember me</label>
+                                      </div>
+
+                                      <% if alert %>
+                                        <div style="color: red; font-weight: bold" class="jGrowl-message">
+                                          <p>The email address and password you entered do not match.</p>
+                                        </div>
+                                      <% end %>
+                                   </div>
+                                </li>
+                              </ol>
+                            </fieldset>
+                          <% end %>
                         </div>
                         <div class="rounded-content-frame__footer">
                            New to Kickstarter?
