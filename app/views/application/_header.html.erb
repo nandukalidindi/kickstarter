@@ -1,9 +1,9 @@
-<div class="site-nav-frame js-site-nav-container" role="navigation">
+<div class="site-nav-frame js-site-nav-container" role="navigation" id="search-togglable-nav">
    <div class="site-nav-container site-nav-container--search" id="js-nav-search" aria-hidden="true">
       <div class="site-nav-unit site-nav-unit--search">
          <nav class="site-nav-base site-nav--search">
             <div class="site-nav__left">
-               <div class="site-nav__item site-nav__item--searchbar js-searchbar js-header-livesearch">
+               <div id="show-search-input" class="site-nav__item site-nav__item--searchbar js-searchbar js-header-livesearch">
                   <form class="site-nav__search-form" role="search" action="/projects/search" accept-charset="UTF-8" method="get">
                      <input name="utf8" type="hidden" value="✓">
                      <svg class="svg-icon__search js-search-icon" aria-hidden="true">
@@ -17,7 +17,7 @@
                </div>
             </div>
             <div class="site-nav__right">
-               <button aria-label="Close Search" class="site-nav__item site-nav__item--close js-toggle-search" data-nav="primary" href="#">
+               <button aria-label="Close Search" id="search-toggle-icon-close" class="site-nav__item site-nav__item--close js-toggle-search" data-nav="primary" href="#">
                   <svg class="svg-icon__close" aria-hidden="true">
                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use>
                   </svg>
@@ -63,12 +63,12 @@
                </a>
             </div>
             <div class="site-nav__right">
-               <a aria-label="Enter Search" class="site-nav__item site-nav__item--search js-toggle-search" data-nav="search" href="#">
+               <div aria-label="Enter Search" id="search-toggle-icon" class="site-nav__item site-nav__item--search js-toggle-search" data-nav="search">
                   <svg class="svg-icon__search" aria-hidden="true">
                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#search"></use>
                   </svg>
                   <span class="site-nav__item-label">Enter Search</span>
-               </a>
+               </div>
                <div id="js-user_nav_select" class="js-tab-expand site-nav__item site-nav__item--user js-user-menu-tab bg-navy-200 " aria-label="User dropdown menu" aria-haspopup="true" aria-expanded="false">
                   <div class="notification-indicator-and-avatar">
                      <img alt="Missing avatar" class="site-nav__user-avatar" src="https://ksr-ugc.imgix.net/missing_user_avatar.png?w=40&amp;h=40&amp;fit=crop&amp;v=&amp;auto=format&amp;q=92&amp;s=8c0db61c92692000c2678b375fc31714">

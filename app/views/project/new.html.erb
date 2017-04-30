@@ -217,6 +217,14 @@
                                              </li>
                                              <li class="category">
                                                 <div class="grey-field mb3 clearfix">
+                                                   <label class="primary" for="project_category_id">Type</label>
+                                                   <div class="field-wrapper">
+                                                      <%= text_field_tag :type, '', class: 'required text', type: 'text', placeholder: 'Eg: Music', id: 'project_type' %>
+                                                   </div>
+                                                </div>
+                                             </li>
+                                             <li class="category">
+                                                <div class="grey-field mb3 clearfix">
                                                    <label class="primary" for="project_category_id">Tags</label>
                                                    <div class="field-wrapper">
                                                       <%= text_field_tag :tags, '', class: 'required text', type: 'text', placeholder: 'Eg: art,music,technology', id: 'project_tags' %>
@@ -292,7 +300,7 @@
                </div>
             </div>
          </div>
-      </main> 
+      </main>
       <%= render 'svg' %>
    </body>
 </html>
