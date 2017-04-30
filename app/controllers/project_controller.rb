@@ -1,6 +1,7 @@
 class ProjectController < ApplicationController
 
   def index
+    binding.pry
     projects = ActiveRecord::Base.connection.execute('SELECT * FROM projects')
     @projects = [[], [], [], [], [], [], []]
 

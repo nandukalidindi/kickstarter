@@ -6,7 +6,6 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
 
   def home
-    # binding.pry
   end
 
   def current_user
