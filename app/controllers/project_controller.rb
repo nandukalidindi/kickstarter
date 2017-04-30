@@ -10,11 +10,11 @@ class ProjectController < ApplicationController
   end
 
   def new
-
+    # binding.pry
   end
 
   def create
-    binding.pry
+    # binding.pry
   end
 
   def show

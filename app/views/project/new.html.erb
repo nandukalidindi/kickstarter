@@ -109,8 +109,7 @@
                            <div class="window" style="width: 880px">
                               <ol class="form-panels">
                                  <li class="panel" data-panel_id="the-basics" id="the-basics-panel" style="width: 880px">
-                                    <form class="edit_project" id="edit_project_2938557" action="/projects/46676441/1772785039" accept-charset="UTF-8" method="post">
-                                       <input name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="patch" class="hidden"><input type="hidden" name="authenticity_token" value="ynn/zTCXSVOkQLavcFfhlU3xtWo5biGQQp0+cjyLHzicLT11fB+axi++dpmy7ctLzLf3Hazk8StkTEKaJ/zWCA==" class="hidden"><input type="hidden" name="panel" id="panel" value="define_your_project" class="hidden">
+                                   <%= form_tag projects_path, class: 'edit_project', role: 'form', id: "edit_project_2938557", "accept-charset"=> "UTF-8", method: :post do %>
                                        <fieldset class="m0">
                                           <ol class="fields m0">
                                             <li class="project-video js-asset-uploads" data-subtitles-path="/video_tracks">
@@ -151,7 +150,7 @@
                                                         OR
                                                       </div>
                                                       <div class="character_counter_wrapper">
-                                                         <input data-help_section="project-title-help" class="required text" size="60" type="text" placeholder="Enter a public URL for the video" name="project[name]" id="project_name">
+                                                        <%= text_field_tag :video_url, '', class: 'required text', type: 'text', placeholder: 'Enter a public URL for the video', id: 'project_video' %>
                                                       </div>
                                                       <div class="field-help-2">
                                                          <p>
@@ -179,7 +178,7 @@
                                                         OR
                                                       </div>
                                                       <div class="character_counter_wrapper">
-                                                         <input data-help_section="project-title-help" class="required text" size="60" type="text" placeholder="Enter a public URL for the image" name="project[name]" id="project_name">
+                                                        <%= text_field_tag :image_url, '', class: 'required text', type: 'text', placeholder: 'Enter a public URL for the image', id: 'project_image' %>
                                                       </div>
                                                       <div class="field-help-2">
                                                          <p>
@@ -194,8 +193,7 @@
                                                    <label class="primary" for="project_name">Project title</label>
                                                    <div class="field-wrapper">
                                                       <div class="character_counter_wrapper">
-                                                         <input maxlength="60" data-help_section="project-title-help" class="required text" size="60" type="text" value="Dummy" name="project[name]" id="project_name">
-                                                         <span class="character_counter_container"><span class="character_counter" data-maxlength="60" rel="#project_name">55</span>/60</span>
+                                                        <%= text_field_tag :title, '', maxlength: '60', class: 'required text', type: 'text', placeholder: 'Enter title for project', id: 'project_name' %>                                                         
                                                       </div>
                                                       <div class="field-help-2">
                                                          <p>Our search looks through words from your project title and blurb, so make them clear and descriptive of what you’re making. Your profile name will be searchable, too.</p>
@@ -209,8 +207,7 @@
                                                    <label class="primary" for="project_blurb">Short blurb</label>
                                                    <div class="field-wrapper">
                                                       <div class="character_counter_wrapper">
-                                                         <textarea maxlength="135" data-help_section="short-description-help" class="required textarea" name="project[blurb]" id="project_blurb"></textarea>
-                                                         <span class="character_counter_container"><span class="character_counter" data-maxlength="135" rel="#project_blurb">135</span>/135</span>
+                                                        <%= text_area_tag :description, '', maxlength: '200', class: 'required textarea', type: 'text', placeholder: 'Enter description for project', id: 'project_blurb' %>
                                                       </div>
                                                       <div class="field-help-2">
                                                          <p>Give people a sense of what you’re doing. Skip “Help me” and focus on what you’re making.</p>
@@ -222,7 +219,7 @@
                                                 <div class="grey-field mb3 clearfix">
                                                    <label class="primary" for="project_category_id">Tags</label>
                                                    <div class="field-wrapper">
-                                                      <input data-help_section="project-title-help" class="required text" size="60" type="text" placeholder="Eg: art,music,technology" name="project[name]" id="project_name">
+                                                      <%= text_field_tag :tags, '', class: 'required text', type: 'text', placeholder: 'Eg: art,music,technology', id: 'project_tags' %>
                                                    </div>
                                                 </div>
                                              </li>
@@ -231,7 +228,7 @@
                                                    <label class="primary" for="project_location_name">Project location</label>
                                                    <div class="field-wrapper">
                                                       <div class="field">
-                                                         <input class="input-text text" type="text" name="project[location_name]" placeholder="Eg: Brooklyn, NY" id="project_location_name" autocomplete="off">
+                                                        <%= text_field_tag :location, '', class: 'input-text text', type: 'text', placeholder: 'Eg: Brooklyn, NY', id: 'project_location' %>
                                                       </div>
                                                    </div>
                                                 </div>
@@ -242,16 +239,15 @@
                                                    <div class="field-wrapper">
                                                       <ul class="options">
                                                          <li class="option number-of-days flex">
-                                                            <label class="option_label" for="duration_duration"><input type="radio" name="duration" id="duration_duration" value="duration" checked="checked" class="radio"><strong>Number of days</strong></label>
+                                                            <label class="option_label" for="duration_duration"><strong>Number of days</strong></label>
                                                             <div class="input-container bg-white border">
                                                                <div class="p2">
-                                                                  <input length="3" size="3" value="30" type="text" name="project[campaign_attributes][duration]" id="project_campaign_attributes_duration" class="text">
+                                                                  <%= text_field_tag :days, '', length: "3", size: "3", class: 'text', type: 'text', placeholder: 'Eg: 10', id: 'project_campaign_attributes_duration' %>
                                                                   <div class="rec pt1">Up to 60 days, but we recommend 30 or fewer</div>
                                                                </div>
                                                             </div>
                                                          </li>
                                                       </ul>
-                                                      <input type="hidden" value="2938557" name="project[campaign_attributes][id]" id="project_campaign_attributes_id" class="hidden">
                                                       <div class="field-help-2">
                                                          <p>
                                                             Projects with shorter durations have higher success rates. You won’t be able to adjust your duration after you launch.
@@ -264,7 +260,7 @@
                                                 <div class="grey-field clearfix">
                                                    <label class="primary" for="project_campaign_attributes_goal">Funding goal</label>
                                                    <div class="field-wrapper">
-                                                      <input length="10" size="10" value="USD$ 0" class="js-campaign-goal text" type="text" name="project[campaign_attributes][goal]" id="project_campaign_attributes_goal">
+                                                     <%= text_field_tag :goal, '', length: "10", size: "10", class: 'js-campaign-goal text', type: 'text', placeholder: 'Eg: USD$ 10000', id: 'project_campaign_attributes_goal' %>
                                                       <div class="field-help-2">
                                                          <p>Funding on Kickstarter is all-or-nothing. It’s okay to raise more than your goal, but if your goal isn’t met, no money will be collected. Your goal should reflect the minimum amount of funds you need to complete your project and send out rewards, and include a buffer for payments processing fees.</p>
                                                          <p>If your project is successfully funded, the following fees will be collected from your funding total: Kickstarter’s 5% fee, and payment processing fees (between 3% and 5%). If funding isn’t successful, there are no fees.
@@ -281,25 +277,22 @@
                                              </li>
                                           </ol>
                                        </fieldset>
-                                    </form>
+                                       <div class="alt-tools list-inline ml2 mt3">
+                                          <div class="mr3 clearfix">
+                                            <button type="submit" class="btn btn--green btn--block submit">CREATE PROJECT</button>
+                                          </div>
+                                       </div>
+                                    <% end %>
                                  </li>
                               </ol>
                            </div>
                         </div>
                      </div>
-                     <div class="alt-tools list-inline ml2 mt3">
-                        <div class="mr3 clearfix">
-                          <button type="submit" class="btn btn--green btn--block submit">CREATE PROJECT</button>
-                        </div>
-                     </div>
-                     <!-- .container -->
-                     <!-- .tools -->
                   </div>
-                  <!-- .container -->
                </div>
             </div>
          </div>
-      </main>      
+      </main>
       <%= render 'svg' %>
    </body>
 </html>
