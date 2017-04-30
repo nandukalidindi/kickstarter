@@ -19,6 +19,8 @@ Rails.application.routes.draw do
 
   get 'projects/new' => 'project#new'
 
+  post 'projects' => 'project#new'
+
   get 'projects/:id' => 'project#show'
 
   # Example of regular route:
