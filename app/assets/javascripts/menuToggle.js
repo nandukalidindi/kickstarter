@@ -15,7 +15,7 @@ $(document).ready(function(){
 
     searchToggleDiv.addClass("site-nav--search-is-visible");
     inputSearchDiv.addClass("site-nav__item--searchbar--visible");
-  })
+  });
 
   $("#search-toggle-icon-close").unbind('click').bind('click', function(event) {
     var searchToggleDiv = $("#search-togglable-nav");
@@ -23,5 +23,28 @@ $(document).ready(function(){
 
     searchToggleDiv.removeClass("site-nav--search-is-visible");
     inputSearchDiv.removeClass("site-nav__item--searchbar--visible");
-  })
+  });
+
+
+  $("#pledge-button").unbind('click').bind('click', function(event) {
+    var pledgeInput = $("#pledge-input"),
+        pledgeValue = parseInt(pledgeInput.val() || "0"),
+        projectId = pledgeInput.attr('project-id');
+
+    if(pledgeValue > 0 && projectId) {
+        $.ajax({
+
+          type: "POST",
+          url: '/projects/' + projectId + '/pledge',
+          dataType: 'json',
+          data: {pledge: pledgeValue},
+          success: function (data) {
+            // location.reload();
+          },
+          error: function (data) {
+            location.reload();
+          }
+      });
+    }
+  });
 })

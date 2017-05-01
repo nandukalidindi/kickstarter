@@ -23,6 +23,8 @@ Rails.application.routes.draw do
 
   get 'projects/:id' => 'project#show'
 
+  post 'projects/:id/pledge' => 'project#pledge'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

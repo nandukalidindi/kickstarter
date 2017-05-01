@@ -20,7 +20,7 @@
       <div id="start-of-content" tabindex="-1"></div>
       <main role="main">
          <div id="growl_section" class="center jGrowl"></div>
-         <div id="main_content">          
+         <div id="main_content">
             <section class="relative border-top pt3" id="advanced_container">
                <div class="loading absolute hide full-width full-height z1"></div>
                <section class="pb3 pb10-sm pt3" id="projects">
@@ -33,7 +33,7 @@
                   <div class="container-flex px3">
                      <h3 class="normal mb3 mb5-sm title">
                         Explore
-                        <b class="count green">321</b> <span class="category">live Art projects</span>
+                        <b class="count green"><%= @projects.flatten.count %></b> <span class="category">projects</span>
                      </h3>
                      <ul class="list js-project-group" data-seed="2488784" id="projects_list">
                        <% @projects.each do |four_way_project| %>
@@ -52,7 +52,7 @@
                                    </div>
                                    <div class="project-card-content">
                                       <h6 class="project-title"><a target="" data-score="null" data-version="null" data-pid="1797358119" href="/projects/<%= project['id'] %>"><%= project['title'] %></a></h6>
-                                      <p class="project-byline">by </p>
+                                      <p class="project-byline">by <%= project['first_name'] %> <%= project['last_name'] %></p>
                                       <p class="project-blurb">
                                          <%= project['description'] %>
                                       </p>
@@ -69,15 +69,15 @@
                                             <strong>Successfully funded!</strong>
                                          </div>
                                          <div class="project-progress-bar">
-                                            <div class="project-percent-pledged" style="width: 100%"></div>
+                                            <div class="project-percent-pledged" style="width: <%= (((project['pledge_sum'] || "0").to_f/project['maximum_fund'].to_f)*100).floor %>%"></div>
                                          </div>
                                          <ul class="project-stats">
                                             <li>
-                                               <div class="project-stats-value">272%</div>
+                                               <div class="project-stats-value"><%= (((project['pledge_sum'] || "0").to_f/project['maximum_fund'].to_f)*100).floor %>%</div>
                                                <span class="project-stats-label">funded</span>
                                             </li>
                                             <li class="js-amount-pledged">
-                                               <div class="project-stats-value"><span class="money">$108,909</span></div>
+                                               <div class="project-stats-value"><span class="money">$<%= project['pledge_sum'] || "0" %></span></div>
                                                <span class="project-stats-label">pledged</span>
                                             </li>
                                             <li style="display: none;">
@@ -87,7 +87,7 @@
                                             </li>
                                             <li class="ksr_page_timer" data-end_time="2017-05-11T10:22:38-04:00">
                                                <div class="project-stats-value">
-                                                  <div class="js-num">14</div>
+                                                  <div class="js-num"><%= project['days_left'].to_f.ceil %></div>
                                                </div>
                                                <div class="project-stats-label js-text" data-word="left">days to go</div>
                                             </li>

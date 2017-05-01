@@ -2,6 +2,19 @@ class ProjectController < ApplicationController
 
   def index
     projects = ActiveRecord::Base.connection.execute('SELECT * FROM projects')
+    index_sql = "SELECT projects.id, projects.title, projects.description, projects.maximum_fund, projects.search_thumbnail_small, projects.search_thumbnail_large, projects.video_url, users.first_name, users.last_name, projects.location, EXTRACT(EPOCH FROM (projects.end_date - CURRENT_TIMESTAMP))/(60*60*24) AS days_left , pledge_sums.pledge_sum
+                FROM projects
+                FULL OUTER JOIN (
+                SELECT projects.id AS id, SUM(pledges.amount) AS pledge_sum
+                FROM projects
+                INNER JOIN pledges
+                ON projects.id = pledges.project_id
+                GROUP BY projects.id
+                ) AS pledge_sums
+                ON projects.id = pledge_sums.id
+                INNER JOIN users
+                ON users.id = projects.posted_by"
+    projects = ActiveRecord::Base.connection.execute(index_sql)
     @projects = [[], [], [], [], [], [], []]
 
     projects.each_with_index do |project, index|
@@ -25,5 +38,25 @@ class ProjectController < ApplicationController
   end
 
   def show
+    @project = ActiveRecord::Base.connection.execute("SELECT * FROM projects WHERE id=#{params[:id].to_i}").first
+    @poster = ActiveRecord::Base.connection.execute("SELECT * FROM users WHERE id=#{@project["posted_by"].to_i}").first
+    @comments = ActiveRecord::Base.connection.execute("SELECT reviews.comment, users.first_name, users.last_name, reviews.created_at FROM reviews INNER JOIN users ON reviews.user_id = users.id WHERE reviews.type='comment' AND reviews.project_id=#{params[:id].to_i}")
+    pledges = ActiveRecord::Base.connection.execute("SELECT * FROM pledges WHERE project_id=#{params[:id].to_i}")
+    @backers = pledges.count
+    @pledged = 0
+    pledges.each do |pledge|
+      @pledged += pledge['amount'].to_f
+    end
+
+    # binding.pry
+  end
+
+  def pledge
+    pledge_amount = (params[:pledge]).to_i
+    cc_card_id = (ActiveRecord::Base.connection.execute("SELECT id FROM credit_cards WHERE user_id=#{current_user['id'].to_i} AND is_default=true AND is_enabled=true").first || {})['id']
+    if pledge_amount > 0 && cc_card_id
+      ActiveRecord::Base.connection.execute("INSERT INTO pledges(user_id, project_id, amount, cc_card_id, created_at, updated_at) VALUES(#{current_user['id'].to_i}, #{params[:id].to_i}, #{params[:pledge].to_f}, #{cc_card_id.to_i}, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)")
+    end
+    redirect_to :back
   end
 end
