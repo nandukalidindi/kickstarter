@@ -47,4 +47,19 @@ $(document).ready(function(){
       });
     }
   });
+
+
+  var togglableChildren = $("#type_list_divs").children()
+  if(togglableChildren) {
+    for(var i=0; i<togglableChildren.length; i++) {
+      togglableChildren[i].children[0].addEventListener('click', showRelevantTypeProject);
+    }
+  }
+
+  function showRelevantTypeProject(event) {
+    var child = document.getElementById(event.target.id + "_project");
+
+    child.parentNode.insertBefore(child, child.parentNode.firstChild);
+  }
+
 })
