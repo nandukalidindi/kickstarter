@@ -25,6 +25,14 @@ Rails.application.routes.draw do
 
   post 'projects/:id/pledge' => 'project#pledge'
 
+  get 'users/:id' => 'user#show'
+
+  get 'user/:id/followers' => 'user#followers'
+
+  get 'user/:id/following' => 'user#following'
+
+  get 'user/:id/profile' => 'user#profile'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
