@@ -39,6 +39,7 @@ class ProjectController < ApplicationController
 
   def show
     @project = ActiveRecord::Base.connection.execute("SELECT * FROM projects WHERE id=#{params[:id].to_i}").first
+    @days_left = ActiveRecord::Base.connection.execute("SELECT EXTRACT(EPOCH FROM (end_date - CURRENT_TIMESTAMP))/(60*60*24) AS days_left FROM projects WHERE id=#{params[:id].to_i}").first['days_left']
     @poster = ActiveRecord::Base.connection.execute("SELECT * FROM users WHERE id=#{@project["posted_by"].to_i}").first
     @comments = ActiveRecord::Base.connection.execute("SELECT reviews.comment, users.first_name, users.last_name, reviews.created_at FROM reviews INNER JOIN users ON reviews.user_id = users.id WHERE reviews.type='comment' AND reviews.project_id=#{params[:id].to_i}")
     pledges = ActiveRecord::Base.connection.execute("SELECT * FROM pledges WHERE project_id=#{params[:id].to_i}")
