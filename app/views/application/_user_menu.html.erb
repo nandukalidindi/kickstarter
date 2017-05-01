@@ -35,9 +35,8 @@
                   Settings
                </h3>
                <ul class="js-dropdown_group dropdown-menu">
-                  <li><a href="/settings/account?ref=user_menu">Account</a></li>
-                  <li><a href="/settings/profile?ref=user_menu">Edit profile</a></li>
-                  <li><a href="/settings/notifications?ref=user_menu">Notifications</a></li>
+                  <li><a href="/user/<%= current_user['id'] %>/account">Account</a></li>
+                  <li><a href="/user/<%= current_user['id'] %>/profile">Edit profile</a></li>
                </ul>
             </div>
          </div>

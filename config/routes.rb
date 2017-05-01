@@ -27,11 +27,21 @@ Rails.application.routes.draw do
 
   get 'users/:id' => 'user#show'
 
-  get 'user/:id/followers' => 'user#followers'
+  get 'users/:id/followers' => 'user#followers'
 
-  get 'user/:id/following' => 'user#following'
+  get 'users/:id/following' => 'user#following'
 
-  get 'user/:id/profile' => 'user#profile'
+  get 'users/:id/account' => 'user#account'
+
+  get 'users/:id/profile' => 'user#profile'
+
+  get 'users/:id/credit_cards' => 'user#credit_cards'
+
+  get 'users/:id/profile/about' => 'user#about'
+
+  get 'users/:id/profile/backed' => 'user#backed'
+
+  get 'users/:id/profile/comments' => 'user#comments'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -17,4 +17,17 @@ class UserController < ApplicationController
 
   def profile
   end
+
+  def about
+  end
+
+  def backed
+  end
+
+  def comments
+  end
+
+  def credit_cards
+
+  end
 end

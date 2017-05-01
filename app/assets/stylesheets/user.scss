@@ -1,3 +1,66 @@
 // Place all the styles related to the User controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  background-color: #EEE;
+  font: 16px/1.2 "Fira Sans", sans-serif;
+}
+.checkbox-containercheckbox- {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  width: 20rem;
+  height: 20rem;
+  background-color: #FFF;
+}
+.checkbox-container > div {
+  margin: 2rem auto;
+}
+
+/* Rounded */
+.checkbox-container > div {
+  width: 5.5rem;
+  height: 2.5rem;
+  position: relative;
+}
+.checkbox-container > div input {
+  opacity: 0;
+}
+.checkbox-container > div label {
+  position: absolute;
+  background-color: #e9513a;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 3.125rem;
+  -webkit-transition: background-color .2s ease-in-out;
+          transition: background-color .2s ease-in-out;
+}
+.checkbox-container > div
+label:after {
+  content: "";
+  display: block;
+  width: 1.875rem;
+  height: 1.875rem;
+  border-radius: 3.125rem;
+  cursor: pointer;
+  position: absolute;
+  top: .3125rem;
+  z-index: 1;
+  left: .5rem;
+  background-color: #FFFFFD;
+  -webkit-transition: left .2s ease-in-out;
+          transition: left .2s ease-in-out;
+}
+.checkbox-container > div input[type=checkbox]:checked ~ label {
+  background-color: #4fbe79;
+}
+
+.checkbox-container > div input[type=checkbox]:checked ~ label:after {
+  left: 3.125rem;
+}
