@@ -11,19 +11,12 @@
                      <a href="/profile/following/find_creators?ref=user_menu">Follow creators</a>
                      <span class="flag-callout">New</span>
                   </li>
-                  <li>
-                     <a href="/profile/following/welcome?ref=user_menu">Follow Facebook friends</a>
-                  </li>
                   <li><a href="/recommendations?ref=user_menu">Recommended for you</a></li>
-                  <li>
-                     <a title="Inbox" href="/messages?ref=user_menu">Messages
-                     </a>
-                  </li>
                   <li>
                      <a title="Activity" href="/activity?ref=user_menu">Activity
                      </a>
                   </li>
-                  <li><a href="/profile/46676441?ref=user_menu">Profile</a></li>
+                  <li><a href="/users/<%= params[:id] %>/profile/about">Profile</a></li>
                   <li><a href="/profile/backings?ref=user_menu">Backed projects</a></li>
                   <li><a href="/profile/projects?ref=user_menu">My projects</a></li>
                   <li>
@@ -35,18 +28,18 @@
                   Settings
                </h3>
                <ul class="js-dropdown_group dropdown-menu">
-                  <li><a href="/user/<%= current_user['id'] %>/account">Account</a></li>
-                  <li><a href="/user/<%= current_user['id'] %>/profile">Edit profile</a></li>
+                  <li><a href="/users/<%= current_user['id'] %>/account">Account</a></li>
+                  <li><a href="/users/<%= current_user['id'] %>/profile">Edit profile</a></li>
                </ul>
             </div>
          </div>
          <div class="user-menu-footer">
             <div class="row">
                <div class="col">
-                  You're logged in as <b>Nandu</b>
+                  You're logged in as <b><%= current_user['first_name'] %></b>
                   &nbsp;
                   <span class="mobile-show"></span>
-                  <a href="/logout?ref=user_menu">Log out</a>
+                  <a href="/">Log out</a>
                </div>
             </div>
          </div>

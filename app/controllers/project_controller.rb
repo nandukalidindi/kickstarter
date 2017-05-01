@@ -43,7 +43,7 @@ class ProjectController < ApplicationController
     @poster = ActiveRecord::Base.connection.execute("SELECT * FROM users WHERE id=#{@project["posted_by"].to_i}").first
     @comments = ActiveRecord::Base.connection.execute("SELECT reviews.comment, users.first_name, users.last_name, reviews.created_at FROM reviews INNER JOIN users ON reviews.user_id = users.id WHERE reviews.type='comment' AND reviews.project_id=#{params[:id].to_i}")
     pledges = ActiveRecord::Base.connection.execute("SELECT * FROM pledges WHERE project_id=#{params[:id].to_i}")
-    @backers = pledges.count
+    @backers = pledges.map{ |x| x['id']}.uniq.count
     @pledged = 0
     pledges.each do |pledge|
       @pledged += pledge['amount'].to_f
