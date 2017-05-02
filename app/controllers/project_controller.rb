@@ -42,6 +42,8 @@ class ProjectController < ApplicationController
     @days_left = ActiveRecord::Base.connection.execute("SELECT EXTRACT(EPOCH FROM (end_date - CURRENT_TIMESTAMP))/(60*60*24) AS days_left FROM projects WHERE id=#{params[:id].to_i}").first['days_left']
     @poster = ActiveRecord::Base.connection.execute("SELECT * FROM users WHERE id=#{@project["posted_by"].to_i}").first
     @comments = ActiveRecord::Base.connection.execute("SELECT reviews.comment, users.first_name, users.last_name, reviews.created_at FROM reviews INNER JOIN users ON reviews.user_id = users.id WHERE reviews.type='comment' AND reviews.project_id=#{params[:id].to_i}")
+    @ratings = ActiveRecord::Base.connection.execute("SELECT * FROM reviews WHERE type='rating' AND project_id=#{params[:id]}")
+    @current_user_rating = @ratings.select { |x| x['user_id'] == current_user['id']}.first['rating'].to_i
     pledges = ActiveRecord::Base.connection.execute("SELECT * FROM pledges WHERE project_id=#{params[:id].to_i}")
     @backers = pledges.map{ |x| x['id']}.uniq.count
     @pledged = 0
@@ -58,6 +60,12 @@ class ProjectController < ApplicationController
     if pledge_amount > 0 && cc_card_id
       ActiveRecord::Base.connection.execute("INSERT INTO pledges(user_id, project_id, amount, cc_card_id, created_at, updated_at) VALUES(#{current_user['id'].to_i}, #{params[:id].to_i}, #{params[:pledge].to_f}, #{cc_card_id.to_i}, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)")
     end
+    redirect_to :back
+  end
+
+  def rating
+    rating = 5 - params[:rating].to_i
+    ActiveRecord::Base.connection.execute("UPDATE reviews SET rating=#{rating} WHERE user_id=#{current_user['id']} AND project_id=#{params[:id]} AND type='rating'")
     redirect_to :back
   end
 end

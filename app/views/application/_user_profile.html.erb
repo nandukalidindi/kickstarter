@@ -42,32 +42,3 @@
       </div>
    </div>
 </div>
-<div class="container-flex mobile-scroll-container px3">
-   <div class="row mobile-scroll-row">
-      <div class="col col-12">
-         <div class="nav--subnav js-nav--subnav nav--subnav--center nav--subnav--short">
-            <div class="js-nav--subnav__selected-indicator nav--subnav__selected-indicator" style="left: 437.578px; width: 71px;"></div>
-            <ul class="nav--subnav__list">
-               <li class="nav--subnav__item">
-                  <a class="nav--subnav__item__link nav--subnav__item__link--gray  js-about-link" href="/users/<%= params[:id] %>/profile/about">About
-                  </a>
-               </li>
-               <li class="nav--subnav__item">
-                  <div class="nav--subnav__item__link nav--subnav__item__link--gray js-backed-link current">Backed
-                  <span class="count">
-                  <%= locals[:backed_count] %>
-                  </span>
-                  </div>
-               </li>
-               <li class="nav--subnav__item">
-                  <a class="nav--subnav__item__link nav--subnav__item__link--gray  js-comments-link" href="/users/<%= params[:id] %>/profile/comments">Comments
-                  <span class="count">
-                  <%= locals[:comment_count] %>
-                  </span>
-                  </a>
-               </li>
-            </ul>
-         </div>
-      </div>
-   </div>
-</div>

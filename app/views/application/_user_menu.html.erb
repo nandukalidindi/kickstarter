@@ -16,7 +16,7 @@
                      <a title="Activity" href="/activity?ref=user_menu">Activity
                      </a>
                   </li>
-                  <li><a href="/users/<%= params[:id] %>/profile/about">Profile</a></li>
+                  <li><a href="/users/<%= current_user['id'] %>/profile/about">Profile</a></li>
                   <li><a href="/profile/backings?ref=user_menu">Backed projects</a></li>
                   <li><a href="/profile/projects?ref=user_menu">My projects</a></li>
                   <li>

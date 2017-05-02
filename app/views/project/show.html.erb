@@ -227,23 +227,37 @@
                                  </div>
                               </div>
                            </div>
-                           <div class="NS_projects__back_and_star py0">
-                              <div class="js-campaign-state js-campaign-state__live js-hide-unless-campaign-running pb2">
-                                <div class="field-wrapper">
-                                   <div class="character_counter_wrapper">
-                                     <input type="number" style="margin-bottom: 10px; width: 25%" class="input-text full-width" placeholder="$" id="pledge-input" project-id=<%= @project['id'] %>>
+                           <% if @project['status'] == 'FUNDED' %>
+                           <div class="acidjs-rating-stars" style="margin-bottom: 10px;">
+                             <div style="display: flex;" id="rating-stars">
+                               <% for i in 0..4 do %>
+                                 <% if i == (5 - @current_user_rating) %>
+                                   <input type="radio" checked="" name="group-2" id="group-2-<%= i %>"><label for="group-2-<%= i %>"></label>
+                                 <% else %>
+                                   <input type="radio" name="group-2" id="group-2-<%= i %>"><label for="group-2-<%= i %>"></label>
+                                 <% end %>
+                               <% end %>
+                             </div>
+                          </div>
+                           <% else %>
+                             <div class="NS_projects__back_and_star py0">
+                                <div class="js-campaign-state js-campaign-state__live js-hide-unless-campaign-running pb2">
+                                  <div class="field-wrapper">
+                                     <div class="character_counter_wrapper">
+                                       <input type="number" style="margin-bottom: 10px; width: 25%" class="input-text full-width" placeholder="$" id="pledge-input" project-id=<%= @project['id'] %>>
+                                     </div>
+                                  </div>
+                                  <button id="pledge-button" class="bttn bttn-green bttn-large block mb3"> Pledge your amount </button>
+                                   <div class="flex mb3">
+                                      <div class="ajax-container block basis50p grow-1 w100p" id="watching-widget">
+                                         <div class="Project439069323" data-conditions="[{&quot;is_starred&quot;:true}]" data-render="&quot;<div class=\&quot;NS_watches__watch js-unwatch\&quot;>\n<a class=\&quot;bttn bttn-medium bttn-green w100p\&quot; href=\&quot;/projects/thestandardsmanual/reissue-of-the-1977-epa-graphic-standards-system/unwatch\&quot;><svg class=\&quot;svg-icon__star fill-green-700\&quot; aria-hidden=\&quot;true\&quot;><use xlink:href=\&quot;#star\&quot;></use></svg>\n<span>Saved</span>\n</a></div>\n\n&quot;" data-evaluation="false"></div>
+                                         <div class="Project439069323" data-conditions="[{&quot;!is_starred&quot;:true}]" data-render="&quot;<div class=\&quot;NS_watches__watch js-watch\&quot;>\n<a class=\&quot;bttn bttn-medium bttn-shadow-light w100p\&quot; href=\&quot;/projects/thestandardsmanual/reissue-of-the-1977-epa-graphic-standards-system/watch\&quot;><svg class=\&quot;svg-icon__star fill-navy-600 icon-small\&quot; aria-hidden=\&quot;true\&quot;><use xlink:href=\&quot;#star\&quot;></use></svg>\nRemind me\n</a></div>\n\n&quot;" data-evaluation="true">
+                                         </div>
+                                      </div>
                                    </div>
                                 </div>
-                                <button id="pledge-button" class="bttn bttn-green bttn-large block mb3"> Pledge your amount </button>
-                                 <div class="flex mb3">
-                                    <div class="ajax-container block basis50p grow-1 w100p" id="watching-widget">
-                                       <div class="Project439069323" data-conditions="[{&quot;is_starred&quot;:true}]" data-render="&quot;<div class=\&quot;NS_watches__watch js-unwatch\&quot;>\n<a class=\&quot;bttn bttn-medium bttn-green w100p\&quot; href=\&quot;/projects/thestandardsmanual/reissue-of-the-1977-epa-graphic-standards-system/unwatch\&quot;><svg class=\&quot;svg-icon__star fill-green-700\&quot; aria-hidden=\&quot;true\&quot;><use xlink:href=\&quot;#star\&quot;></use></svg>\n<span>Saved</span>\n</a></div>\n\n&quot;" data-evaluation="false"></div>
-                                       <div class="Project439069323" data-conditions="[{&quot;!is_starred&quot;:true}]" data-render="&quot;<div class=\&quot;NS_watches__watch js-watch\&quot;>\n<a class=\&quot;bttn bttn-medium bttn-shadow-light w100p\&quot; href=\&quot;/projects/thestandardsmanual/reissue-of-the-1977-epa-graphic-standards-system/watch\&quot;><svg class=\&quot;svg-icon__star fill-navy-600 icon-small\&quot; aria-hidden=\&quot;true\&quot;><use xlink:href=\&quot;#star\&quot;></use></svg>\nRemind me\n</a></div>\n\n&quot;" data-evaluation="true">
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
+                             </div>
+                           <% end %>
                            <p class="mb3 mb0-lg type-12">
                               <span class="link-navy medium"><a class="navy-700 pointer" href="/help/faq/kickstarter+basics?ref=project_header#faq_41848">All or nothing.</a></span>
                               This project will only be funded if it reaches its goal by <time datetime="2017-05-26T18:00:00-04:00" data-format="llll z" class="js-adjust-time">Fri, May 26 2017 6:00 PM EDT</time>.

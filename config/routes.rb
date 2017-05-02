@@ -25,6 +25,8 @@ Rails.application.routes.draw do
 
   post 'projects/:id/pledge' => 'project#pledge'
 
+  post 'projects/:id/rating' => 'project#rating'
+
   get 'users/:id' => 'user#show'
 
   get 'users/:id/followers' => 'user#followers'

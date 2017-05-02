@@ -17,7 +17,7 @@
          <div id="growl_section" class="center jGrowl"></div>
          <div id="main_content">
             <div class="z2" id="hover_label"></div>
-            <%= render 'user_profile' %>
+            <%= render 'user_profile', locals: {backed_count: 20, comment_count: 20} %>
             <div class="container-flex mobile-scroll-container px3">
                <div class="row mobile-scroll-row">
                   <div class="col col-12">

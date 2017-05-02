@@ -62,4 +62,30 @@ $(document).ready(function(){
     child.parentNode.insertBefore(child, child.parentNode.firstChild);
   }
 
+  var ratingChildren = $("#rating-stars").children()
+  if(ratingChildren) {
+    for(var i=0; i<ratingChildren.length; i++) {
+      ratingChildren[i].addEventListener('click', sendRatingAJAX);
+    }
+  }
+
+  function sendRatingAJAX(event) {
+    var rating = event.target.attributes['for'].value.split("-")[2];
+
+    if(rating) {
+        $.ajax({
+          type: "POST",
+          url: location.href + '/rating',
+          dataType: 'json',
+          data: {rating: rating},
+          success: function (data) {
+            // location.reload();
+          },
+          error: function (data) {
+            location.reload();
+          }
+      });
+    }
+  }
+
 })

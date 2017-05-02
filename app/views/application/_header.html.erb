@@ -4,16 +4,14 @@
          <nav class="site-nav-base site-nav--search">
             <div class="site-nav__left">
                <div id="show-search-input" class="site-nav__item site-nav__item--searchbar js-searchbar js-header-livesearch">
-                  <form class="site-nav__search-form" role="search" action="/projects/search" accept-charset="UTF-8" method="get">
-                     <input name="utf8" type="hidden" value="✓">
-                     <svg class="svg-icon__search js-search-icon" aria-hidden="true">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#search"></use>
-                     </svg>
-                     <svg class="svg-icon__loading-spin js-loading-spinner hide" aria-hidden="true">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#loading-spin"></use>
-                     </svg>
-                     <input type="text" name="term" id="term" aria-label="Search projects" data-tracker-name="Header Live Search" placeholder="Search" class="site-nav__search-input js-search-term text" maxlength="200" tabindex="-1" autocomplete="off">
-                  </form>
+                 <input name="utf8" type="hidden" value="✓">
+                 <svg class="svg-icon__search js-search-icon" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#search"></use>
+                 </svg>
+                 <svg class="svg-icon__loading-spin js-loading-spinner hide" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#loading-spin"></use>
+                 </svg>
+                 <input id="search-projects" type="text" name="term" id="term" aria-label="Search projects" data-tracker-name="Header Live Search" placeholder="Search" class="site-nav__search-input js-search-term text" maxlength="200" tabindex="-1" autocomplete="off">
                </div>
             </div>
             <div class="site-nav__right">
@@ -46,7 +44,7 @@
             </div>
             <div class="site-nav__middle">
                <a class="site-nav__item site-nav__item--logo" href="/home">
-                 
+
                   <!-- <svg class="svg--ksr-logo" viewBox="0 0 354 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                      <path class="svg-fill--kick" d="M13.2157427,13.5552759 L20.3375224,3.69776954 C21.6837338,1.84097866 23.4218359,0.912583227 25.5529967,0.912583227 C27.2916828,0.912583227 28.7961689,1.50175725 30.0676233,2.68010531 C31.3384936,3.85845336 31.9745128,5.26945821 31.9745128,6.91256191 C31.9745128,8.12661748 31.6375219,9.19840092 30.9647082,10.1267964 L24.5437761,19.0464225 L32.3944374,28.5552226 C33.1793867,29.5020297 33.5724454,30.6089628 33.5724454,31.8771375 C33.5724454,33.5553908 32.9556995,34.9970818 31.7216237,36.2022105 C30.4881319,37.4084551 28.9924063,38.0110194 27.2356149,38.0110194 C25.3100361,38.0110194 23.8429285,37.4129185 22.8331239,36.2161587 L13.2157427,24.7518141 L13.2157427,31.0731605 C13.2157427,32.8775059 12.8886804,34.278468 12.234556,35.2782785 C11.0378587,37.0999198 9.29917262,38.0110194 7.01908175,38.0110194 C4.9439888,38.0110194 3.33612758,37.3415035 2.19608215,36.0019136 C1.13079379,34.7694464 0.598149607,33.1358275 0.598149607,31.0999411 L0.598149607,7.66241976 C0.598149607,5.73365593 1.14013842,4.14467143 2.22470009,2.89435041 C3.36416149,1.57317229 4.93464416,0.912583227 6.93498003,0.912583227 C8.84186956,0.912583227 10.4304575,1.57317229 11.7019118,2.89435041 C12.41152,3.62691243 12.8600625,4.36784341 13.0475392,5.11770126 C13.1596748,5.58245691 13.2157427,6.44836419 13.2157427,7.71598104 L13.2157427,13.5552759" id="Fill-1-Copy"></path>
                      <path class="svg-fill--kick" d="M48.5875213,8.38549698 L48.5875213,31.0731605 C48.5875213,33.0381898 48.0548771,34.6539549 46.9895887,35.9215717 C45.8489592,37.3147228 44.269716,38.0110194 42.2506908,38.0110194 C40.4004532,38.0110194 38.8393151,37.3593572 37.5684448,36.0554749 C36.5025724,34.9663957 35.9699282,33.3054382 35.9699282,31.0731605 L35.9699282,8.38549698 C35.9699282,5.85026329 36.5025724,4.01076824 37.5684448,2.86756977 C38.7832473,1.56424541 40.3443853,0.912583227 42.2506908,0.912583227 C44.1575804,0.912583227 45.7181344,1.55531853 46.9335209,2.84078913 C48.0361878,4.01913719 48.5875213,5.86755911 48.5875213,8.38549698" id="Fill-2-Copy"></path>
