@@ -17,12 +17,12 @@
          <div id="growl_section" class="center jGrowl"></div>
          <div id="main_content">
             <div class="z2" id="hover_label"></div>
-            <%= render 'user_profile', locals: {backed_count: 20, comment_count: 20} %>
+            <%= render 'user_profile', locals: {backed_count: @projects.count} %>
             <div class="container-flex mobile-scroll-container px3">
                <div class="row mobile-scroll-row">
                   <div class="col col-12">
                      <div class="nav--subnav js-nav--subnav nav--subnav--center nav--subnav--short">
-                        <div class="js-nav--subnav__selected-indicator nav--subnav__selected-indicator" style="left: 353.734px; width: 40px;"></div>
+                        <div class="js-nav--subnav__selected-indicator nav--subnav__selected-indicator" style="left: 353.734px; width: 60px;"></div>
                         <ul class="nav--subnav__list">
                            <li class="nav--subnav__item">
                               <div class="nav--subnav__item__link nav--subnav__item__link--gray js-about-link current">About
@@ -31,14 +31,14 @@
                            <li class="nav--subnav__item">
                               <a class="nav--subnav__item__link nav--subnav__item__link--gray  js-backed-link" href="/users/<%= params[:id] %>/profile/backed">Backed
                               <span class="count">
-                              132
+                              <%= @projects.count %>
                               </span>
                               </a>
                            </li>
                            <li class="nav--subnav__item">
                               <a class="nav--subnav__item__link nav--subnav__item__link--gray  js-comments-link" href="/users/<%= params[:id] %>/profile/comments">Comments
                               <span class="count">
-                              329
+                              <%= @comments.count %>
                               </span>
                               </a>
                            </li>
