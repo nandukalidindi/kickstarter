@@ -48,6 +48,13 @@ $(document).ready(function(){
     }
   });
 
+  $('#term').keypress(function (e) {
+    var str = $('#term').val();
+    var domain = "/projects?search=" + str;
+    if (e.keyCode == 13) {
+        window.location.href = domain;
+    }
+  });
 
   var togglableChildren = $("#type_list_divs").children()
   if(togglableChildren) {

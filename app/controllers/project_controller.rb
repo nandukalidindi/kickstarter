@@ -1,7 +1,7 @@
 class ProjectController < ApplicationController
-
+  
   def index
-    projects = ActiveRecord::Base.connection.execute('SELECT * FROM projects')
+    projects = ActiveRecord::Base.connection.execute("SELECT * FROM projects WHERE title like '%#{params[:search]}%'")
     index_sql = "SELECT projects.id, projects.title, projects.description, projects.maximum_fund, projects.search_thumbnail_small, projects.search_thumbnail_large, projects.video_url, users.first_name, users.last_name, projects.location, EXTRACT(EPOCH FROM (projects.end_date - CURRENT_TIMESTAMP))/(60*60*24) AS days_left , pledge_sums.pledge_sum
                 FROM projects
                 FULL OUTER JOIN (
