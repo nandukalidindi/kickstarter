@@ -114,8 +114,8 @@
                            <div class="js-category-nav category-nav border-left mt3 mb3 ml2 mr2">
                               <ul class="nav f5 list" id="type_list_divs">
                                 <% @types.each do |type| %>
-                                  <li>
-                                     <div id="discover_<%= type["type"] %>" class="green-dark link" href="/discover/categories/art">
+                                  <li style="cursor: pointer;">
+                                     <div id="discover_<%= type["type"] %>" class="green-dark link" style="font-weight: bold;">
                                      <%= type["type"] %>
                                     </div>
                                   </li>

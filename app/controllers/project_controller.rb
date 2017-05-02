@@ -66,9 +66,9 @@ class ProjectController < ApplicationController
 
   def rating
     rating = 5 - params[:rating].to_i
-    count = ActiveRecord::Base.connection.execute("SELECT COUNT(*) FROM reviews WHERE user_id=#{current_user['id'].to_i} AND project_id=#{params[:id].to_i} AND type='rating'")
-    if count > 0
-      ActiveRecord::Base.connection.execute("UPDATE reviews SET rating=#{rating} AND updated_at=CURRENT_TIMESTAMP WHERE user_id=#{current_user['id'].to_i} AND project_id=#{params[:id].to_i} AND type='rating'")
+    ratings = ActiveRecord::Base.connection.execute("SELECT * FROM reviews WHERE user_id=#{current_user['id'].to_i} AND project_id=#{params[:id].to_i} AND type='rating'")
+    if ratings.count > 0
+      ActiveRecord::Base.connection.execute("UPDATE reviews SET rating=#{rating}, updated_at=CURRENT_TIMESTAMP WHERE user_id=#{current_user['id'].to_i} AND project_id=#{params[:id].to_i} AND type='rating'")
     else
       ActiveRecord::Base.connection.execute("INSERT INTO reviews(user_id, project_id, type, rating, created_at, updated_at) VALUES(#{current_user['id'].to_i}, #{params[:id].to_i}, 'rating', #{rating}, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)")
     end
