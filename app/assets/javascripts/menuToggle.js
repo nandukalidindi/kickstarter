@@ -88,4 +88,19 @@ $(document).ready(function(){
     }
   }
 
+  $("#like_unlike").unbind('click').bind('click', function(event) {
+    $.ajax({
+      type: "POST",
+      url: location.href + '/like',
+      dataType: 'json',
+      data: {likeType: event.target.innerText},
+      success: function (data) {
+        // location.reload();
+      },
+      error: function (data) {
+        location.reload();
+      }
+    });
+  });
+
 })

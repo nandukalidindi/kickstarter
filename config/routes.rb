@@ -27,6 +27,8 @@ Rails.application.routes.draw do
 
   post 'projects/:id/rating' => 'project#rating'
 
+  post 'projects/:id/like' => 'project#like'
+
   get 'users/:id' => 'user#show'
 
   get 'users/:id/followers' => 'user#followers'

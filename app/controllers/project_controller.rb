@@ -43,7 +43,8 @@ class ProjectController < ApplicationController
     @poster = ActiveRecord::Base.connection.execute("SELECT * FROM users WHERE id=#{@project["posted_by"].to_i}").first
     @comments = ActiveRecord::Base.connection.execute("SELECT reviews.comment, users.first_name, users.last_name, reviews.created_at FROM reviews INNER JOIN users ON reviews.user_id = users.id WHERE reviews.type='comment' AND reviews.project_id=#{params[:id].to_i}")
     @ratings = ActiveRecord::Base.connection.execute("SELECT * FROM reviews WHERE type='rating' AND project_id=#{params[:id]}")
-    @current_user_rating = @ratings.select { |x| x['user_id'] == current_user['id']}.first['rating'].to_i
+    @like = ((ActiveRecord::Base.connection.execute("SELECT COUNT(*) FROM reviews WHERE type='like' AND project_id=#{params[:id]} AND user_id=#{current_user['id']}") || []).first || {})['count'].to_i
+    @current_user_rating = ((@ratings.select { |x| x['user_id'] == current_user['id']} || []).first || {})['rating'].to_i
     pledges = ActiveRecord::Base.connection.execute("SELECT * FROM pledges WHERE project_id=#{params[:id].to_i}")
     @backers = pledges.map{ |x| x['id']}.uniq.count
     @pledged = 0
@@ -65,7 +66,16 @@ class ProjectController < ApplicationController
 
   def rating
     rating = 5 - params[:rating].to_i
-    ActiveRecord::Base.connection.execute("UPDATE reviews SET rating=#{rating} WHERE user_id=#{current_user['id']} AND project_id=#{params[:id]} AND type='rating'")
+    ActiveRecord::Base.connection.execute("UPDATE reviews SET rating=#{rating} WHERE user_id=#{current_user['id'].to_i} AND project_id=#{params[:id].to_i} AND type='rating'")
+    redirect_to :back
+  end
+
+  def like
+    if params[:likeType] == "UNLIKE"
+      ActiveRecord::Base.connection.execute("DELETE FROM reviews WHERE type='like' AND user_id=#{current_user['id'].to_i} AND project_id=#{params[:id].to_i}")
+    else
+      ActiveRecord::Base.connection.execute("INSERT INTO reviews(user_id, project_id, type, created_at, updated_at) VALUES (#{current_user['id'].to_i}, #{params[:id].to_i}, 'like', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)")
+    end
     redirect_to :back
   end
 end
