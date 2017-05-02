@@ -42,8 +42,11 @@ class ProjectController < ApplicationController
     @days_left = ActiveRecord::Base.connection.execute("SELECT EXTRACT(EPOCH FROM (end_date - CURRENT_TIMESTAMP))/(60*60*24) AS days_left FROM projects WHERE id=#{params[:id].to_i}").first['days_left']
     @poster = ActiveRecord::Base.connection.execute("SELECT * FROM users WHERE id=#{@project["posted_by"].to_i}").first
     @comments = ActiveRecord::Base.connection.execute("SELECT reviews.comment, users.first_name, users.last_name, reviews.created_at FROM reviews INNER JOIN users ON reviews.user_id = users.id WHERE reviews.type='comment' AND reviews.project_id=#{params[:id].to_i}")
+    @ratings = ActiveRecord::Base.connection.execute("SELECT * FROM reviews WHERE type='rating' AND project_id=#{params[:id]}")
+    @like = ((ActiveRecord::Base.connection.execute("SELECT COUNT(*) FROM reviews WHERE type='like' AND project_id=#{params[:id]} AND user_id=#{current_user['id']}") || []).first || {})['count'].to_i
+    @current_user_rating = ((@ratings.select { |x| x['user_id'] == current_user['id']} || []).first || {})['rating'].to_i
     pledges = ActiveRecord::Base.connection.execute("SELECT * FROM pledges WHERE project_id=#{params[:id].to_i}")
-    @backers = pledges.count
+    @backers = pledges.map{ |x| x['id']}.uniq.count
     @pledged = 0
     pledges.each do |pledge|
       @pledged += pledge['amount'].to_f
@@ -57,6 +60,34 @@ class ProjectController < ApplicationController
     cc_card_id = (ActiveRecord::Base.connection.execute("SELECT id FROM credit_cards WHERE user_id=#{current_user['id'].to_i} AND is_default=true AND is_enabled=true").first || {})['id']
     if pledge_amount > 0 && cc_card_id
       ActiveRecord::Base.connection.execute("INSERT INTO pledges(user_id, project_id, amount, cc_card_id, created_at, updated_at) VALUES(#{current_user['id'].to_i}, #{params[:id].to_i}, #{params[:pledge].to_f}, #{cc_card_id.to_i}, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)")
+    end
+    redirect_to :back
+  end
+
+  def rating
+    rating = 5 - params[:rating].to_i
+    ratings = ActiveRecord::Base.connection.execute("SELECT * FROM reviews WHERE user_id=#{current_user['id'].to_i} AND project_id=#{params[:id].to_i} AND type='rating'")
+    if ratings.count > 0
+      ActiveRecord::Base.connection.execute("UPDATE reviews SET rating=#{rating}, updated_at=CURRENT_TIMESTAMP WHERE user_id=#{current_user['id'].to_i} AND project_id=#{params[:id].to_i} AND type='rating'")
+    else
+      ActiveRecord::Base.connection.execute("INSERT INTO reviews(user_id, project_id, type, rating, created_at, updated_at) VALUES(#{current_user['id'].to_i}, #{params[:id].to_i}, 'rating', #{rating}, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)")
+    end
+
+    redirect_to :back
+  end
+
+  def like
+    if params[:likeType] == "UNLIKE"
+      ActiveRecord::Base.connection.execute("DELETE FROM reviews WHERE type='like' AND user_id=#{current_user['id'].to_i} AND project_id=#{params[:id].to_i}")
+    else
+      ActiveRecord::Base.connection.execute("INSERT INTO reviews(user_id, project_id, type, created_at, updated_at) VALUES (#{current_user['id'].to_i}, #{params[:id].to_i}, 'like', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)")
+    end
+    redirect_to :back
+  end
+
+  def comment
+    if params[:comment].length > 0
+      ActiveRecord::Base.connection.execute("INSERT INTO reviews(user_id, project_id, type, comment, created_at, updated_at) VALUES (#{current_user['id'].to_i}, #{params[:id].to_i}, 'comment', '#{params[:comment]}', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)")
     end
     redirect_to :back
   end

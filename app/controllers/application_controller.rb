@@ -6,6 +6,8 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
 
   def home
+    @types = ActiveRecord::Base.connection.execute("SELECT DISTINCT(type) FROM projects")
+    @type_projects = ActiveRecord::Base.connection.execute("SELECT * FROM projects WHERE id IN ( SELECT MAX(id) FROM projects GROUP BY type )")
   end
 
   def current_user

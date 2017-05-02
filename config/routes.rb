@@ -25,6 +25,12 @@ Rails.application.routes.draw do
 
   post 'projects/:id/pledge' => 'project#pledge'
 
+  post 'projects/:id/rating' => 'project#rating'
+
+  post 'projects/:id/comment' => 'project#comment', :as => 'project_comments'
+
+  post 'projects/:id/like' => 'project#like'
+
   get 'users/:id' => 'user#show'
 
   get 'users/:id/followers' => 'user#followers'

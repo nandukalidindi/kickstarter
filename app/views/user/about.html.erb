@@ -17,55 +17,12 @@
          <div id="growl_section" class="center jGrowl"></div>
          <div id="main_content">
             <div class="z2" id="hover_label"></div>
-            <div id="running-board-wrap">
-               <div class="grid-container" id="running-board">
-                  <div class="NS_users__profile ratio-16-9">
-                     <div class="grid-row">
-                        <div class="col-full">
-                           <div class="center" id="profile_avatar">
-                              <a href="/profile/zenxacred"><img class="avatar-image" alt="" style="height: auto;" src="https://ksr-ugc.imgix.net/assets/006/044/224/3df7d34aa2b9b21f46d97b39afde17ce_original.jpeg?w=160&amp;h=160&amp;fit=crop&amp;v=1470016008&amp;auto=format&amp;q=92&amp;s=048c15728b5b0daecb3d67c365c710de" width="160" height="160"></a>
-                           </div>
-                           <div class="profile_bio center mb6">
-                              <h2 class="mb2">
-                                 <a href="/profile/zenxacred">Zen L</a>
-                              </h2>
-                              <p class="normal_type mb1">
-                                 <span class="backed">
-                                 Backed 132 projects
-                                 </span>
-                                 <span class="divider">
-                                 ·
-                                 </span>
-                                 <span class="location">
-                                 <a href="/discover/advanced?backed=-1&amp;ref=profile_location&amp;state=live&amp;woe_id=15015372">Kyoto-shi, Japan</a>
-                                 </span>
-                                 <span class="divider">
-                                 ·
-                                 </span>
-                                 <span class="joined">
-                                 Joined <time datetime="2011-04-22T04:55:51-04:00" data-format="MMM YYYY" class="js-adjust-time">Apr 2011</time>
-                                 </span>
-                              </p>
-                              <div class="mr2 inline-block btn p0 mt2" style="border: 0; border-radius: 6px;"></div>
-                           </div>
-                           <div id="category_circle">
-                              <div id="half_circle_border"></div>
-                              <div id="half_circle"></div>
-                              <div id="small_circle" style="padding: 0px;">
-                                 <canvas class="flot-base" width="77" height="77" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 77px; height: 77px;"></canvas>
-                                 <canvas class="flot-overlay" width="77" height="77" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 77px; height: 77px;"></canvas>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
+            <%= render 'user_profile', locals: {backed_count: @projects.count, user: @user, is_following: @is_following} %>
             <div class="container-flex mobile-scroll-container px3">
                <div class="row mobile-scroll-row">
                   <div class="col col-12">
                      <div class="nav--subnav js-nav--subnav nav--subnav--center nav--subnav--short">
-                        <div class="js-nav--subnav__selected-indicator nav--subnav__selected-indicator" style="left: 353.734px; width: 40px;"></div>
+                        <div class="js-nav--subnav__selected-indicator nav--subnav__selected-indicator" style="left: 353.734px; width: 60px;"></div>
                         <ul class="nav--subnav__list">
                            <li class="nav--subnav__item">
                               <div class="nav--subnav__item__link nav--subnav__item__link--gray js-about-link current">About
@@ -74,14 +31,14 @@
                            <li class="nav--subnav__item">
                               <a class="nav--subnav__item__link nav--subnav__item__link--gray  js-backed-link" href="/users/<%= params[:id] %>/profile/backed">Backed
                               <span class="count">
-                              132
+                              <%= @projects.count %>
                               </span>
                               </a>
                            </li>
                            <li class="nav--subnav__item">
                               <a class="nav--subnav__item__link nav--subnav__item__link--gray  js-comments-link" href="/users/<%= params[:id] %>/profile/comments">Comments
                               <span class="count">
-                              329
+                              <%= @comments.count %>
                               </span>
                               </a>
                            </li>

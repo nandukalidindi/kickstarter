@@ -18,55 +18,12 @@
          <div id="growl_section" class="center jGrowl"></div>
          <div id="main_content">
             <div class="z2" id="hover_label"></div>
-            <div id="running-board-wrap">
-               <div class="grid-container" id="running-board">
-                  <div class="NS_users__profile ratio-16-9">
-                     <div class="grid-row">
-                        <div class="col-full">
-                           <div class="center" id="profile_avatar">
-                              <a href="/profile/zenxacred"><img class="avatar-image" alt="" style="height: auto;" src="https://ksr-ugc.imgix.net/assets/006/044/224/3df7d34aa2b9b21f46d97b39afde17ce_original.jpeg?w=160&amp;h=160&amp;fit=crop&amp;v=1470016008&amp;auto=format&amp;q=92&amp;s=048c15728b5b0daecb3d67c365c710de" width="160" height="160"></a>
-                           </div>
-                           <div class="profile_bio center mb6">
-                              <h2 class="mb2">
-                                 <a href="/profile/zenxacred">Zen L</a>
-                              </h2>
-                              <p class="normal_type mb1">
-                                 <span class="backed">
-                                 Backed 132 projects
-                                 </span>
-                                 <span class="divider">
-                                 ·
-                                 </span>
-                                 <span class="location">
-                                 <a href="/discover/advanced?backed=-1&amp;ref=profile_location&amp;state=live&amp;woe_id=15015372">Kyoto-shi, Japan</a>
-                                 </span>
-                                 <span class="divider">
-                                 ·
-                                 </span>
-                                 <span class="joined">
-                                 Joined <time datetime="2011-04-22T04:55:51-04:00" data-format="MMM YYYY" class="js-adjust-time">Apr 2011</time>
-                                 </span>
-                              </p>
-                              <div class="mr2 inline-block btn p0 mt2" style="border: 0; border-radius: 6px;"></div>
-                           </div>
-                           <div id="category_circle">
-                              <div id="half_circle_border"></div>
-                              <div id="half_circle"></div>
-                              <div id="small_circle" style="padding: 0px;">
-                                 <canvas class="flot-base" width="77" height="77" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 77px; height: 77px;"></canvas>
-                                 <canvas class="flot-overlay" width="77" height="77" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 77px; height: 77px;"></canvas>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
+            <%= render 'user_profile', locals: {backed_count: @projects.count, user: @user, is_following: @is_following} %>
             <div class="container-flex mobile-scroll-container px3">
                <div class="row mobile-scroll-row">
                   <div class="col col-12">
                      <div class="nav--subnav js-nav--subnav nav--subnav--center nav--subnav--short">
-                        <div class="js-nav--subnav__selected-indicator nav--subnav__selected-indicator" style="left: 552.609px; width: 93px;"></div>
+                        <div class="js-nav--subnav__selected-indicator nav--subnav__selected-indicator" style="left: 545.609px; width: 93px;"></div>
                         <ul class="nav--subnav__list">
                            <li class="nav--subnav__item">
                               <a class="nav--subnav__item__link nav--subnav__item__link--gray  js-about-link" href="/users/<%= params[:id] %>/profile/about">About
@@ -75,14 +32,14 @@
                            <li class="nav--subnav__item">
                               <a class="nav--subnav__item__link nav--subnav__item__link--gray  js-backed-link" href="/users/<%= params[:id] %>/profile/backed">Backed
                               <span class="count">
-                              132
+                              <%= @projects.count %>
                               </span>
                               </a>
                            </li>
                            <li class="nav--subnav__item">
                               <div class="nav--subnav__item__link nav--subnav__item__link--gray js-comments-link current">Comments
                               <span class="count">
-                              329
+                              <%= @comments.count %>
                               </span>
                             </div>
                            </li>
@@ -104,118 +61,20 @@
                            <ul class="mobius">
                               <li class="page" data-last_page="false" data-page_number="1">
                                  <ol id="activity">
-                                    <li class="activity-comment-project">
-                                       <span class="quote">“</span>
-                                       <p class="body">@steve A: just checked their site
-                                          "With care, the stickers can be returned to the backing sheet and used multiple times."
-                                       </p>
-                                       <p>
-                                          <a class="read-more" href="/projects/1350948450/gloomhaven-second-printing/comments?cursor=16619152#comment-16619151"><time datetime="2017-05-01T14:33:56-04:00" data-format="ll" class="js-adjust-time">May 1 2017</time></a> on <b>Gloomhaven (Second Printing)</b>
-                                       </p>
-                                    </li>
-                                    <li class="activity-comment-project">
-                                       <span class="quote">“</span>
-                                       <p class="body">@tothepoint: thanks so much for all the info! those removable stickers look nice. only question now is that, do they go back on the sheet? xD</p>
-                                       <p>
-                                          <a class="read-more" href="/projects/1350948450/gloomhaven-second-printing/comments?cursor=16619099#comment-16619098"><time datetime="2017-05-01T14:29:00-04:00" data-format="ll" class="js-adjust-time">May 1 2017</time></a> on <b>Gloomhaven (Second Printing)</b>
-                                       </p>
-                                    </li>
-                                    <li class="activity-comment-project">
-                                       <span class="quote">“</span>
-                                       <p class="body">what are the standees for?</p>
-                                       <p>
-                                          <a class="read-more" href="/projects/1350948450/gloomhaven-second-printing/comments?cursor=16619010#comment-16619009"><time datetime="2017-05-01T14:19:15-04:00" data-format="ll" class="js-adjust-time">May 1 2017</time></a> on <b>Gloomhaven (Second Printing)</b>
-                                       </p>
-                                    </li>
-                                    <li class="activity-comment-project">
-                                       <span class="quote">“</span>
-                                       <p class="body">Hello. I emailed for replacement parts and I got an email back. But haven't received anything yet. Just following up.</p>
-                                       <p>
-                                          <a class="read-more" href="/projects/2074786394/vast-the-crystal-caverns-second-printing-with-mini/comments?cursor=16548181#comment-16548180"><time datetime="2017-04-24T00:26:47-04:00" data-format="ll" class="js-adjust-time">Apr 24 2017</time></a> on <b>Vast: The Crystal Caverns - Second Printing with Miniatures</b>
-                                       </p>
-                                    </li>
-                                    <li class="activity-comment-project">
-                                       <span class="quote">“</span>
-                                       <p class="body">3 days later, I ask once more. :/
-                                          Does international get tracking numbers?
-                                       </p>
-                                       <p>
-                                          <a class="read-more" href="/projects/michaelmindes/yokohama-deluxe-by-hisashi-hayashi-and-tmg/comments?cursor=16548170#comment-16548169"><time datetime="2017-04-24T00:24:26-04:00" data-format="ll" class="js-adjust-time">Apr 24 2017</time></a> on <b>YOKOHAMA Deluxe! by Hisashi Hayashi &amp; TMG</b>
-                                       </p>
-                                    </li>
-                                    <li class="activity-comment-project">
-                                       <span class="quote">“</span>
-                                       <p class="body">I'm guessing international gets no tracking number?</p>
-                                       <p>
-                                          <a class="read-more" href="/projects/michaelmindes/yokohama-deluxe-by-hisashi-hayashi-and-tmg/comments?cursor=16529416#comment-16529415"><time datetime="2017-04-21T05:47:24-04:00" data-format="ll" class="js-adjust-time">Apr 21 2017</time></a> on <b>YOKOHAMA Deluxe! by Hisashi Hayashi &amp; TMG</b>
-                                       </p>
-                                    </li>
-                                    <li class="activity-comment-project">
-                                       <span class="quote">“</span>
-                                       <p class="body">got that 48 hour left email. backed for combo gold! let's see how fast these dragons get to Japan! :)</p>
-                                       <p>
-                                          <a class="read-more" href="/projects/laywastegames/dragoon-the-rogue-and-barbarian-expansion-reprint/comments?cursor=16426304#comment-16426303"><time datetime="2017-04-09T12:16:04-04:00" data-format="ll" class="js-adjust-time">Apr 9 2017</time></a> on <b>DRAGOON: The Rogue and Barbarian Expansion + Reprint</b>
-                                       </p>
-                                    </li>
-                                    <li class="activity-comment-project">
-                                       <span class="quote">“</span>
-                                       <p class="body">arrived in japan today. i ordered a clock kit in crowdox. i'm guessing that will arrive later, yes?</p>
-                                       <p>
-                                          <a class="read-more" href="/projects/maydaygames/crokinole-2016-hardwood-edition-2-4-player-dexteri/comments?cursor=16364796#comment-16364795"><time datetime="2017-04-03T01:54:01-04:00" data-format="ll" class="js-adjust-time">Apr 3 2017</time></a> on <b>Crokinole 2017 Hardwood Edition 2-4 Player Dexterity Game</b>
-                                       </p>
-                                    </li>
-                                    <li class="activity-comment-project">
-                                       <span class="quote">“</span>
-                                       <p class="body">Quick question: the 18 bonus cards. August, yes? There weren't any bonus cards in the box when my copy arrived.</p>
-                                       <p>
-                                          <a class="read-more" href="/projects/2074786394/vast-the-crystal-caverns-second-printing-with-mini/comments?cursor=16352933#comment-16352932"><time datetime="2017-04-01T15:26:20-04:00" data-format="ll" class="js-adjust-time">Apr 1 2017</time></a> on <b>Vast: The Crystal Caverns - Second Printing with Miniatures</b>
-                                       </p>
-                                    </li>
-                                    <li class="activity-comment-project">
-                                       <span class="quote">“</span>
-                                       <p class="body">@max: 3 red cubes. 1 for the dragon. 2 for the knight.</p>
-                                       <p>
-                                          <a class="read-more" href="/projects/2074786394/vast-the-crystal-caverns-second-printing-with-mini/comments?cursor=16349708#comment-16349707"><time datetime="2017-04-01T05:48:51-04:00" data-format="ll" class="js-adjust-time">Apr 1 2017</time></a> on <b>Vast: The Crystal Caverns - Second Printing with Miniatures</b>
-                                       </p>
-                                    </li>
+                                   <% @comments.each do |comment| %>
+                                     <li class="activity-comment-project">
+                                        <span class="quote">“</span>
+                                        <p class="body">
+                                          <%= comment['comment'] %>
+                                        </p>
+                                        <p>
+                                           <a class="read-more" href="/projects/1350948450/gloomhaven-second-printing/comments?cursor=16619152#comment-16619151"><time datetime="2017-05-01T14:33:56-04:00" data-format="ll" class="js-adjust-time"><%= comment['created_at'] %></time></a> on <b><%= comment['title'] %></b>
+                                        </p>
+                                     </li>
+                                   <% end %>
                                  </ol>
                               </li>
                            </ul>
-                           <div class="load_more">
-                              <div class="loading">
-                                 <img src="https://static.kickstarter.com/assets/icons/loading-small-a25feb0222a994468bf211976c47036a664ab4d3280c072d19a21d8d8eae8434.gif" alt="Loading small">
-                                 <div class="copy">Please wait</div>
-                                 <div class="clear"></div>
-                              </div>
-                           </div>
-                           <div class="mini-footer--sticky js-mini-footer--sticky">
-                              <footer class="py3 border-top js-mini-footer" role="contentinfo">
-                                 <div class="grid-container">
-                                    <div class="grid-row">
-                                       <div class="col-18-24">
-                                          <ul class="js-mini-footer__links">
-                                             <li class="display-inline ml3 type-12"><a href="/blog?ref=footer">Blog</a></li>
-                                             <li class="display-inline ml3 type-12"><a href="/help?ref=footer">Help</a></li>
-                                             <li class="display-inline ml3 type-12"><a href="/help/handbook?ref=footer">Creator Handbook</a></li>
-                                             <li class="display-inline ml3 type-12"><a href="/rules?ref=footer">Our Rules</a></li>
-                                             <li class="display-inline ml3 type-12"><a href="/help/stats?ref=footer">Stats</a></li>
-                                             <li class="display-inline ml3 type-12"><a href="/press?ref=footer">Press</a></li>
-                                             <li class="display-inline ml3 type-12 mobile-hide"><a href="/team?ref=footer">Team</a></li>
-                                             <li class="display-inline ml3 type-12"><a href="/jobs?ref=footer">Jobs</a></li>
-                                          </ul>
-                                       </div>
-                                       <div class="col-6-24">
-                                          <div class="type-12 right">
-                                             ©
-                                             2017
-                                             Kickstarter, PBC
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </footer>
-                           </div>
-                           <div class="pagination"><span class="previous_page disabled">← Previous</span> <em class="current">1</em> <a rel="next" href="/profile/zenxacred/comments?page=2">2</a> <a href="/profile/zenxacred/comments?page=3">3</a> <a href="/profile/zenxacred/comments?page=4">4</a> <a href="/profile/zenxacred/comments?page=5">5</a> <a href="/profile/zenxacred/comments?page=6">6</a> <a href="/profile/zenxacred/comments?page=7">7</a> <a href="/profile/zenxacred/comments?page=8">8</a> <a href="/profile/zenxacred/comments?page=9">9</a> <span class="gap">…</span> <a href="/profile/zenxacred/comments?page=32">32</a> <a href="/profile/zenxacred/comments?page=33">33</a> <a class="next_page" rel="next" href="/profile/zenxacred/comments?page=2">Next →</a></div>
                         </div>
                      </div>
                   </div>

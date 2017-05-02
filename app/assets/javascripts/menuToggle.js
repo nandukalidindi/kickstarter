@@ -55,6 +55,77 @@ $(document).ready(function(){
         window.location.href = domain;
     }
   });
+
+  var togglableChildren = $("#type_list_divs").children()
+  if(togglableChildren) {
+    for(var i=0; i<togglableChildren.length; i++) {
+      togglableChildren[i].children[0].addEventListener('click', showRelevantTypeProject);
+    }
+  }
+
+  function showRelevantTypeProject(event) {
+    var child = document.getElementById(event.target.id + "_project");
+
+    child.parentNode.insertBefore(child, child.parentNode.firstChild);
+  }
+
+  var ratingChildren = $("#rating-stars").children()
+  if(ratingChildren) {
+    for(var i=0; i<ratingChildren.length; i++) {
+      ratingChildren[i].addEventListener('click', sendRatingAJAX);
+    }
+  }
+
+  function sendRatingAJAX(event) {
+    var rating = event.target.attributes['for'].value.split("-")[2];
+
+    if(rating) {
+        $.ajax({
+          type: "POST",
+          url: location.href + '/rating',
+          dataType: 'json',
+          data: {rating: rating},
+          success: function (data) {
+            // location.reload();
+          },
+          error: function (data) {
+            location.reload();
+          }
+      });
+    }
+  }
+
+  $("#like_unlike").unbind('click').bind('click', function(event) {
+    $.ajax({
+      type: "POST",
+      url: location.href + '/like',
+      dataType: 'json',
+      data: {likeType: event.target.innerText},
+      success: function (data) {
+        // location.reload();
+      },
+      error: function (data) {
+        location.reload();
+      }
+    });
+  });
+
+  $("#project-comment-submit").unbind('click').bind('click', function(event) {
+    var comment = $("#project-comment").val();
+    $.ajax({
+      type: "POST",
+      url: location.href + '/comment',
+      dataType: 'json',
+      data: {comment: comment},
+      success: function (data) {
+        // location.reload();
+      },
+      error: function (data) {
+        location.reload();
+      }
+    });
+
+  })
 })
 
 

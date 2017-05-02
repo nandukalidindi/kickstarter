@@ -163,14 +163,16 @@
                                        <div class="col-sm-22-24 col-offset-sm-1-24 col-offset-md-0-24">
                                           <div class="py2 py3-lg flex">
                                              <div class="flex items-center scroll-x">
-                                                <a class="nowrap navy-700 flex items-center medium mr3 type-12" href="/discover/recommended?ref=pwl_badge">
-                                                   <div class="pill bg-ksr-green-700 inline-block h4 w4 flex items-center justify-center mr1">
-                                                      <svg class="svg-icon__kickstarter nowrap fill-white icon-small test-pwl-badge" aria-hidden="true">
-                                                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#kickstarter"></use>
-                                                      </svg>
+                                                <div style="width: 60px; cursor: pointer;" class="nowrap navy-700 flex items-center medium mr3 type-12" id="like_unlike">
+                                                   <div style="width: 100%;" class="pill bg-ksr-green-700 inline-block h4 w4 flex items-center justify-center mr1">
+                                                     <% if @like >= 1 %>
+                                                      UNLIKE
+                                                     <% else %>
+                                                      LIKE
+                                                     <% end %>
                                                    </div>
-                                                   Project We Love
-                                                </a>
+
+                                                </div>
                                                 <a class="nowrap navy-700 flex items-center medium mr3 type-12" href="/discover/categories/design/graphic%20design?ref=category">
                                                    <div class="inline-block w4 h4 rounded inline-flex items-center justify-center mr1 bg-navy-400">
                                                       <svg class="svg-icon__compass fill-navy-700 icon-small" aria-hidden="true">
@@ -199,7 +201,7 @@
                            <div class="NS_campaigns__stats">
                               <div class="digits_5" id="stats"></div>
                               <div class="h1_2 w100p bg-navy-400 mb2 mb3-md mt3-md mt0-lg">
-                                 <div class="bg-green-400 h100p" style="width: <%= (@pledged/(@project['maximum_fund'].to_f))*100 %>%;"></div>
+                                 <div class="bg-green-400 h100p" style="width: <%= [(@pledged/(@project['maximum_fund'].to_f))*100, 100].min %>%;"></div>
                               </div>
                               <div class="flex flex-column-lg mb4 mb5-sm">
                                  <div class="mb2-lg">
@@ -227,23 +229,37 @@
                                  </div>
                               </div>
                            </div>
-                           <div class="NS_projects__back_and_star py0">
-                              <div class="js-campaign-state js-campaign-state__live js-hide-unless-campaign-running pb2">
-                                <div class="field-wrapper">
-                                   <div class="character_counter_wrapper">
-                                     <input type="number" style="margin-bottom: 10px; width: 25%" class="input-text full-width" placeholder="$" id="pledge-input" project-id=<%= @project['id'] %>>
+                           <% if @project['status'] == 'FUNDED' %>
+                           <div class="acidjs-rating-stars" style="margin-bottom: 10px;">
+                             <div style="display: flex;" id="rating-stars">
+                               <% for i in 0..4 do %>
+                                 <% if i == (5 - @current_user_rating) %>
+                                   <input type="radio" checked="" name="group-2" id="group-2-<%= i %>"><label for="group-2-<%= i %>"></label>
+                                 <% else %>
+                                   <input type="radio" name="group-2" id="group-2-<%= i %>"><label for="group-2-<%= i %>"></label>
+                                 <% end %>
+                               <% end %>
+                             </div>
+                          </div>
+                           <% else %>
+                             <div class="NS_projects__back_and_star py0">
+                                <div class="js-campaign-state js-campaign-state__live js-hide-unless-campaign-running pb2">
+                                  <div class="field-wrapper">
+                                     <div class="character_counter_wrapper">
+                                       <input type="number" style="margin-bottom: 10px; width: 25%" class="input-text full-width" placeholder="$" id="pledge-input" project-id=<%= @project['id'] %>>
+                                     </div>
+                                  </div>
+                                  <button id="pledge-button" class="bttn bttn-green bttn-large block mb3"> Pledge your amount </button>
+                                   <div class="flex mb3">
+                                      <div class="ajax-container block basis50p grow-1 w100p" id="watching-widget">
+                                         <div class="Project439069323" data-conditions="[{&quot;is_starred&quot;:true}]" data-render="&quot;<div class=\&quot;NS_watches__watch js-unwatch\&quot;>\n<a class=\&quot;bttn bttn-medium bttn-green w100p\&quot; href=\&quot;/projects/thestandardsmanual/reissue-of-the-1977-epa-graphic-standards-system/unwatch\&quot;><svg class=\&quot;svg-icon__star fill-green-700\&quot; aria-hidden=\&quot;true\&quot;><use xlink:href=\&quot;#star\&quot;></use></svg>\n<span>Saved</span>\n</a></div>\n\n&quot;" data-evaluation="false"></div>
+                                         <div class="Project439069323" data-conditions="[{&quot;!is_starred&quot;:true}]" data-render="&quot;<div class=\&quot;NS_watches__watch js-watch\&quot;>\n<a class=\&quot;bttn bttn-medium bttn-shadow-light w100p\&quot; href=\&quot;/projects/thestandardsmanual/reissue-of-the-1977-epa-graphic-standards-system/watch\&quot;><svg class=\&quot;svg-icon__star fill-navy-600 icon-small\&quot; aria-hidden=\&quot;true\&quot;><use xlink:href=\&quot;#star\&quot;></use></svg>\nRemind me\n</a></div>\n\n&quot;" data-evaluation="true">
+                                         </div>
+                                      </div>
                                    </div>
                                 </div>
-                                <button id="pledge-button" class="bttn bttn-green bttn-large block mb3"> Pledge your amount </button>
-                                 <div class="flex mb3">
-                                    <div class="ajax-container block basis50p grow-1 w100p" id="watching-widget">
-                                       <div class="Project439069323" data-conditions="[{&quot;is_starred&quot;:true}]" data-render="&quot;<div class=\&quot;NS_watches__watch js-unwatch\&quot;>\n<a class=\&quot;bttn bttn-medium bttn-green w100p\&quot; href=\&quot;/projects/thestandardsmanual/reissue-of-the-1977-epa-graphic-standards-system/unwatch\&quot;><svg class=\&quot;svg-icon__star fill-green-700\&quot; aria-hidden=\&quot;true\&quot;><use xlink:href=\&quot;#star\&quot;></use></svg>\n<span>Saved</span>\n</a></div>\n\n&quot;" data-evaluation="false"></div>
-                                       <div class="Project439069323" data-conditions="[{&quot;!is_starred&quot;:true}]" data-render="&quot;<div class=\&quot;NS_watches__watch js-watch\&quot;>\n<a class=\&quot;bttn bttn-medium bttn-shadow-light w100p\&quot; href=\&quot;/projects/thestandardsmanual/reissue-of-the-1977-epa-graphic-standards-system/watch\&quot;><svg class=\&quot;svg-icon__star fill-navy-600 icon-small\&quot; aria-hidden=\&quot;true\&quot;><use xlink:href=\&quot;#star\&quot;></use></svg>\nRemind me\n</a></div>\n\n&quot;" data-evaluation="true">
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
+                             </div>
+                           <% end %>
                            <p class="mb3 mb0-lg type-12">
                               <span class="link-navy medium"><a class="navy-700 pointer" href="/help/faq/kickstarter+basics?ref=project_header#faq_41848">All or nothing.</a></span>
                               This project will only be funded if it reaches its goal by <time datetime="2017-05-26T18:00:00-04:00" data-format="llll z" class="js-adjust-time">Fri, May 26 2017 6:00 PM EDT</time>.
@@ -309,6 +325,10 @@
                               <div class="col col-8">
                                  <div class="pl3">
                                     <ol class="list-comments click">
+                                      <div class="form-simple">
+                                        <textarea class="required textarea" placeholder="Enter a comment" id="project-comment"> </textarea>
+                                        <button id="project-comment-submit" type="submit" class="btn btn--green btn--block submit">Comment</button>
+                                      </div>
                                        <li class="page">
                                           <ol class="comments">
                                             <% @comments.each do |comment| %>
@@ -345,7 +365,6 @@
             </div>
          </div>
       </main>
-      <%= render 'scripts' %>
       <%= render 'svg' %>
    </body>
 </html>
