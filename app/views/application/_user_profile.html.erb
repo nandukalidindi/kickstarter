@@ -6,9 +6,9 @@
                <div class="center" id="profile_avatar">
                   <a href="/profile/zenxacred"><img class="avatar-image" alt="" style="height: auto;" src="https://ksr-ugc.imgix.net/assets/006/044/224/3df7d34aa2b9b21f46d97b39afde17ce_original.jpeg?w=160&amp;h=160&amp;fit=crop&amp;v=1470016008&amp;auto=format&amp;q=92&amp;s=048c15728b5b0daecb3d67c365c710de" width="160" height="160"></a>
                </div>
-               <div class="profile_bio center mb6">
+               <div class="profile_bio center mb6" style="display: flex; flex-direction: column;">
                   <h2 class="mb2">
-                     <a href="/profile/zenxacred"><%= current_user['first_name'] %> <%= current_user['last_name'] %></a>
+                     <a href="/profile/zenxacred"><%= locals[:user]['first_name'] %> <%= locals[:user]['last_name'] %></a>
                   </h2>
                   <p class="normal_type mb1">
                      <span class="backed">
@@ -18,16 +18,32 @@
                      ·
                      </span>
                      <span class="location">
-                     <a href="/discover/advanced?backed=-1&amp;ref=profile_location&amp;state=live&amp;woe_id=15015372"><%= current_user['state'] %>, <%= current_user['country'] %></a>
+                     <a href="/discover/advanced?backed=-1&amp;ref=profile_location&amp;state=live&amp;woe_id=15015372"><%= locals[:user]['state'] %>, <%= locals[:user]['country'] %></a>
                      </span>
                      <span class="divider">
                      ·
                      </span>
                      <span class="joined">
-                     Joined <time datetime="2011-04-22T04:55:51-04:00" data-format="MMM YYYY" class="js-adjust-time"><%= current_user['created_at'] %></time>
+                     Joined <time datetime="2011-04-22T04:55:51-04:00" data-format="MMM YYYY" class="js-adjust-time"><%= locals[:user]['created_at'] %></time>
                      </span>
                   </p>
-                  <div class="mr2 inline-block btn p0 mt2" style="border: 0; border-radius: 6px;"></div>
+                  <% if params[:id] != current_user['id'] %>
+                    <% if locals[:is_following] %>
+                      <div class="user-display__item__actions js-social-actions js-backer-count" data-backed_projects="0" style="text-align: center;">
+                         <button class="js-follow-user btn--with-svg btn user-display__item__actions__button btn--green" data-is-following="true" data-follow-path="/profiles/141490519/follow" data-unfollow-path="/profiles/141490519/unfollow" style="width: 140px">
+                            Following
+                            <svg class="svg-icon__check ml1">
+                               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#check"></use>
+                            </svg>
+                         </button>
+                      </div>
+                    <% else %>
+                      <div style="text-align: center;" class="user-display__item__actions js-social-actions js-backer-count" data-backed_projects="0">
+                        <button class="js-follow-user btn--with-svg btn user-display__item__actions__button btn--border-green" data-is-following="true" style="width: 140px">Follow</button>
+                     </div>
+                    <% end %>
+                 <% end %>
+                <div class="mr2 inline-block btn p0 mt2" style="border: 0; border-radius: 6px;"></div>
                </div>
                <div id="category_circle">
                   <div id="half_circle_border"></div>

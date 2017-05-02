@@ -18,7 +18,7 @@
          <div id="growl_section" class="center jGrowl"></div>
          <div id="main_content">
             <div class="z2" id="hover_label"></div>
-            <%= render 'user_profile', locals: {backed_count: @projects.count}%>
+            <%= render 'user_profile', locals: {backed_count: @projects.count, user: @user, is_following: @is_following}%>
             <div class="container-flex mobile-scroll-container px3">
                <div class="row mobile-scroll-row">
                   <div class="col col-12">
@@ -69,12 +69,12 @@
                                                  <div class="icon"><span class="ksr-icon__heart" aria-hidden="true"></span></div>
                                                  <div class="label">Project We Love</div>
                                               </div>
-                                              <a href="/projects/laywastegames/dragoon-the-rogue-and-barbarian-expansion-reprint?ref=profile_backed" target="">
+                                              <a href="/projects/<%= project['id'] %>" target="">
                                                  <div class="project-profile-card__background" style="background-color: #67b3a7; ">
                                                     <div class="bg-black hide project-profile-card__background"></div>
                                                     <div class="project-profile-card__background" style="opacity: 0.8;"></div>
                                                  </div>
-                                                 <img src=<%= project['search_thumbnail_large'] %> alt="3c1f156b7b63585a66433ceecb8811d2 original">
+                                                 <img src=<%= project['search_thumbnail_large'] %>>
                                               </a>
                                            </div>
                                            <div class="project-card-content">
