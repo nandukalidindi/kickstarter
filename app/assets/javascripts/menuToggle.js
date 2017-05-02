@@ -103,4 +103,21 @@ $(document).ready(function(){
     });
   });
 
+  $("#project-comment-submit").unbind('click').bind('click', function(event) {
+    var comment = $("#project-comment").val();
+    $.ajax({
+      type: "POST",
+      url: location.href + '/comment',
+      dataType: 'json',
+      data: {comment: comment},
+      success: function (data) {
+        // location.reload();
+      },
+      error: function (data) {
+        location.reload();
+      }
+    });
+
+  })
+
 })

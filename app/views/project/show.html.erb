@@ -325,6 +325,10 @@
                               <div class="col col-8">
                                  <div class="pl3">
                                     <ol class="list-comments click">
+                                      <div class="form-simple">
+                                        <textarea class="required textarea" placeholder="Enter a comment" id="project-comment"> </textarea>
+                                        <button id="project-comment-submit" type="submit" class="btn btn--green btn--block submit">Comment</button>
+                                      </div>
                                        <li class="page">
                                           <ol class="comments">
                                             <% @comments.each do |comment| %>

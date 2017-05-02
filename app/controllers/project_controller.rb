@@ -66,7 +66,13 @@ class ProjectController < ApplicationController
 
   def rating
     rating = 5 - params[:rating].to_i
-    ActiveRecord::Base.connection.execute("UPDATE reviews SET rating=#{rating} WHERE user_id=#{current_user['id'].to_i} AND project_id=#{params[:id].to_i} AND type='rating'")
+    count = ActiveRecord::Base.connection.execute("SELECT COUNT(*) FROM reviews WHERE user_id=#{current_user['id'].to_i} AND project_id=#{params[:id].to_i} AND type='rating'")
+    if count > 0
+      ActiveRecord::Base.connection.execute("UPDATE reviews SET rating=#{rating} AND updated_at=CURRENT_TIMESTAMP WHERE user_id=#{current_user['id'].to_i} AND project_id=#{params[:id].to_i} AND type='rating'")
+    else
+      ActiveRecord::Base.connection.execute("INSERT INTO reviews(user_id, project_id, type, rating, created_at, updated_at) VALUES(#{current_user['id'].to_i}, #{params[:id].to_i}, 'rating', #{rating}, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)")
+    end
+
     redirect_to :back
   end
 
@@ -75,6 +81,13 @@ class ProjectController < ApplicationController
       ActiveRecord::Base.connection.execute("DELETE FROM reviews WHERE type='like' AND user_id=#{current_user['id'].to_i} AND project_id=#{params[:id].to_i}")
     else
       ActiveRecord::Base.connection.execute("INSERT INTO reviews(user_id, project_id, type, created_at, updated_at) VALUES (#{current_user['id'].to_i}, #{params[:id].to_i}, 'like', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)")
+    end
+    redirect_to :back
+  end
+
+  def comment
+    if params[:comment].length > 0
+      ActiveRecord::Base.connection.execute("INSERT INTO reviews(user_id, project_id, type, comment, created_at, updated_at) VALUES (#{current_user['id'].to_i}, #{params[:id].to_i}, 'comment', '#{params[:comment]}', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)")
     end
     redirect_to :back
   end
