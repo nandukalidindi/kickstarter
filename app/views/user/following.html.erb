@@ -40,14 +40,14 @@
                                  <li class="nav--subnav__item">
                                     <div class="nav--subnav__item__link current">Following
                                     <span class="nav--subnav__item__meta js-friend-count">
-                                    2
+                                    <%= @following.count %>
                                     </span>
                                   </div>
                                  </li>
                                  <li class="nav--subnav__item">
                                     <a class="nav--subnav__item__link " href="/users/<%= params[:id] %>/followers">Followers
                                     <span class="nav--subnav__item__meta">
-                                    0
+                                    <%= @followers.count %>
                                     </span>
                                     </a>
                                  </li>
@@ -69,54 +69,31 @@
                               </div>
                               <ul class="mobius">
                                  <li class="page" data-last_page="true" data-page_number="1">
-                                    <div class="user-display__item">
-                                       <div class="user-display__item__img">
-                                          <div class="user-display__item__avatar">
-                                             <a class="avatar" target="_blank" href="/profile/1494661930"><img class="avatar-image" alt="" style="height: auto;" src="https://ksr-ugc.imgix.net/assets/016/224/962/0058cb42df761b9286b063cf52af9c0a_original.jpg?w=80&amp;h=80&amp;fit=crop&amp;v=1491954431&amp;auto=format&amp;q=92&amp;s=e1f38279acda084600f3137ae7260782" width="80" height="80"></a>
-                                          </div>
-                                       </div>
-                                       <div class="user-display__item__body">
-                                          <div class="user-display__item__info">
-                                             <a class="user-display__item__name" target="_blank" href="/profile/1494661930">TROPICS Team</a>
-                                             <div class="user-display__item__meta-section">
-                                                <p class="user-display__item__meta__item">
-                                                   <span class="bold">1</span> Created
-                                                </p>
-                                             </div>
-                                          </div>
-                                       </div>
-                                       <div class="user-display__item__actions js-social-actions js-backer-count" data-backed_projects="0">
-                                        <button class="js-follow-user btn--with-svg btn user-display__item__actions__button btn--border-green" data-is-following="true" data-follow-path="/profiles/1494661930/follow" data-unfollow-path="/profiles/1494661930/unfollow" style="width: 140px">Follow</button>
-                                      </div>
-                                    </div>
-                                    <div class="user-display__item">
-                                       <div class="user-display__item__img">
-                                          <div class="user-display__item__avatar">
-                                             <a class="avatar" target="_blank" href="/profile/141490519"><img class="avatar-image" alt="" style="height: auto;" src="https://ksr-ugc.imgix.net/assets/010/705/300/eee8ca87d6ad2b526b2fa87dd0b66729_original.jpg?w=80&amp;h=80&amp;fit=crop&amp;v=1461707389&amp;auto=format&amp;q=92&amp;s=7be7b641162a8c016392385af4104e95" width="80" height="80"></a>
-                                          </div>
-                                       </div>
-                                       <div class="user-display__item__body">
-                                          <div class="user-display__item__info">
-                                             <a class="user-display__item__name" target="_blank" href="/profile/141490519">Sibel Edmonds</a>
-                                             <p class="user-display__item__location">
-                                                Bend, OR
-                                             </p>
-                                             <div class="user-display__item__meta-section">
-                                                <p class="user-display__item__meta__item">
-                                                   <span class="bold">4</span> Created
-                                                </p>
-                                             </div>
-                                          </div>
-                                       </div>
-                                       <div class="user-display__item__actions js-social-actions js-backer-count" data-backed_projects="0">
-                                          <button class="js-follow-user btn--with-svg btn user-display__item__actions__button btn--green" data-is-following="true" data-follow-path="/profiles/141490519/follow" data-unfollow-path="/profiles/141490519/unfollow" style="width: 140px">
-                                             Following
-                                             <svg class="svg-icon__check ml1">
-                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#check"></use>
-                                             </svg>
-                                          </button>
-                                       </div>
-                                    </div>
+                                   <% @following.each do |following| %>
+                                     <div class="user-display__item">
+                                        <div class="user-display__item__img">
+                                           <div class="user-display__item__avatar">
+                                              <a class="avatar" target="_blank" href="/users/<%= following['id'] %>/profile/about"><img class="avatar-image" alt="" style="height: auto;" src="https://ksr-ugc.imgix.net/assets/016/224/962/0058cb42df761b9286b063cf52af9c0a_original.jpg?w=80&amp;h=80&amp;fit=crop&amp;v=1491954431&amp;auto=format&amp;q=92&amp;s=e1f38279acda084600f3137ae7260782" width="80" height="80"></a>
+                                           </div>
+                                        </div>
+                                        <div class="user-display__item__body">
+                                           <div class="user-display__item__info">
+                                              <a class="user-display__item__name" target="_blank" href="/users/<%= following['id'] %>/profile/about"><%= following['first_name'] %> <%= following['last_name'] %></a>
+                                              <div class="user-display__item__meta-section">
+                                                 <p class="user-display__item__meta__item">
+                                                    <span class="bold">1</span> Created
+                                                 </p>
+                                              </div>
+                                           </div>
+                                        </div>
+                                        <button user-id=<%= following['id'] %> name='unfollow-followers' class="js-follow-user btn--with-svg btn user-display__item__actions__button btn--green" style="width: 140px">
+                                           Following
+                                           <svg class="svg-icon__check ml1">
+                                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#check"></use>
+                                           </svg>
+                                        </button>
+                                     </div>
+                                   <% end %>
                                  </li>
                               </ul>
                            </div>
@@ -140,7 +117,7 @@
                                           </div>
                                           <div class="friends-tout__stat">
                                              <div class="js-friend-count f3">
-                                                2
+                                                <%= @following.count %>
                                              </div>
                                           </div>
                                        </div>
@@ -152,7 +129,7 @@
                                           </div>
                                           <div class="friends-tout__stat">
                                              <div class="js-backed-projects-count h3">
-                                                0
+                                                <%= @backed.count %>
                                              </div>
                                           </div>
                                        </div>

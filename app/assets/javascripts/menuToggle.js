@@ -117,7 +117,64 @@ $(document).ready(function(){
         location.reload();
       }
     });
+  });
 
-  })
+  $("#user-profile-follow-button").unbind('click').bind('click', function(event) {
+    $.ajax({
+      type: "POST",
+      url: location.href + '/follow',
+      dataType: 'json',
+      success: function(data) {
 
+      },
+      error: function(data) {
+        location.reload();
+      }
+    })
+  });
+
+  $("#user-profile-unfollow-button").unbind('click').bind('click', function(event) {
+    $.ajax({
+      type: "POST",
+      url: location.href + '/unfollow',
+      dataType: 'json',
+      success: function(data) {
+
+      },
+      error: function(data) {
+        location.reload();
+      }
+    })
+  });
+
+  $("#show-follow-button").unbind('click').bind('click', function(event) {
+    $.ajax({
+      type: "POST",
+      url: '/users/' + event.target.attributes['user-id'].value + '/profile/about/follow',
+      dataType: 'json',
+      success: function(data) {
+
+      },
+      error: function(data) {
+        location.reload();
+      }
+    })
+  });
+
+  var unfollowableElements = document.getElementsByName("unfollow-followers")
+
+  for(var i=0; i<unfollowableElements.length; i++) {
+    unfollowableElements[i].addEventListener('click', function(event) {
+      $.ajax({
+        type: "POST",
+        url: '/users/' + event.target.attributes['user-id'].value + '/profile/about/unfollow',
+        dataType: 'json',
+        success: function(data) {
+        },
+        error: function(data) {
+          location.reload();
+        }
+      });
+    });
+  }
 })

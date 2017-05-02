@@ -14,7 +14,7 @@ class LoginController < ApplicationController
       session[:user] = email
       @current_user ||= ActiveRecord::Base.connection.execute("SELECT * FROM users WHERE email='#{session[:user]}'").first
     else
-      redirect_to '/', success: 'The email address and password you entered do not match.'
+      redirect_to '/', alert: 'The email address and password you entered do not match.'
     end
   end
 

@@ -30,7 +30,7 @@
                   <% if params[:id] != current_user['id'] %>
                     <% if locals[:is_following] %>
                       <div class="user-display__item__actions js-social-actions js-backer-count" data-backed_projects="0" style="text-align: center;">
-                         <button class="js-follow-user btn--with-svg btn user-display__item__actions__button btn--green" data-is-following="true" data-follow-path="/profiles/141490519/follow" data-unfollow-path="/profiles/141490519/unfollow" style="width: 140px">
+                         <button id='user-profile-unfollow-button' class="js-follow-user btn--with-svg btn user-display__item__actions__button btn--green" data-is-following="true" data-follow-path="/profiles/141490519/follow" data-unfollow-path="/profiles/141490519/unfollow" style="width: 140px">
                             Following
                             <svg class="svg-icon__check ml1">
                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#check"></use>
@@ -39,7 +39,7 @@
                       </div>
                     <% else %>
                       <div style="text-align: center;" class="user-display__item__actions js-social-actions js-backer-count" data-backed_projects="0">
-                        <button class="js-follow-user btn--with-svg btn user-display__item__actions__button btn--border-green" data-is-following="true" style="width: 140px">Follow</button>
+                        <button id='user-profile-follow-button' class="js-follow-user btn--with-svg btn user-display__item__actions__button btn--border-green" data-is-following="true" style="width: 140px">Follow</button>
                      </div>
                     <% end %>
                  <% end %>

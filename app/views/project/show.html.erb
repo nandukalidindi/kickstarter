@@ -278,12 +278,12 @@
                                  <a class="remote_modal_dialog" data-modal-title="About the creator" data-modal-class="modal_project_by" href="/projects/thestandardsmanual/reissue-of-the-1977-epa-graphic-standards-system/creator_bio"><img class="circle bg-grey-500 w4 h4 w7-md h7-md flex-noshrink mb2-md" alt="" style="height: auto;" src="https://ksr-ugc.imgix.net/assets/008/425/161/e1fd2a33920b69af808bf64de25d0ae8_original.jpg?w=80&amp;h=80&amp;fit=crop&amp;v=1461523284&amp;auto=format&amp;q=92&amp;s=bf080d529af4f587dda333465e8bec0c" width="80" height="80"></a>
                                  <span class="navy-700 ml2 ml0-md">
                                  By
-                                 <a class="medium navy-700 remote_modal_dialog" data-modal-title="About the creator" data-modal-class="modal_project_by" href="/projects/thestandardsmanual/reissue-of-the-1977-epa-graphic-standards-system/creator_bio"><%= @poster['first_name'] %> <%= @poster['last_name'] %></a>
+                                 <a class="medium navy-700 remote_modal_dialog" data-modal-title="About the creator" data-modal-class="modal_project_by" href="/users/<%= @poster['id'] %>/profile/about"><%= @poster['first_name'] %> <%= @poster['last_name'] %></a>
                                  </span>
                                  <span class="hide inline-block-md mb2-md">
-                                 <a class="remote_modal_dialog navy-600" data-modal-title="Projects created by Jesse Reed &amp; Hamish Smyth" href="/profile/thestandardsmanual/created">3 created</a>
+                                 <a class="remote_modal_dialog navy-600" data-modal-title="Projects created by Jesse Reed &amp; Hamish Smyth" href="/users/<%= @poster['id'] %>/profile/about">3 created</a>
                                  </span>
-                                 <a class="remote_modal_dialog bttn bttn-xsmall bttn-small-md bttn-grey ml2 ml0-md" data-modal-title="Follow Jesse Reed &amp; Hamish Smyth" href="/profile/thestandardsmanual/follow">Follow</a>
+                                 <div id='show-follow-button' class="remote_modal_dialog bttn bttn-xsmall bttn-small-md bttn-grey ml2 ml0-md" user-id=<%= @poster['id']%>>Follow</div>
                               </div>
                               <div class="col-20-24 col-lg-15-24 hide block-md order-2-md">
                                  <h2 class="type-24 type-28-sm type-38-md navy-700 medium mb3">
@@ -335,11 +335,11 @@
                                               <li class="NS_comments__comment comment earliest_comment item latest_comment mb3 py3" id="comment-16435532">
                                                  <div class="comment-inner">
                                                     <div class="avatar left">
-                                                       <a href="/profile/mdad"><img class="circle" alt="" style="height: auto;" src="https://ksr-ugc.imgix.net/assets/006/113/655/8d30417575ce889ed8ef2b4084c7d36f_original.jpg?w=80&amp;h=80&amp;fit=crop&amp;v=1461367414&amp;auto=format&amp;q=92&amp;s=780b71bff6dea5d7cb50c2fd31e7a7ed" width="80" height="80"></a>
+                                                       <a href="/users/<%= comment['user_id'] %>/profile/about"><img class="circle" alt="" style="height: auto;" src="https://ksr-ugc.imgix.net/assets/006/113/655/8d30417575ce889ed8ef2b4084c7d36f_original.jpg?w=80&amp;h=80&amp;fit=crop&amp;v=1461367414&amp;auto=format&amp;q=92&amp;s=780b71bff6dea5d7cb50c2fd31e7a7ed" width="80" height="80"></a>
                                                     </div>
                                                     <div class="main clearfix pl3 ml3">
                                                        <h3>
-                                                          <a class="author green-dark" href="/profile/mdad"><%= comment['first_name']%> <%= comment['last_name']%></a>
+                                                          <a class="author green-dark" href="/users/<%= comment['user_id'] %>/profile/about"><%= comment['first_name']%> <%= comment['last_name']%></a>
                                                           <span class="date normal f6">
                                                             <data class="Comment16435532" data-format="distance_date" data-value="2017-04-10T15:39:08-04:00" itemprop="Comment[created_at]"><%= comment['created_at']%></data>
                                                           </span>

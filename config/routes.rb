@@ -37,6 +37,12 @@ Rails.application.routes.draw do
 
   get 'users/:id/following' => 'user#following'
 
+  post 'users/:id/profile/:profile_type/follow' => 'user#follow'
+
+  post 'users/:id/profile/:profile_type/unfollow' => 'user#unfollow'
+
+  post 'users/:id/following/follow' => 'user#follow'
+
   get 'users/:id/account' => 'user#account'
 
   get 'users/:id/profile' => 'user#profile'
