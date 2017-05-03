@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html class="discover_advanced fontface js" data-request-id="171066af-716a-4361-b280-fc92fe986738" lang="en">
+   <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# kickstarter: http://ogp.me/ns/fb/kickstarter#">
+   </head>
+   <body class="frame discover not-mobile not-phone not-mobile-safari not-chrome-ios not-forces-video-controls not-tablet not-ipad not-iphone not-ios not-android not-touchable not-native-app-request not-apple-pay-capable not-android-pay-capable responsive skip_autologin" id="discover_advanced">
+      <div class="NS_layouts__notifications"></div>
+      <%= render 'header' %>
+      <%= render 'user_menu' %>
+
+      <div id="start-of-content" tabindex="-1"></div>
+      <main role="main">
+         <div id="growl_section" class="center jGrowl"></div>
+         <div id="main_content">
+            <section class="relative border-top pt3" id="advanced_container">
+               <div class="loading absolute hide full-width full-height z1"></div>
+               <section class="pb3 pb10-sm pt3" id="projects">
+                  <div class="js-back-to-top back-to-top t0 r0 mt3 mr3 hide z1" style="display: none;">
+                     <a class="btn btn--border-gray btn--small type-12" role="button">
+                     <span class="ksr-icon__arrow-up" aria-hidden="true"></span>
+                     Back to top
+                     </a>
+                  </div>
+                  <div class="container-flex px3">
+                     <h3 class="normal mb3 mb5-sm title">
+                        Explore
+                        <b class="count green"><%= @projects.flatten.count %></b> <span class="category">projects</span>
+                     </h3>
+                     <ul class="list js-project-group" data-seed="2488784" id="projects_list">
+                       <% @projects.each do |four_way_project| %>
+                         <div class="row">
+                           <% four_way_project.each do |project| %>
+                             <li class="project col col-3 mb3 mb7-sm">
+                                <div class="js-score-tracking js-track-project-card project-card project-card-tall project-card-wrap ratio-16-9" data-pid="1797358119" data-project_backers_count="1676" data-project_percent_raised="272.273125" data-project_pid="1797358119" data-project_pledged="108909.25" data-project_state="live" data-section="category">
+                                   <div class="project-thumbnail">
+                                      <div class="projects-we-love-badge projects-we-love-badge--overlay">
+                                         <div class="icon"><span class="ksr-icon__heart" aria-hidden="true"></span></div>
+                                         <div class="label">Project We Love</div>
+                                      </div>
+                                      <a class="project-thumbnail-wrap" data-pid="1797358119" href="/projects/<%= project['id'] %>" target="">
+                                      <img class="project-thumbnail-img" width="100%" alt="Project image" src=<%= project['search_thumbnail_small'] %>>
+                                      </a>
+                                   </div>
+                                   <div class="project-card-content">
+                                      <h6 class="project-title"><a target="" data-score="null" data-version="null" data-pid="1797358119" href="/projects/<%= project['id'] %>"><%= project['title'] %></a></h6>
+                                      <p class="project-byline">by <%= project['first_name'] %> <%= project['last_name'] %></p>
+                                      <p class="project-blurb">
+                                         <%= project['description'] %>
+                                      </p>
+                                   </div>
+                                   <div class="project-card-footer">
+                                      <div class="project-location">
+                                         <a data-location="{&quot;id&quot;:2459115,&quot;name&quot;:&quot;New York&quot;,&quot;slug&quot;:&quot;new-york-ny&quot;,&quot;short_name&quot;:&quot;New York, NY&quot;,&quot;displayable_name&quot;:&quot;New York, NY&quot;,&quot;country&quot;:&quot;US&quot;,&quot;state&quot;:&quot;NY&quot;,&quot;type&quot;:&quot;Town&quot;,&quot;is_root&quot;:false,&quot;urls&quot;:{&quot;web&quot;:{&quot;discover&quot;:&quot;https://www.kickstarter.com/discover/places/new-york-ny&quot;,&quot;location&quot;:&quot;https://www.kickstarter.com/locations/new-york-ny&quot;},&quot;api&quot;:{&quot;nearby_projects&quot;:&quot;https://api.kickstarter.com/v1/discover?signature=1493357142.295da7699b06f7a97cd96dfb139fceb1988ddf42&amp;woe_id=2459115&quot;}}}" href="/discover/places/new-york-ny?ref=city" target="">
+                                         <span aria-hidden="true" class="ksr-icon__location"></span>
+                                         <span class="location-name"><%= project['location'] %></span>
+                                         </a>
+                                      </div>
+                                      <div class="project-stats-container">
+                                         <div class="project-pledged-successful">
+                                            <strong>Successfully funded!</strong>
+                                         </div>
+                                         <div class="project-progress-bar">
+                                            <div class="project-percent-pledged" style="width: <%= (((project['pledge_sum'] || "0").to_f/project['maximum_fund'].to_f)*100).floor %>%"></div>
+                                         </div>
+                                         <ul class="project-stats">
+                                            <li>
+                                               <div class="project-stats-value"><%= (((project['pledge_sum'] || "0").to_f/project['maximum_fund'].to_f)*100).floor %>%</div>
+                                               <span class="project-stats-label">funded</span>
+                                            </li>
+                                            <li class="js-amount-pledged">
+                                               <div class="project-stats-value"><span class="money">$<%= project['pledge_sum'] || "0" %></span></div>
+                                               <span class="project-stats-label">pledged</span>
+                                            </li>
+                                            <li style="display: none;">
+                                               <div class="project-stats-value">Funded</div>
+                                               <span class="project-stats-label">
+                                               </span>
+                                            </li>
+                                            <li class="ksr_page_timer" data-end_time="2017-05-11T10:22:38-04:00">
+                                               <div class="project-stats-value">
+                                                  <div class="js-num"><%= project['days_left'].to_f.ceil %></div>
+                                               </div>
+                                               <div class="project-stats-label js-text" data-word="left">days to go</div>
+                                            </li>
+                                         </ul>
+                                      </div>
+                                   </div>
+                                </div>
+                             </li>
+                           <% end %>
+                         </div>
+                       <% end %>
+                     </ul>
+                  </div>
+               </section>
+            </section>
+         </div>
+      </main>
+
+      <%= render 'svg' %>
+   </body>
+</html>

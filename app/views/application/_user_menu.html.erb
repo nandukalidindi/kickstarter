@@ -17,12 +17,8 @@
                      </a>
                   </li>
                   <li><a href="/users/<%= current_user['id'] %>/profile/about">Profile</a></li>
-                  <li><a href="/profile/backings?ref=user_menu">Backed projects</a></li>
-                  <li><a href="/profile/projects?ref=user_menu">My projects</a></li>
-                  <li>
-                     <a href="/profile/starred?ref=user_menu">Saved projects
-                     </a>
-                  </li>
+                  <li><a href="/users/<%= current_user['id'] %>/profile/backed">Backed projects</a></li>
+                  <li><a href="/users/<%= current_user['id'] %>/projects">My projects</a></li>
                </ul>
                <h3 class="dropdown-menu-header">
                   Settings

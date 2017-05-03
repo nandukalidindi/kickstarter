@@ -33,6 +33,8 @@ Rails.application.routes.draw do
 
   get 'users/:id' => 'user#show'
 
+  get 'users/:id/projects' => 'user#projects'
+
   get 'users/:id/followers' => 'user#followers'
 
   get 'users/:id/following' => 'user#following'

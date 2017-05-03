@@ -24,6 +24,29 @@ class UserController < ApplicationController
   def profile
   end
 
+  def projects
+    user_projects_sql = "SELECT projects.id, projects.title, projects.description, projects.maximum_fund, projects.search_thumbnail_small, projects.search_thumbnail_large, projects.video_url, users.first_name, users.last_name, projects.location, EXTRACT(EPOCH FROM (projects.end_date - CURRENT_TIMESTAMP))/(60*60*24) AS days_left , pledge_sums.pledge_sum
+                FROM projects
+                FULL OUTER JOIN (
+                SELECT projects.id AS id, SUM(pledges.amount) AS pledge_sum
+                FROM projects
+                INNER JOIN pledges
+                ON projects.id = pledges.project_id
+                GROUP BY projects.id
+                ) AS pledge_sums
+                ON projects.id = pledge_sums.id
+                INNER JOIN users
+                ON users.id = projects.posted_by
+                WHERE projects.posted_by=#{params[:id]}"
+
+    projects = ActiveRecord::Base.connection.execute(user_projects_sql)
+    @projects = [[], [], [], [], [], [], []]
+
+    projects.each_with_index do |project, index|
+      @projects[index/4] << project
+    end
+  end
+
   def about
     ActiveRecord::Base.connection.execute("INSERT INTO events (user_id, profile_id, type, created_at, updated_at) VALUES (#{current_user['id']}, #{params[:id]}, 'profile_views', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)")
     @user = ActiveRecord::Base.connection.execute("SELECT * FROM users WHERE id=#{params[:id].to_i}").first
