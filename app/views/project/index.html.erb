@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html class="discover_advanced fontface js" data-request-id="171066af-716a-4361-b280-fc92fe986738" lang="en">
-   <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# kickstarter: http://ogp.me/ns/fb/kickstarter#">      
+   <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# kickstarter: http://ogp.me/ns/fb/kickstarter#">
    </head>
    <body class="frame discover not-mobile not-phone not-mobile-safari not-chrome-ios not-forces-video-controls not-tablet not-ipad not-iphone not-ios not-android not-touchable not-native-app-request not-apple-pay-capable not-android-pay-capable responsive skip_autologin" id="discover_advanced">
       <div class="NS_layouts__notifications"></div>
@@ -21,10 +21,17 @@
                      </a>
                   </div>
                   <div class="container-flex px3">
-                     <h3 class="normal mb3 mb5-sm title">
-                        Explore
-                        <b class="count green"><%= @projects.flatten.count %></b> <span class="category">projects</span>
-                     </h3>
+                    <% if params[:search] %>
+                      <h3 class="normal mb3 mb5-sm title">
+                         Fetched
+                         <b class="count green"><%= @projects.flatten.count %></b> <span class="category">projects for term "<%= params[:search] %>"</span>
+                      </h3>
+                    <% else %>
+                       <h3 class="normal mb3 mb5-sm title">
+                          Explore
+                          <b class="count green"><%= @projects.flatten.count %></b> <span class="category">projects</span>
+                       </h3>
+                    <% end %>
                      <ul class="list js-project-group" data-seed="2488784" id="projects_list">
                        <% @projects.each do |four_way_project| %>
                          <div class="row">
