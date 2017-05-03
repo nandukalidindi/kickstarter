@@ -168,7 +168,7 @@ $(document).ready(function(){
     })
   });
 
-  var unfollowableElements = document.getElementsByName("unfollow-followers")
+  var unfollowableElements = document.getElementsByName("unfollow-followers");
 
   for(var i=0; i<unfollowableElements.length; i++) {
     unfollowableElements[i].addEventListener('click', function(event) {
@@ -184,4 +184,40 @@ $(document).ready(function(){
       });
     });
   }
+
+  var existingCreditCards = document.getElementsByName("existing-cc-cards");
+
+  for(var i=0; i<existingCreditCards.length; i++) {
+    existingCreditCards[i].addEventListener('click', function(event) {
+      $.ajax({
+        type: "DELETE",
+        url: '/credit_cards/' + event.target.attributes['card-id'].value,
+        dataType: 'json',
+        success: function(data) {
+        },
+        error: function(data) {
+          location.reload();
+        }
+      });
+    });
+  }
+
+
+
+  $("#credit_card_create").unbind('click').bind('click', function(event) {
+    var is_default = document.getElementById('rounded').checked,
+        number = document.getElementById('cc-card-number').value;
+
+    $.ajax({
+      type: "POST",
+      url: '/credit_cards',
+      dataType: 'json',
+      data: {is_default: is_default, number: number},
+      success: function(data) {
+      },
+      error: function(data) {
+        location.reload();
+      }
+    });
+  });
 })

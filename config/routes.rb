@@ -55,6 +55,10 @@ Rails.application.routes.draw do
 
   get 'users/:id/profile/comments' => 'user#comments'
 
+  post 'credit_cards' => 'credit_card#new'
+
+  delete 'credit_cards/:cc_number' => 'credit_card#destroy'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

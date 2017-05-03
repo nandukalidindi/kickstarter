@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="credit_cards_index no-mega fontface js" data-request-id="817303d9-2573-43f9-802e-84fb6613c007" lang="en">
    <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# kickstarter: http://ogp.me/ns/fb/kickstarter#">
-      
+
    </head>
    <body class="users_edit credit_cards not-mobile not-phone not-mobile-safari not-chrome-ios not-forces-video-controls not-tablet not-ipad not-iphone not-ios not-android not-touchable not-native-app-request not-apple-pay-capable not-android-pay-capable fixed-width skip_autologin" id="credit_cards_index">
       <div class="NS_layouts__notifications"></div>
@@ -42,9 +42,6 @@
                            Any payment methods you've saved to Kickstarter are listed here (securely) for your convenience. You can always click "Remove this card" to take one off the list.
                         </p>
                      </div>
-                     <div class="absolute b0 r0">
-                        <a class="btn btn--green js-add-source show" href="#">Add a new card</a>
-                     </div>
                   </div>
                   <div class="row">
                      <div class="col col-12">
@@ -67,14 +64,7 @@
                                              <ol class="grouped">
                                                 <li class="required" id="card_number">
                                                    <label for="number">Card number</label>
-                                                   <input type="text" name="number" id="number" pattern="[0-9]*" placeholder="Card number" autocomplete="cc-number" data-stripe="number" required="required" aria-required="true" class="fs-hide text">
-                                                   <div class="error-messages-container">
-                                                      <ul class="error-messages js-error-messages"></ul>
-                                                   </div>
-                                                </li>
-                                                <li class="required" id="card_name">
-                                                   <label for="name">Name</label>
-                                                   <input type="text" name="name" id="name" placeholder="Name" autocomplete="name" data-stripe="name" required="required" aria-required="true" class="text">
+                                                   <input type="text" name="number" id="cc-card-number" pattern="[0-9]*" placeholder="Card number" autocomplete="cc-number" data-stripe="number" required="required" aria-required="true" class="fs-hide text">
                                                    <div class="error-messages-container">
                                                       <ul class="error-messages js-error-messages"></ul>
                                                    </div>
@@ -88,51 +78,6 @@
                                                   </div>
                                                    <label for="name">Set as default</label>
                                                 </li>
-                                                <li class="required" data-min_date="2017-05-01" id="card_expiration">
-                                                   <label for="Expiration">Expiration</label>
-                                                   <select name="exp_month" id="exp_month" autocomplete="cc-exp-month" data-stripe="exp_month" required="required" aria-required="true" class="select">
-                                                      <option value="01">01</option>
-                                                      <option value="02">02</option>
-                                                      <option value="03">03</option>
-                                                      <option value="04">04</option>
-                                                      <option value="05">05</option>
-                                                      <option selected="selected" value="06">06</option>
-                                                      <option value="07">07</option>
-                                                      <option value="08">08</option>
-                                                      <option value="09">09</option>
-                                                      <option value="10">10</option>
-                                                      <option value="11">11</option>
-                                                      <option value="12">12</option>
-                                                   </select>
-                                                   <select name="exp_year" id="exp_year" autocomplete="cc-exp-year" data-stripe="exp_year" required="required" aria-required="true" class="select">
-                                                      <option value="2017">2017</option>
-                                                      <option selected="selected" value="2018">2018</option>
-                                                      <option value="2019">2019</option>
-                                                      <option value="2020">2020</option>
-                                                      <option value="2021">2021</option>
-                                                      <option value="2022">2022</option>
-                                                      <option value="2023">2023</option>
-                                                      <option value="2024">2024</option>
-                                                      <option value="2025">2025</option>
-                                                      <option value="2026">2026</option>
-                                                      <option value="2027">2027</option>
-                                                      <option value="2028">2028</option>
-                                                      <option value="2029">2029</option>
-                                                      <option value="2030">2030</option>
-                                                      <option value="2031">2031</option>
-                                                      <option value="2032">2032</option>
-                                                      <option value="2033">2033</option>
-                                                      <option value="2034">2034</option>
-                                                      <option value="2035">2035</option>
-                                                      <option value="2036">2036</option>
-                                                      <option value="2037">2037</option>
-                                                   </select>
-                                                   <div class="error-messages-container">
-                                                      <ul class="error-messages js-error-messages"></ul>
-                                                   </div>
-                                                </li>
-                                                <input type="hidden" name="apple_pay_capable" id="apple_pay_capable" value="0" class="hidden">
-                                                <input type="checkbox" name="reusable" id="reusable" value="1" class="hidden checkbox" checked="checked">
                                              </ol>
                                           </fieldset>
                                           <div class="not_refund_checkout" id="submit">
@@ -142,31 +87,35 @@
                                     </form>
                                  </div>
                               </div>
-                              <form id="js-stripe_form" action="/profile/new_payment_source" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="GevIHCjoJMF/+JPaBwmTZXvT/Nx43C5y2YSqP1tJ0aG5bCLwcZAm9NBbsOiT5uAQ/65lkTboXlA8TDu/+dPPBQ==" class="hidden">
-                                 <input type="hidden" name="token" id="stripe_token" class="hidden">
-                                 <input type="hidden" name="reusable" id="stripe_reusable" value="0" class="hidden">
-                                 <input type="hidden" name="payment_type" id="payment_type" class="hidden">
-                              </form>
-                              <a class="btn btn--green js-pledge-submit" href="#"><span class="translation_missing" title="translation missing: en.credit_cards.index.Submit">Submit</span></a>
+                              <button id='credit_card_create' class="btn btn--green js-pledge-submit translation_missing">Submit</button>
                            </div>
                         </div>
                      </div>
                      <div class="mb3 mb7-sm" id="stored_card_form">
                         <ul class="stored_cards">
-                           <li class="credit_card_choice bg-violet-100 border border-grey-400">
-                              <img height="29" width="46" alt="Visa" src="https://static.kickstarter.com/assets/payment_sources/icon-cc-visa-1431c2739e616da785a215e1c423b27710c6238e23c02ba8e64c97aa6932cb6c.png">
-                              <div class="credit_card_info js-credit-card-info left">
-                                 <strong class="credit_card_number">
-                                 Card ending in 6520
-                                 </strong>
-                                 <span class="credit_card_expiry">
-                                 Expires 08/2019
-                                 </span>
-                              </div>
-                              <span class="forget_card">
-                              <a class="remote_modal_dialog btn btn--dark-green btn--small right" data-modal-id="remove_credit_card_modal" href="/profile/credit_cards/49700910/edit">Remove this card</a>
-                              </span>
-                           </li>
+                          <% @credit_cards.each do |credit_card| %>
+                            <li class="credit_card_choice bg-violet-100 border border-grey-400">
+                               <img height="29" width="46" alt="Visa" src="https://static.kickstarter.com/assets/payment_sources/icon-cc-visa-1431c2739e616da785a215e1c423b27710c6238e23c02ba8e64c97aa6932cb6c.png">
+                               <div class="credit_card_info js-credit-card-info left">
+                                  <strong class="credit_card_number">
+                                  Card ending in <%= credit_card['cc_number'] %>
+                                  </strong>
+                                  <span class="credit_card_expiry">
+                                    <% if credit_card['is_enabled'] == 't' %>
+                                      ENABLED
+                                    <% end %>
+                                  </span>
+                                  <span class="credit_card_expiry">
+                                    <% if credit_card['is_default'] =='t' %>
+                                      DEFAULT
+                                    <% end %>
+                                  </span>
+                               </div>
+                               <span class="forget_card">
+                               <div name='existing-cc-cards' card-id=<%= credit_card['cc_number'] %> class="remote_modal_dialog btn btn--dark-green btn--small right">Remove this card</div>
+                               </span>
+                            </li>
+                          <% end %>
                         </ul>
                      </div>
                   </div>

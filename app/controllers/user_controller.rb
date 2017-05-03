@@ -47,7 +47,7 @@ class UserController < ApplicationController
   end
 
   def credit_cards
-
+    @credit_cards = ActiveRecord::Base.connection.execute("SELECT * FROM credit_cards where user_id = #{current_user['id'].to_i}")
   end
 
   def follow
