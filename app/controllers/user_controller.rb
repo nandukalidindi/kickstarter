@@ -25,6 +25,7 @@ class UserController < ApplicationController
   end
 
   def about
+    ActiveRecord::Base.connection.execute("INSERT INTO events (user_id, profile_id, type, created_at, updated_at) VALUES (#{current_user['id']}, #{params[:id]}, 'profile_views', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)")
     @user = ActiveRecord::Base.connection.execute("SELECT * FROM users WHERE id=#{params[:id].to_i}").first
     @projects = ActiveRecord::Base.connection.execute("SELECT * FROM projects WHERE id IN (SELECT projects.id FROM projects INNER JOIN pledges ON projects.id = pledges.project_id WHERE pledges.user_id=#{params[:id].to_i})")
     @comments = ActiveRecord::Base.connection.execute("SELECT projects.title, reviews.comment, reviews.created_at FROM reviews INNER JOIN projects ON reviews.project_id = projects.id WHERE reviews.type='comment' AND reviews.user_id=#{params[:id].to_i}")

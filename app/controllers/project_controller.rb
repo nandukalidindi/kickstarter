@@ -1,5 +1,5 @@
 class ProjectController < ApplicationController
-  
+
   def index
     projects = ActiveRecord::Base.connection.execute("SELECT * FROM projects WHERE title like '%#{params[:search]}%'")
     index_sql = "SELECT projects.id, projects.title, projects.description, projects.maximum_fund, projects.search_thumbnail_small, projects.search_thumbnail_large, projects.video_url, users.first_name, users.last_name, projects.location, EXTRACT(EPOCH FROM (projects.end_date - CURRENT_TIMESTAMP))/(60*60*24) AS days_left , pledge_sums.pledge_sum
@@ -38,7 +38,7 @@ class ProjectController < ApplicationController
   end
 
   def show
-    # ActiveRecord::Base.connection.execute("INSERT INTO events (user_id, type, project_id, created_at, updated_at) VALUES ()")
+    ActiveRecord::Base.connection.execute("INSERT INTO events (user_id, type, project_id, created_at, updated_at) VALUES (#{current_user['id'].to_i}, 'project_views', #{params[:id]}, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)")
     @project = ActiveRecord::Base.connection.execute("SELECT * FROM projects WHERE id=#{params[:id].to_i}").first
     @days_left = ActiveRecord::Base.connection.execute("SELECT EXTRACT(EPOCH FROM (end_date - CURRENT_TIMESTAMP))/(60*60*24) AS days_left FROM projects WHERE id=#{params[:id].to_i}").first['days_left']
     @poster = ActiveRecord::Base.connection.execute("SELECT * FROM users WHERE id=#{@project["posted_by"].to_i}").first
