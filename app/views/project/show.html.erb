@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html class="projects_show fontface js skrollr skrollr-desktop" data-request-id="94a70ff9-2b07-43ab-9248-5bd3df8a3e01" lang="en">
-   <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# kickstarter: http://ogp.me/ns/fb/kickstarter#">      
+   <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# kickstarter: http://ogp.me/ns/fb/kickstarter#">
    </head>
    <body class="project projects not-mobile not-phone not-mobile-safari not-chrome-ios not-forces-video-controls not-tablet not-ipad not-iphone not-ios not-android not-touchable not-native-app-request not-apple-pay-capable not-android-pay-capable responsive skip_autologin" id="projects_show">
       <%= render 'header' %>
@@ -55,7 +55,7 @@
                                           <source src=<%= @project['video_url'] %> type="video/webm">
                                           You'll need an HTML5 capable browser to see this content.
                                        </video>
-                                       <img class="has_played_hide full-width poster landscape" alt="1977 EPA Graphic Standards System reissue project video thumbnail" src=<%= @project["search_thumbnail_large"] %> style="min-height: 0px;">
+                                       <img class="has_played_hide full-width poster landscape" alt="1977 EPA Graphic Standards System reissue project video thumbnail" src=<%= @project['project_image_url'] || @project["search_thumbnail_large"] %> style="min-height: 0px;">
                                        <div class="reset-video js-reset-video-once">
                                           <div class="reset-video__icon">
                                              <div class="audio-indicator js-autoplay-svg">

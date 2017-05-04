@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html class="discover_advanced fontface js" data-request-id="171066af-716a-4361-b280-fc92fe986738" lang="en">
+   <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# kickstarter: http://ogp.me/ns/fb/kickstarter#">
+   </head>
+   <body class="frame discover not-mobile not-phone not-mobile-safari not-chrome-ios not-forces-video-controls not-tablet not-ipad not-iphone not-ios not-android not-touchable not-native-app-request not-apple-pay-capable not-android-pay-capable responsive skip_autologin" id="discover_advanced">
+      <div class="NS_layouts__notifications"></div>
+      <%= render 'header' %>
+      <%= render 'user_menu' %>
+
+      <div id="start-of-content" tabindex="-1"></div>
+      <main role="main">
+         <div id="growl_section" class="center jGrowl"></div>
+         <div id="main_content">
+            <section class="relative border-top pt3" id="advanced_container">
+               <div class="loading absolute hide full-width full-height z1"></div>
+               <section class="pb3 pb10-sm pt3" id="projects">
+                  <div class="js-back-to-top back-to-top t0 r0 mt3 mr3 hide z1" style="display: none;">
+                     <a class="btn btn--border-gray btn--small type-12" role="button">
+                     <span class="ksr-icon__arrow-up" aria-hidden="true"></span>
+                     Back to top
+                     </a>
+                  </div>
+                  <div class="py3 py7-sm js-project-cards-module js-project-group" data-ref="home_recs" id="recommended-projects">
+                     <div class="container-flex px3 py3 test-homepage-recommendations">
+                        <div class="title-card pb3">
+                           <div class="row">
+                              <div class="mobile-col">
+                                 <h2 class="f3 mb0 normal">
+                                   <div class="green-dark"> Recommended for you </div>
+                                 </h2>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="container-flex px3 mobile-scroll-container pb3 js-recs">
+                        <div class="js-slider slider loading hide" style="display: block;">
+                           <div class="js-project-list mobile-scroll-row row">
+                             <% @recommendations.each do |recommend| %>
+                               <div class="project col col-4 mobile-scroll-row-item">
+                                  <div class="project-card js-score-tracking js-track-project-card ratio-16-9  project-card-tall-big" data-pid="95795193" data-section="home_recs" data-weighted_score="" data-raw_score="" data-model_name="" data-project_pid="95795193" data-project_state="live" data-project_backers_count="3697" data-project_percent_raised="743.01084" data-project_pledged="371505.42" data-user_has_starred="false" data-user_is_backer="false">
+                                     <div class="project-thumbnail">
+                                        <div class="projects-we-love-badge projects-we-love-badge--overlay">
+                                           <div class="icon">
+                                              <span class="ksr-icon__heart"></span>
+                                           </div>
+                                           <div class="label">
+                                              Project We Love
+                                           </div>
+                                        </div>
+                                        <a href="/projects/<%= recommend['id'] %>" class="project-thumbnail-wrap" target="">
+                                        <img alt="Project image" class="project-thumbnail-img" src=<%= recommend['project_image_url'] || recommend['search_thumbnail_large'] %> width="100%">
+                                        </a>
+                                     </div>
+                                     <div class="project-card-content">
+                                        <h6 class="project-title"><a href="/projects/<%= recommend['id'] %>" target="" data-score="" data-version="" data-pid="95795193"><%= recommend['title'] %></a></h6>
+                                        <p class="project-byline">by <%= recommend['first_name'] %> <%= recommend['last_name'] %></p>
+                                        <p class="project-blurb">
+                                           <%= recommend['description'] %>
+                                        </p>
+                                     </div>
+                                     <div class="project-card-footer">
+                                        <div class="project-location">
+                                           <a href="https://www.kickstarter.com/discover/places/port-townsend-wa" data-location="{&quot;id&quot;:2475511,&quot;name&quot;:&quot;Port Townsend&quot;,&quot;slug&quot;:&quot;port-townsend-wa&quot;,&quot;short_name&quot;:&quot;Port Townsend, WA&quot;,&quot;displayable_name&quot;:&quot;Port Townsend, WA&quot;,&quot;country&quot;:&quot;US&quot;,&quot;state&quot;:&quot;WA&quot;,&quot;type&quot;:&quot;Town&quot;,&quot;is_root&quot;:false,&quot;urls&quot;:{&quot;web&quot;:{&quot;discover&quot;:&quot;https://www.kickstarter.com/discover/places/port-townsend-wa&quot;,&quot;location&quot;:&quot;https://www.kickstarter.com/locations/port-townsend-wa&quot;},&quot;api&quot;:{&quot;nearby_projects&quot;:&quot;https://api.kickstarter.com/v1/discover?signature=1493147980.274914a2efa5dce719c2b750b191b6a3812fa598&amp;woe_id=2475511&quot;}}}">
+                                           <span class="ksr-icon__location" aria-hidden="true"></span>
+                                           <span class="location-name"<%= recommend['location'] %></span>
+                                           </a>
+                                        </div>
+                                        <div class="project-stats-container">
+                                           <div class="project-progress-bar">
+                                              <div class="project-percent-pledged" style="width: <%= (((recommend['pledge_sum'] || "0").to_f/recommend['maximum_fund'].to_f)*100).floor %>%"></div>
+                                           </div>
+                                           <ul class="project-stats">
+                                              <li>
+                                                 <div class="project-stats-value"><%= (((recommend['pledge_sum'] || "0").to_f/recommend['maximum_fund'].to_f)*100).floor %>%</div>
+                                                 <span class="project-stats-label">funded</span>
+                                              </li>
+                                              <li class="js-amount-pledged">
+                                                 <div class="project-stats-value">$<%= recommend['pledge_sum'] || "0" %></div>
+                                                 <span class="project-stats-label">pledged</span>
+                                              </li>
+                                              <li class="ksr_page_timer" data-end_time="1494050400000">
+                                                 <div class="project-stats-value js-num"><%= recommend['days_left'].to_f.ceil %></div>
+                                                 <div data-word="left" class="project-stats-label js-text">days to go</div>
+                                              </li>
+                                           </ul>
+                                        </div>
+                                     </div>
+                                  </div>
+                               </div>
+                             <% end %>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+            </section>
+         </div>
+      </main>
+
+      <%= render 'svg' %>
+   </body>
+</html>

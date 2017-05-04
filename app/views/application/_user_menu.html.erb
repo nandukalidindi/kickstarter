@@ -7,11 +7,7 @@
                   My stuff
                </h3>
                <ul class="js-dropdown_group dropdown-menu">
-                  <li>
-                     <a href="/profile/following/find_creators?ref=user_menu">Follow creators</a>
-                     <span class="flag-callout">New</span>
-                  </li>
-                  <li><a href="/recommendations?ref=user_menu">Recommended for you</a></li>
+                  <li><a href="/users/<%= current_user['id'] %>/recommendations">Recommended for you</a></li>
                   <li>
                      <a title="Activity" href="/activity?ref=user_menu">Activity
                      </a>

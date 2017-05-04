@@ -9,6 +9,31 @@ class UserController < ApplicationController
   def index
   end
 
+  def account
+    @user = ActiveRecord::Base.connection.execute("SELECT * FROM users where id=#{params[:id].to_i}").first
+  end
+
+  def reset_password
+    current_password = ActiveRecord::Base.connection.execute("SELECT password FROM users WHERE id=#{params[:id].to_i}").first['password']
+
+    if current_password != params['current_password']
+      redirect_to "/users/#{params[:id]}/account", alert: "PASSWORD IS INCORRECT. SYSTEM WILL SELF DESTRUCT IN 10 mins"
+      return
+    end
+
+    if params[:password] == params[:confirm_password] && params[:password].length != 0
+      ActiveRecord::Base.connection.execute("
+        UPDATE users
+        SET password='#{params['password']}',
+            email='#{params['email']}'
+        WHERE id=#{params[:id].to_i}
+      ")
+      redirect_to "/users/#{params[:id]}/account", notice: "PASSWORD RESET SUCCESSFULLY!"
+      return
+    end
+    redirect_to "/users/#{params[:id]}/account"
+  end
+
   def followers
     @followers = ActiveRecord::Base.connection.execute("SELECT * FROM followers INNER JOIN users ON followers.follower_id = users.id WHERE followers.following_id=#{params[:id].to_i}")
     @following = ActiveRecord::Base.connection.execute("SELECT * FROM followers INNER JOIN users ON followers.following_id = users.id WHERE followers.follower_id=#{params[:id].to_i}")
@@ -22,6 +47,25 @@ class UserController < ApplicationController
   end
 
   def profile
+    @user = ActiveRecord::Base.connection.execute("SELECT * FROM users where id=#{params[:id].to_i}").first
+  end
+
+  def update_profile
+    ActiveRecord::Base.connection.execute("
+    UPDATE users
+    SET first_name='#{params['first_name']}',
+        last_name='#{params['last_name']}',
+        username='#{params['username']}',
+        profile_image_url='#{params['profile_image_url']}',
+        biography='#{params['biography']}',
+        address='#{params['address']}',
+        state='#{params['state']}',
+        country='#{params['country']}',
+        pincode='#{params['pincode']}'
+    WHERE id=#{params[:id].to_i}
+    ")
+
+    redirect_to "/users/#{params[:id]}/profile"
   end
 
   def projects
@@ -39,11 +83,53 @@ class UserController < ApplicationController
                 ON users.id = projects.posted_by
                 WHERE projects.posted_by=#{params[:id]}"
 
-    projects = ActiveRecord::Base.connection.execute(user_projects_sql)
+    projects = ActiveRecord::Base.connection.execute(user_projects_sql).to_a
+    projects.each do |project|
+      ar_project = Project.find(project['id'].to_i)
+      unless ar_project.project_image_file_name.nil?
+        project['project_image_url'] = ar_project.project_image.url
+      end
+    end
+
     @projects = [[], [], [], [], [], [], []]
 
     projects.each_with_index do |project, index|
       @projects[index/4] << project
+    end
+  end
+
+  def recommendations
+    recommend_sql = "SELECT projects.id, projects.title, projects.description, projects.maximum_fund, projects.search_thumbnail_small, projects.search_thumbnail_large, projects.video_url, users.first_name, users.last_name, projects.location, EXTRACT(EPOCH FROM (projects.end_date - CURRENT_TIMESTAMP))/(60*60*24) AS days_left , CASE WHEN pledge_sums.pledge_sum is null THEN 0 ELSE pledge_sums.pledge_sum END
+                FROM projects
+                FULL OUTER JOIN (
+                SELECT projects.id AS id, SUM(pledges.amount) AS pledge_sum
+                FROM projects
+                INNER JOIN pledges
+                ON projects.id = pledges.project_id
+                GROUP BY projects.id
+                ) AS pledge_sums
+                ON projects.id = pledge_sums.id
+                INNER JOIN users
+                ON users.id = projects.posted_by
+                WHERE projects.id IN
+                (
+                  SELECT project_id
+                  FROM (
+                          SELECT project_id, COUNT(*) AS no_of_views
+                          FROM events
+                          WHERE user_id=#{current_user['id']}
+                          AND type='project_views'
+                          GROUP BY project_id ORDER BY no_of_views DESC
+                        ) AS A
+                ) ORDER BY random()"
+
+    @recommendations = ActiveRecord::Base.connection.execute(recommend_sql).to_a
+
+    @recommendations.each do |project|
+      ar_project = Project.find(project['id'].to_i)
+      unless ar_project.project_image_file_name.nil?
+        project['project_image_url'] = ar_project.project_image.url
+      end
     end
   end
 
@@ -57,7 +143,13 @@ class UserController < ApplicationController
 
   def backed
     @user = ActiveRecord::Base.connection.execute("SELECT * FROM users WHERE id=#{params[:id].to_i}").first
-    @projects = ActiveRecord::Base.connection.execute("SELECT * FROM projects WHERE id IN (SELECT projects.id FROM projects INNER JOIN pledges ON projects.id = pledges.project_id WHERE pledges.user_id=#{params[:id]})")
+    @projects = ActiveRecord::Base.connection.execute("SELECT * FROM projects WHERE id IN (SELECT projects.id FROM projects INNER JOIN pledges ON projects.id = pledges.project_id WHERE pledges.user_id=#{params[:id]})").to_a
+    @projects.each do |project|
+      ar_project = Project.find(project['id'].to_i)
+      unless ar_project.project_image_file_name.nil?
+        project['project_image_url'] = ar_project.project_image.url
+      end
+    end
     @comments = ActiveRecord::Base.connection.execute("SELECT projects.title, reviews.comment, reviews.created_at FROM reviews INNER JOIN projects ON reviews.project_id = projects.id WHERE reviews.type='comment' AND reviews.user_id=#{params[:id].to_i}")
     @is_following = (ActiveRecord::Base.connection.execute("SELECT * FROM followers WHERE following_id=#{params[:id].to_i} AND follower_id=#{current_user['id'].to_i}") || []).count >= 1
   end

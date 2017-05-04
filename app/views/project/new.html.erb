@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html class="no-mega js skrollr skrollr-desktop" data-request-id="43c5f683-e7b8-40c1-89e8-48c694d3637f" lang="en">
-   <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# kickstarter: http://ogp.me/ns/fb/kickstarter#">      
+   <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# kickstarter: http://ogp.me/ns/fb/kickstarter#">
    </head>
    <body class="minimal projects not-mobile not-phone not-mobile-safari not-chrome-ios not-forces-video-controls not-tablet not-ipad not-iphone not-ios not-android not-touchable not-native-app-request not-apple-pay-capable not-android-pay-capable fixed-width is_creator transition-all skip_autologin started au" id="projects_edit">
       <%= render 'header' %>
@@ -86,47 +86,15 @@
                         <div id="main">
                            <div class="window" style="width: 880px">
                               <ol class="form-panels">
+
                                  <li class="panel" data-panel_id="the-basics" id="the-basics-panel" style="width: 880px">
-                                   <%= form_tag projects_path, class: 'edit_project', role: 'form', id: "edit_project_2938557", "accept-charset"=> "UTF-8", method: :post do %>
+                                   <%= form_tag projects_path, class: 'edit_project', role: 'form', id: "edit_project_2938557", "accept-charset"=> "UTF-8", multipart: true, method: :post do %>
                                        <fieldset class="m0">
                                           <ol class="fields m0">
                                             <li class="project-video js-asset-uploads" data-subtitles-path="/video_tracks">
                                                 <div class="grey-field clearfix mb3">
                                                    <label class="primary" for="project_video">Project video</label>
-                                                   <div class="field-wrapper">
-                                                      <div class="js-asset-upload asset_upload video">
-                                                         <div class="error">
-                                                            <div class="message"></div>
-                                                         </div>
-                                                         <div class="success">
-                                                            <div class="image-clip">
-                                                               <a class="remove" href="/projects/46676441/1772785039/video">
-                                                                  <div class="circle_x">
-                                                                     <span class="ss-icon ss-delete"></span>
-                                                                  </div>
-                                                               </a>
-                                                               <img class="preview" src="https://static.kickstarter.com/assets/trans_50_black-9dfe8581ba0aebae05e21b7e89da8b1b143de53aabbcf00c99e32f443de4062f.png" alt="Trans 50 black">
-                                                            </div>
-                                                         </div>
-                                                         <div class="upload">
-                                                            <input type="file" name="file" id="file" url="https://ksr-client-uploads.s3.amazonaws.com" data-params="{&quot;bucket&quot;:&quot;ksr-client-uploads&quot;,&quot;acl&quot;:&quot;private&quot;,&quot;key&quot;:&quot;ugc/3313d2006f82a844&quot;,&quot;AWSAccessKeyId&quot;:&quot;AKIAJJHXSS6EMLSOSPLQ&quot;,&quot;policy&quot;:&quot;eyJleHBpcmF0aW9uIjoiMjAxNy0wNC0yOFQwMzo0MzozN1oiLCJjb25kaXRpb25zIjpbeyJidWNrZXQiOiJrc3ItY2xpZW50LXVwbG9hZHMifSx7ImFjbCI6InByaXZhdGUifSx7ImtleSI6InVnYy8zMzEzZDIwMDZmODJhODQ0In0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9yZWRpcmVjdCIsIiJdXX0=&quot;,&quot;signature&quot;:&quot;2iNoR3IIe7265rhX4w20VMypyRs=&quot;}" data-asset-path="/projects/46676441/1772785039/video" class="video file">
-                                                            <strong class="center">
-                                                            Choose a video from your computer <span>MOV, MPEG, AVI, MP4, 3GP, WMV, or FLV • 5GB file limit</span>
-                                                            </strong>
-                                                            <div class="encode">
-                                                               <div class="image-placeholder"></div>
-                                                               <div class="message">
-                                                                  <strong>Your video is being encoded...</strong>
-                                                                  <p>
-                                                                     This usually takes a few minutes. Feel free to continue working or leave the page. Your video will appear when it’s ready. If it doesn’t appear after 20 minutes, <a class="retry_upload" href="#">retry the upload</a>.
-                                                                  </p>
-                                                               </div>
-                                                            </div>
-                                                         </div>
-                                                      </div>
-                                                      <div style="text-align: center; margin-top: 5px; margin-bottom: 5px">
-                                                        OR
-                                                      </div>
+                                                   <div class="field-wrapper">                                                                                                            
                                                       <div class="character_counter_wrapper">
                                                         <%= text_field_tag :video_url, '', class: 'required text', type: 'text', placeholder: 'Enter a public URL for the video', id: 'project_video' %>
                                                       </div>
@@ -146,7 +114,7 @@
                                                    <div class="field-wrapper main-project-image">
                                                       <div class="js-asset-upload asset_upload project required">
                                                          <div class="upload">
-                                                            <input type="file" name="project[photo]" id="project_photo" class="photo file" url="/projects/46676441/1772785039/photo" data-help_section="project-image-help">
+                                                           <%= file_field_tag :project_image, class: 'photo file', id: 'project_photo' %>
                                                             <strong class="center">
                                                             Choose an image from your computer <span class="has_file_hide">This is the main image associated with your project. Make it count!</span><span>JPEG, PNG, GIF, or BMP • 50MB file limit</span> <span>At least 1024x576 pixels • 16:9 aspect ratio</span>
                                                             </strong>

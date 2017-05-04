@@ -47,7 +47,7 @@
                                                     <div class="label">Project We Love</div>
                                                  </div>
                                               </div>
-                                              <a class="project-thumbnail-wrap" href="/projects/<%= project['id'] %>"><img alt="Project image" style="height: auto;" class="project-thumbnail__image" src=<%= project['search_thumbnail_large'] %> width="560" height="315"></a>
+                                              <a class="project-thumbnail-wrap" href="/projects/<%= project['id'] %>"><img alt="Project image" style="height: auto;" class="project-thumbnail__image" src=<%= project['project_image_url'] || project['search_thumbnail_large'] %> width="560" height="315"></a>
                                            </div>
                                            <div class="project-card-interior">
                                               <h4 class="project-title ellipsis"><a class="green-dark" href="/projects/<%= project['id'] %>"><%= project['title'] %></a></h4>
@@ -125,7 +125,7 @@
                         <div class="row">
                            <div class="mobile-col">
                               <h2 class="f3 mb0 normal">
-                                <div class="green-dark"> Recommended for you </div>
+                                <a href="/users/<%= current_user['id'] %>/recommendations" class="green-dark"> Recommended for you <span> (Click to view more ...) </span> </a>
                               </h2>
                            </div>
                         </div>
@@ -147,7 +147,7 @@
                                         </div>
                                      </div>
                                      <a href="/projects/<%= recommend['id'] %>" class="project-thumbnail-wrap" target="">
-                                     <img alt="Project image" class="project-thumbnail-img" src=<%= recommend['search_thumbnail_large'] %> width="100%">
+                                     <img alt="Project image" class="project-thumbnail-img" src=<%= recommend['project_image_url'] || recommend['search_thumbnail_large'] %> width="100%">
                                      </a>
                                   </div>
                                   <div class="project-card-content">
@@ -218,7 +218,7 @@
                                      </div>
                                   </div>
                                   <a href="/projects/<%= recommend['id'] %>" class="project-thumbnail-wrap" target="">
-                                  <img alt="Project image" class="project-thumbnail-img" src=<%= recommend['search_thumbnail_large'] %> width="100%">
+                                  <img alt="Project image" class="project-thumbnail-img" src=<%= recommend['project_image_url'] || recommend['search_thumbnail_large'] %> width="100%">
                                   </a>
                                </div>
                                <div class="project-card-content">

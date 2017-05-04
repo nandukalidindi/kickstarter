@@ -32,7 +32,14 @@ class ProjectController < ApplicationController
     end
 
 
-    projects = ActiveRecord::Base.connection.execute(index_sql)
+    projects = ActiveRecord::Base.connection.execute(index_sql).to_a
+    projects.each do |project|
+      ar_project = Project.find(project['id'].to_i)
+      unless ar_project.project_image_file_name.nil?
+        project['project_image_url'] = ar_project.project_image.url
+      end
+    end
+
     @projects = [[], [], [], [], [], [], []]
 
     projects.each_with_index do |project, index|
@@ -41,7 +48,6 @@ class ProjectController < ApplicationController
   end
 
   def new
-
   end
 
   def create
@@ -50,14 +56,26 @@ class ProjectController < ApplicationController
     end_date = (Time.now + (60 * 60 * 24 * params[:days].to_i)).to_s
     if params[:title] && params[:goal]
       ActiveRecord::Base.connection.execute("INSERT INTO projects(title, description, posted_by, type, status, maximum_fund, start_date, end_date, created_at, updated_at, tags, search_thumbnail_small, search_thumbnail_large, video_url, location) VALUES('#{params[:title]}', '#{params[:description]}', #{posted_by}, '#{params[:type]}', 'INITIAL', #{params[:goal].to_f}, '#{Time.now.to_s}', '#{end_date}', '#{Time.now.to_s}', '#{Time.now.to_s}', '{#{tags}}', '#{params[:image_url]}', '#{params[:image_url]}', '#{params[:video_url]}', '#{params[:location]}')")
-
-      redirect_to '/projects'
     end
+
+    created_project = Project.where(title: params[:title]).first
+    if created_project && params[:project_image]
+      created_project.project_image = params[:project_image]
+      created_project.save!
+    end
+    redirect_to '/projects'
   end
 
   def show
     ActiveRecord::Base.connection.execute("INSERT INTO events (user_id, type, project_id, created_at, updated_at) VALUES (#{current_user['id'].to_i}, 'project_views', #{params[:id]}, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)")
     @project = ActiveRecord::Base.connection.execute("SELECT * FROM projects WHERE id=#{params[:id].to_i}").first
+    if @project
+      ar_project = Project.find(@project['id'].to_i)
+      unless ar_project.project_image_file_name.nil?
+        @project['project_image_url'] = ar_project.project_image.url
+      end
+    end
+
     @days_left = ActiveRecord::Base.connection.execute("SELECT EXTRACT(EPOCH FROM (end_date - CURRENT_TIMESTAMP))/(60*60*24) AS days_left FROM projects WHERE id=#{params[:id].to_i}").first['days_left']
     @poster = ActiveRecord::Base.connection.execute("SELECT * FROM users WHERE id=#{@project["posted_by"].to_i}").first
     @comments = ActiveRecord::Base.connection.execute("SELECT reviews.comment, users.id AS user_id, users.first_name, users.last_name, reviews.created_at FROM reviews INNER JOIN users ON reviews.user_id = users.id WHERE reviews.type='comment' AND reviews.project_id=#{params[:id].to_i}")

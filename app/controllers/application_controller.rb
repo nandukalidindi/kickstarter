@@ -20,15 +20,35 @@ class ApplicationController < ActionController::Base
                 ON users.id = projects.posted_by"
 
     @types = ActiveRecord::Base.connection.execute("SELECT DISTINCT(type) FROM projects")
-    @type_projects = ActiveRecord::Base.connection.execute("SELECT * FROM projects WHERE id IN ( SELECT MAX(id) FROM projects GROUP BY type )")
+    @type_projects = ActiveRecord::Base.connection.execute("SELECT * FROM projects WHERE id IN ( SELECT MAX(id) FROM projects GROUP BY type )").to_a
+    @type_projects.each do |project|
+      ar_project = Project.find(project['id'].to_i)
+      unless ar_project.project_image_file_name.nil?
+        project['project_image_url'] = ar_project.project_image.url
+      end
+    end
 
     recommend_sql = full_index_sql + " WHERE projects.id IN (SELECT project_id FROM (SELECT project_id, COUNT(*) as no_of_views FROM events WHERE user_id=#{current_user['id']} AND type='project_views' GROUP BY project_id ORDER BY no_of_views DESC) AS A) ORDER BY random() limit 3";
 
-    @recommendations = ActiveRecord::Base.connection.execute(recommend_sql)
+    @recommendations = ActiveRecord::Base.connection.execute(recommend_sql).to_a
+
+    @recommendations.each do |project|
+      ar_project = Project.find(project['id'].to_i)
+      unless ar_project.project_image_file_name.nil?
+        project['project_image_url'] = ar_project.project_image.url
+      end
+    end
 
     whatspopular_sql = full_index_sql + " ORDER BY pledge_sum DESC limit 3"
 
-    @whatspopular = ActiveRecord::Base.connection.execute(whatspopular_sql)
+    @whatspopular = ActiveRecord::Base.connection.execute(whatspopular_sql).to_a
+
+    @whatspopular.each do |project|
+      ar_project = Project.find(project['id'].to_i)
+      unless ar_project.project_image_file_name.nil?
+        project['project_image_url'] = ar_project.project_image.url
+      end
+    end
   end
 
   def current_user

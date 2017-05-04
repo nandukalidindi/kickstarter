@@ -47,7 +47,13 @@ Rails.application.routes.draw do
 
   get 'users/:id/account' => 'user#account'
 
+  post 'users/:id/account' => 'user#reset_password', as: 'password_reset'
+
   get 'users/:id/profile' => 'user#profile'
+
+  post 'users/:id/profile' => 'user#update_profile', as: 'profile_update'
+
+  get 'users/:id/recommendations' => 'user#recommendations'
 
   get 'users/:id/credit_cards' => 'user#credit_cards'
 

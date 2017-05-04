@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="users_edit fontface js" data-request-id="8bf20d5f-f0c7-4e55-be53-e637a5ae4e7f" lang="en">
    <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# kickstarter: http://ogp.me/ns/fb/kickstarter#">
-      
+
    </head>
    <body class="users_edit users not-mobile not-phone not-mobile-safari not-chrome-ios not-forces-video-controls not-tablet not-ipad not-iphone not-ios not-android not-touchable not-native-app-request not-apple-pay-capable not-android-pay-capable responsive skip_autologin" id="users_edit_account">
       <div class="NS_layouts__notifications"></div>
@@ -31,30 +31,38 @@
             </section>
             <div class="container-flex px3">
                <div class="row">
+                 <% if notice %>
+                   <div style="text-align: center; font-weight: bold; padding-bottom: 0px" class="btn btn--green btn--block submit">
+                     <p>User created successfully!</p>
+                     <p>Login to EXPLORE</p>
+                   </div>
+                  <% end %>
+                  <% if alert %>
+                    <div style="color: red; font-weight: bold" class="jGrowl-message">
+                      <p>The email address and password you entered do not match.</p>
+                    </div>
+                  <% end %>
                   <div class="col col-5 col-post-1">
-                     <form class="form-simple form-stacked" id="edit_user_12467261" action="https://www.kickstarter.com/profile" accept-charset="UTF-8" method="post">
-                        <input name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="patch" class="hidden"><input type="hidden" name="authenticity_token" value="QWSO3zXvYIWeuzKUMlARTMZ9kiuZEQEasEa71+WmTjLh42QzbJdisDEYEaamv2I5QgALZtclcThVjipXRzxQlg==" class="hidden">
-                        <div class="red"></div>
-                        <input type="hidden" name="view" id="view" value="account" class="hidden">
+                    <%= form_tag password_reset_path, class: 'form-simple form-stacked', role: 'form', "accept-charset"=> "UTF-8", method: :post do %>
                         <fieldset class="mb3 mb10-sm">
                            <ol class="f5">
                               <li class="py2">
                                  <label class="bold" for="user_email">Email</label>
-                                 <input class="input-text full-width text" type="text" value="nandukalidindi@gmail.com" name="user[email]" id="user_email">
+                                 <%= text_field_tag :email, '', class: 'input-text full-width text', value: @user['email'], style: 'width: 100%', type: 'text', placeholder: 'Enter an email address', id: 'user-email' %>
                               </li>
                               <li class="change_password py2 js-hide" style="display: list-item;">
                                  <label class="bold">New Password</label>
-                                 <input class="input-text full-width password" type="password" name="user[password]" id="user_password">
+                                 <%= text_field_tag :password, '', class: 'input-text full-width js-auto_focus fs-hide password', type: 'password', placeholder: 'Password' %>
                                  <span class="grey-dark">Minimum 6 characters</span>
                               </li>
                               <li class="change_password py2 js-hide" style="display: list-item;">
                                  <label class="bold">Confirm Password</label>
-                                 <input class="input-text full-width password" type="password" name="user[password_confirmation]" id="user_password_confirmation">
+                                 <%= text_field_tag :confirm_password, '', class: 'input-text full-width js-auto_focus fs-hide password', type: 'password', placeholder: 'Password' %>
                                  <span class="grey-dark">Make sure they match!</span>
                               </li>
                               <li class="current_password py2">
                                  <label class="bold">Current Password</label>
-                                 <input class="input-text full-width password" type="password" name="user[current_password]" id="user_current_password">
+                                 <%= text_field_tag :current_password, '', class: 'input-text full-width js-auto_focus fs-hide password', type: 'password', placeholder: 'Password' %>
                                  <span class="grey-dark">
                                  Enter your current password to save these changes.
                                  </span>
@@ -64,62 +72,7 @@
                               <input type="submit" name="commit" value="Reset password" class="btn btn--blue submit">
                            </div>
                         </fieldset>
-                     </form>
-                  </div>
-               </div>
-               <div class="clear mb3 mb10-sm">
-                  <div class="NS_users__security_events py3 py7-sm border-top">
-                     <h3>
-                        Login History
-                     </h3>
-                     <p>
-                        This feature provides information about your account usage and other related changes. If you see any suspicious activity, change your password immediately.
-                     </p>
-                     <div class="row mobile-hide">
-                        <div class="col col-5">
-                           <h5 class="grey-dark">Activity</h5>
-                        </div>
-                        <div class="col col-3">
-                           <h5 class="grey-dark">Time</h5>
-                        </div>
-                        <div class="col col-2">
-                           <h5 class="grey-dark">Location</h5>
-                        </div>
-                        <div class="col col-2 right-align">
-                           <h5 class="grey-dark">IP Address</h5>
-                        </div>
-                     </div>
-                     <div class="mobius_page">
-                        <ul class="list mobius click border-top" data-mobius_append="true" data-mobius_url="/profile/security_events">
-                           <li class="page" data-last_page="false" data-page_number="1">
-                              <div class="NS_users__security_event_row py2 border-bottom" data-cursor="1493648683">
-                                 <div class="row">
-                                    <div class="col col-5 bold">
-                                       Password verification successful
-                                    </div>
-                                    <div class="col col-3 f5">
-                                       <time datetime="2017-05-01T14:24:43+00:00" data-format="llll z" class="js-adjust-time">Mon, May 1 2017 10:24 AM EDT</time>
-                                    </div>
-                                    <div class="col col-2 f5">
-                                       New York, 10003, US
-                                       &nbsp;
-                                    </div>
-                                    <div class="col col-2 f5 right-align mobile-left-align">
-                                       216.165.95.7
-                                    </div>
-                                 </div>
-                              </div>
-                           </li>
-                        </ul>
-                        <div class="loading pl2" style="display: none">
-                           <img src="https://static.kickstarter.com/assets/icons/loading-small-a25feb0222a994468bf211976c47036a664ab4d3280c072d19a21d8d8eae8434.gif" alt="Loading small">
-                           <span class="tiny_type grey-dark pl2">Please wait</span>
-                           <div class="clear"></div>
-                        </div>
-                        <div>
-                           <a class="btn btn--gray pt3 load_more" href="#">Load more</a>
-                        </div>
-                     </div>
+                     <% end %>
                   </div>
                </div>
             </div>
