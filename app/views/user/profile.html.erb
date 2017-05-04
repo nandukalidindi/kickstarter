@@ -30,7 +30,7 @@
                </div>
             </section>
             <div class="container-flex px3">
-              <%= form_tag profile_update_path, class: 'form-simple', role: 'form', "accept-charset"=> "UTF-8", method: :post do %>
+              <%= form_tag profile_update_path, class: 'form-simple', role: 'form', "accept-charset"=> "UTF-8", multipart: true, method: :post do %>
                   <div class="row">
                      <fieldset class="col col-5 col-post-1">
                         <ol class="f5">
@@ -39,18 +39,14 @@
                               <%= text_field_tag :username, '', class: 'required text', value: @user['username'], style: 'width: 100%', type: 'text', placeholder: 'Enter a unique name', id: 'user-name' %>
                            </li>
                            <li class="py2">
+                              <label class="bold" for="user_name">Existing Photo (don't like it? Upload a new one)</label>
+                              <img alt="Profile image" class="project-thumbnail-img" src=<%= @user.profile_image.url || @user.profile_image_url %> width="100%">
+                           </li>
+                           <li class="py2">
                               <label class="bold" for="user_Picture">Picture</label>
                               <div class="js-asset-upload asset_upload profile-photo avatar">
-                                 <div class="error">
-                                    <div class="message"></div>
-                                 </div>
-                                 <div class="success">
-                                    <div class="image-clip">
-                                       <img alt="" class="preview">
-                                    </div>
-                                 </div>
                                  <div class="upload">
-                                    <input class="avatar file" url="/profile/avatar" type="file" name="user[avatar]" id="user_avatar">
+                                   <%= file_field_tag :profile_image, class: 'photo file', class: 'avatar file', id: 'profile_photo' %>
                                     <strong class="center profile-photo">
                                     Choose an image from your computer
                                     </strong>

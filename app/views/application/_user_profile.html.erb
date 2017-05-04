@@ -4,11 +4,11 @@
          <div class="grid-row">
             <div class="col-full">
                <div class="center" id="profile_avatar">
-                  <a href="/profile/zenxacred"><img class="avatar-image" alt="" style="height: auto;" src="https://ksr-ugc.imgix.net/assets/006/044/224/3df7d34aa2b9b21f46d97b39afde17ce_original.jpeg?w=160&amp;h=160&amp;fit=crop&amp;v=1470016008&amp;auto=format&amp;q=92&amp;s=048c15728b5b0daecb3d67c365c710de" width="160" height="160"></a>
+                 <img alt="Profile image" class="avatar-image" style="height: 160px; width: 160px" src=<%= @user.profile_image.url || @user.profile_image_url %>>
                </div>
                <div class="profile_bio center mb6" style="display: flex; flex-direction: column;">
                   <h2 class="mb2">
-                     <a href="/profile/zenxacred"><%= locals[:user]['first_name'] %> <%= locals[:user]['last_name'] %></a>
+                     <a href="/profile/zenxacred"><%= @user['first_name'] %> <%= @user['last_name'] %></a>
                   </h2>
                   <p class="normal_type mb1">
                      <span class="backed">
@@ -18,13 +18,13 @@
                      ·
                      </span>
                      <span class="location">
-                     <a href="/discover/advanced?backed=-1&amp;ref=profile_location&amp;state=live&amp;woe_id=15015372"><%= locals[:user]['state'] %>, <%= locals[:user]['country'] %></a>
+                     <a href="/discover/advanced?backed=-1&amp;ref=profile_location&amp;state=live&amp;woe_id=15015372"><%= @user['state'] %>, <%= @user['country'] %></a>
                      </span>
                      <span class="divider">
                      ·
                      </span>
                      <span class="joined">
-                     Joined <time datetime="2011-04-22T04:55:51-04:00" data-format="MMM YYYY" class="js-adjust-time"><%= locals[:user]['created_at'] %></time>
+                     Joined <time datetime="2011-04-22T04:55:51-04:00" data-format="MMM YYYY" class="js-adjust-time"><%= @user['created_at'] %></time>
                      </span>
                   </p>
                   <% if params[:id] != current_user['id'] %>
