@@ -51,7 +51,6 @@
                                            </div>
                                            <div class="project-card-interior">
                                               <h4 class="project-title ellipsis"><a class="green-dark" href="/projects/<%= project['id'] %>"><%= project['title'] %></a></h4>
-                                              <p class="f6 grey-dark mobile-hide">by bachor</p>
                                               <p class="blurb f5 grey-dark mb3 mb5-sm mobile-hide">
                                                  <%= project['description'] %>
                                               </p>
@@ -62,37 +61,6 @@
                                                     </a><a class="grey-dark mr3 nowrap type-12" href="/discover/categories/art/public%20art?ref=category"><span class="ksr-icon__tag" aria-hidden="true"></span>
                                                     <%= project['tags'][1..-2].split(",").map(&:capitalize).join(", ") %>
                                                     </a>
-                                                 </div>
-                                                 <div class="project-stats-wrap">
-                                                    <div class="project-pledged-successful bg-green white f6 pl2 pr2 mb2" style="display: none;">
-                                                       <strong>Successfully funded!</strong>
-                                                    </div>
-                                                    <div class="NS_project__baseball_card_stats">
-                                                       <div class="project-pledged-wrap bg-grey mb2 clip">
-                                                          <div class="project-pledged bg-green full-height" style="width: 100%"></div>
-                                                       </div>
-                                                       <ul class="project-stats list m0 f6 no-wrap">
-                                                          <li class="first funded inline-block mr3">
-                                                             <strong class="block f4">219%</strong> <span class="grey-dark">funded</span>
-                                                          </li>
-                                                          <li class="pledged inline-block mr3">
-                                                             <strong class="block f4"><span class="money">$10,952</span></strong> <span class="grey-dark">pledged</span>
-                                                          </li>
-                                                          <li class="backers inline-block mr3 mobile-hide">
-                                                             <strong class="block f4">216</strong> <span class="grey-dark">backers</span>
-                                                          </li>
-                                                          <li class="last successful inline-block" style="display: none;">
-                                                             <strong class="block f4">Funded</strong>
-                                                             <div class="deadline grey-dark"></div>
-                                                          </li>
-                                                          <li class="last ksr_page_timer inline-block" data-end_time="2017-04-30T11:55:34-04:00">
-                                                             <strong class="block f6">
-                                                                <div class="js-num f4">5</div>
-                                                             </strong>
-                                                             <div class="span js-text grey-dark" data-word="left">days to go</div>
-                                                          </li>
-                                                       </ul>
-                                                    </div>
                                                  </div>
                                               </div>
                                            </div>

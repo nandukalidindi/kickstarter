@@ -35,14 +35,28 @@ class UserController < ApplicationController
   end
 
   def followers
-    @followers = ActiveRecord::Base.connection.execute("SELECT * FROM followers INNER JOIN users ON followers.follower_id = users.id WHERE followers.following_id=#{params[:id].to_i}")
-    @following = ActiveRecord::Base.connection.execute("SELECT * FROM followers INNER JOIN users ON followers.following_id = users.id WHERE followers.follower_id=#{params[:id].to_i}")
+    @followers = ActiveRecord::Base.connection.execute("SELECT * FROM followers INNER JOIN users ON followers.follower_id = users.id WHERE followers.following_id=#{params[:id].to_i}").to_a
+    @followers.each do |follower|
+      ar_follower = User.find(follower['id'].to_i)
+      unless ar_follower.profile_image_file_name.nil?
+        follower['profile_image'] = ar_follower.profile_image.url
+      end
+    end
+
+
+    @following = ActiveRecord::Base.connection.execute("SELECT * FROM followers INNER JOIN users ON followers.following_id = users.id WHERE followers.follower_id=#{params[:id].to_i}").to_a
     @backed = ActiveRecord::Base.connection.execute("SELECT DISTINCT(project_id) FROM pledges WHERE user_id=#{params[:id].to_i}")
   end
 
   def following
     @followers = ActiveRecord::Base.connection.execute("SELECT * FROM followers INNER JOIN users ON followers.follower_id = users.id WHERE followers.following_id=#{params[:id].to_i}")
-    @following = ActiveRecord::Base.connection.execute("SELECT * FROM followers INNER JOIN users ON followers.following_id = users.id WHERE followers.follower_id=#{params[:id].to_i}")
+    @following = ActiveRecord::Base.connection.execute("SELECT * FROM followers INNER JOIN users ON followers.following_id = users.id WHERE followers.follower_id=#{params[:id].to_i}").to_a
+    @following.each do |following|
+      ar_following = User.find(following['id'].to_i)
+      unless ar_following.profile_image_file_name.nil?
+        following['profile_image'] = ar_following.profile_image.url
+      end
+    end
     @backed = ActiveRecord::Base.connection.execute("SELECT DISTINCT(project_id) FROM pledges WHERE user_id=#{params[:id].to_i}")
   end
 

@@ -269,7 +269,8 @@
                                  </h2>
                               </div>
                               <div class="col-full col-sm-22-24 col-offset-sm-1-24 col-md-4-24 col-offset-md-0-24 flex items-center flex-column-md items-start-md mb3 order-1-md">
-                                 <a class="remote_modal_dialog" data-modal-title="About the creator" data-modal-class="modal_project_by" href="/projects/thestandardsmanual/reissue-of-the-1977-epa-graphic-standards-system/creator_bio"><img class="circle bg-grey-500 w4 h4 w7-md h7-md flex-noshrink mb2-md" alt="" style="height: auto;" src="https://ksr-ugc.imgix.net/assets/008/425/161/e1fd2a33920b69af808bf64de25d0ae8_original.jpg?w=80&amp;h=80&amp;fit=crop&amp;v=1461523284&amp;auto=format&amp;q=92&amp;s=bf080d529af4f587dda333465e8bec0c" width="80" height="80"></a>
+                                 <a class="remote_modal_dialog" data-modal-title="About the creator" data-modal-class="modal_project_by" href="/users/<%= @poster['id'] %>/profile/about">
+                                 <img alt="Profile image" class="circle bg-grey-500 w4 h4 w7-md h7-md flex-noshrink mb2-md" style="height: 80px; width: 80px" src=<%= @poster.profile_image.url || @poster.profile_image_url %>></a>
                                  <span class="navy-700 ml2 ml0-md">
                                  By
                                  <a class="medium navy-700 remote_modal_dialog" data-modal-title="About the creator" data-modal-class="modal_project_by" href="/users/<%= @poster['id'] %>/profile/about"><%= @poster['first_name'] %> <%= @poster['last_name'] %></a>

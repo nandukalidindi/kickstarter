@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html class="following_index no-mega fontface js skrollr skrollr-desktop" data-request-id="6ae63a4f-aba2-47ad-b199-162217abb208" lang="en">
-   <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# kickstarter: http://ogp.me/ns/fb/kickstarter#">      
+   <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# kickstarter: http://ogp.me/ns/fb/kickstarter#">
    </head>
    <body class="following not-mobile not-phone not-mobile-safari not-chrome-ios not-forces-video-controls not-tablet not-ipad not-iphone not-ios not-android not-touchable not-native-app-request not-apple-pay-capable not-android-pay-capable responsive skip_autologin" id="following_index">
       <div class="NS_layouts__notifications"></div>
@@ -66,22 +66,16 @@
                                      <div class="user-display__item">
                                         <div class="user-display__item__img">
                                            <div class="user-display__item__avatar">
-                                              <a class="avatar" target="_blank" href="/users/<%= follower['id'] %>/profile/about"><img class="avatar-image" alt="" style="height: auto;" src="https://ksr-ugc.imgix.net/assets/016/224/962/0058cb42df761b9286b063cf52af9c0a_original.jpg?w=80&amp;h=80&amp;fit=crop&amp;v=1491954431&amp;auto=format&amp;q=92&amp;s=e1f38279acda084600f3137ae7260782" width="80" height="80"></a>
+                                              <a class="avatar" target="_blank" href="/users/<%= follower['id'] %>/profile/about">
+                                                <img alt="Profile image" class="avatar-image" style="height: 80px; width: 80px" src=<%= follower['profile_image'] || follower['profile_image_url'] %>></a>
+                                              </a>
                                            </div>
                                         </div>
                                         <div class="user-display__item__body">
                                            <div class="user-display__item__info">
                                               <a class="user-display__item__name" target="_blank" href="/users/<%= follower['id'] %>/profile/about"><%= follower['first_name'] %> <%= follower['last_name'] %></a>
-                                              <div class="user-display__item__meta-section">
-                                                 <p class="user-display__item__meta__item">
-                                                    <span class="bold">1</span> Created
-                                                 </p>
-                                              </div>
                                            </div>
-                                        </div>
-                                        <div class="user-display__item__actions js-social-actions js-backer-count" data-backed_projects="0">
-                                         <button class="js-follow-user btn--with-svg btn user-display__item__actions__button btn--border-green" data-is-following="true" data-follow-path="/profiles/1494661930/follow" data-unfollow-path="/profiles/1494661930/unfollow" style="width: 140px">Follow</button>
-                                       </div>
+                                        </div>                                        
                                      </div>
                                    <% end %>
                                  </li>

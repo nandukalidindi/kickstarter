@@ -1,5 +1,7 @@
 class ProjectController < ApplicationController
 
+  before_action :deep_munge_empty_strings
+
   def index
     if params[:search]
       index_sql = "SELECT projects.id, projects.title, projects.description, projects.maximum_fund, projects.search_thumbnail_small, projects.search_thumbnail_large, projects.video_url, users.first_name, users.last_name, projects.location, EXTRACT(EPOCH FROM (projects.end_date - CURRENT_TIMESTAMP))/(60*60*24) AS days_left , pledge_sums.pledge_sum
@@ -51,6 +53,7 @@ class ProjectController < ApplicationController
   end
 
   def create
+    params[:description] = nil
     tags = params[:tags].split(",").map(&:capitalize).join(",")
     posted_by = current_user["id"].to_i
     end_date = (Time.now + (60 * 60 * 24 * params[:days].to_i)).to_s
@@ -77,13 +80,13 @@ class ProjectController < ApplicationController
     end
 
     @days_left = ActiveRecord::Base.connection.execute("SELECT EXTRACT(EPOCH FROM (end_date - CURRENT_TIMESTAMP))/(60*60*24) AS days_left FROM projects WHERE id=#{params[:id].to_i}").first['days_left']
-    @poster = ActiveRecord::Base.connection.execute("SELECT * FROM users WHERE id=#{@project["posted_by"].to_i}").first
+    @poster = User.find(@project['posted_by'].to_i)
     @comments = ActiveRecord::Base.connection.execute("SELECT reviews.comment, users.id AS user_id, users.first_name, users.last_name, reviews.created_at FROM reviews INNER JOIN users ON reviews.user_id = users.id WHERE reviews.type='comment' AND reviews.project_id=#{params[:id].to_i}")
     @ratings = ActiveRecord::Base.connection.execute("SELECT * FROM reviews WHERE type='rating' AND project_id=#{params[:id]}")
     @like = ((ActiveRecord::Base.connection.execute("SELECT COUNT(*) FROM reviews WHERE type='like' AND project_id=#{params[:id]} AND user_id=#{current_user['id']}") || []).first || {})['count'].to_i
     @current_user_rating = ((@ratings.select { |x| x['user_id'] == current_user['id']} || []).first || {})['rating'].to_i
     pledges = ActiveRecord::Base.connection.execute("SELECT * FROM pledges WHERE project_id=#{params[:id].to_i}")
-    @backers = pledges.map{ |x| x['id']}.uniq.count
+    @backers = pledges.map{ |x| x['user_id']}.uniq.count
     @pledged = 0
     pledges.each do |pledge|
       @pledged += pledge['amount'].to_f
@@ -125,5 +128,8 @@ class ProjectController < ApplicationController
       ActiveRecord::Base.connection.execute("INSERT INTO reviews(user_id, project_id, type, comment, created_at, updated_at) VALUES (#{current_user['id'].to_i}, #{params[:id].to_i}, 'comment', '#{params[:comment]}', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)")
     end
     redirect_to :back
+  end
+
+  def deep_munge_empty_strings
   end
 end
