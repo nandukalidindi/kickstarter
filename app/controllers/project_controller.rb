@@ -1,6 +1,6 @@
 class ProjectController < ApplicationController
 
-  before_action :deep_munge_empty_strings
+  before_action :deep_munge_empty_strings, only: [:create]
 
   def index
     if params[:search]
@@ -53,12 +53,26 @@ class ProjectController < ApplicationController
   end
 
   def create
-    params[:description] = nil
-    tags = params[:tags].split(",").map(&:capitalize).join(",")
+    tags = (params[:tags] || "").split(",").map(&:capitalize).join(",")
     posted_by = current_user["id"].to_i
     end_date = (Time.now + (60 * 60 * 24 * params[:days].to_i)).to_s
     if params[:title] && params[:goal]
-      ActiveRecord::Base.connection.execute("INSERT INTO projects(title, description, posted_by, type, status, maximum_fund, start_date, end_date, created_at, updated_at, tags, search_thumbnail_small, search_thumbnail_large, video_url, location) VALUES('#{params[:title]}', '#{params[:description]}', #{posted_by}, '#{params[:type]}', 'INITIAL', #{params[:goal].to_f}, '#{Time.now.to_s}', '#{end_date}', '#{Time.now.to_s}', '#{Time.now.to_s}', '{#{tags}}', '#{params[:image_url]}', '#{params[:image_url]}', '#{params[:video_url]}', '#{params[:location]}')")
+      ActiveRecord::Base.connection.execute("INSERT INTO projects(title, description, posted_by, type, status, maximum_fund, start_date, end_date, created_at, updated_at, tags, search_thumbnail_small, search_thumbnail_large, video_url, location)
+      VALUES(#{ActiveRecord::Base.sanitize(params[:title])},
+             #{ActiveRecord::Base.sanitize(params[:description])},
+             #{ActiveRecord::Base.sanitize(posted_by)},
+             #{ActiveRecord::Base.sanitize(params[:type])},
+             'INITIAL',
+             #{ActiveRecord::Base.sanitize(params[:goal].to_f)},
+             #{ActiveRecord::Base.sanitize(Time.now.to_s)},
+             #{ActiveRecord::Base.sanitize(end_date)},
+             #{ActiveRecord::Base.sanitize(Time.now.to_s)},
+             #{ActiveRecord::Base.sanitize(Time.now.to_s)},
+             '{#{tags}}',
+             #{ActiveRecord::Base.sanitize(params[:image_url])},
+             #{ActiveRecord::Base.sanitize(params[:image_url])},
+             #{ActiveRecord::Base.sanitize(params[:video_url])},
+             #{ActiveRecord::Base.sanitize(params[:location])})")
     end
 
     created_project = Project.where(title: params[:title]).first
@@ -131,5 +145,8 @@ class ProjectController < ApplicationController
   end
 
   def deep_munge_empty_strings
+    params.keys.each do |x|
+      params[x] = nil if params[x] == ""
+    end
   end
 end
