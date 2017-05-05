@@ -95,7 +95,13 @@ class ProjectController < ApplicationController
 
     @days_left = ActiveRecord::Base.connection.execute("SELECT EXTRACT(EPOCH FROM (end_date - CURRENT_TIMESTAMP))/(60*60*24) AS days_left FROM projects WHERE id=#{params[:id].to_i}").first['days_left']
     @poster = User.find(@project['posted_by'].to_i)
-    @comments = ActiveRecord::Base.connection.execute("SELECT reviews.comment, users.id AS user_id, users.first_name, users.last_name, reviews.created_at FROM reviews INNER JOIN users ON reviews.user_id = users.id WHERE reviews.type='comment' AND reviews.project_id=#{params[:id].to_i}")
+    @comments = ActiveRecord::Base.connection.execute("SELECT reviews.comment, users.id AS user_id, users.first_name, users.last_name, reviews.created_at FROM reviews INNER JOIN users ON reviews.user_id = users.id WHERE reviews.type='comment' AND reviews.project_id=#{params[:id].to_i}").to_a
+    @comments.each do |comment|
+      ar_user = User.find(comment['user_id'].to_i)
+      unless ar_user.profile_image_file_name.nil?
+        comment['profile_image'] = ar_user.profile_image.url
+      end
+    end
     @ratings = ActiveRecord::Base.connection.execute("SELECT * FROM reviews WHERE type='rating' AND project_id=#{params[:id]}")
     @like = ((ActiveRecord::Base.connection.execute("SELECT COUNT(*) FROM reviews WHERE type='like' AND project_id=#{params[:id]} AND user_id=#{current_user['id']}") || []).first || {})['count'].to_i
     @current_user_rating = ((@ratings.select { |x| x['user_id'] == current_user['id']} || []).first || {})['rating'].to_i

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Kickstarer</title>
+    <title>CS6083</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <link href="https://static.kickstarter.com/favicon.ico" rel="icon" type="image/x-icon">
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <%= yield %>    
+    <%= yield %>
     <%= javascript_include_tag('menuToggle.js') %>
   </body>
 </html>

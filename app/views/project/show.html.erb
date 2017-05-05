@@ -49,13 +49,13 @@
                               <div class="aspect-ratio aspect-ratio--16x9">
                                  <div class="project-image mb2 cf aspect-ratio--object" data-has-video="true" id="video-section">
                                     <div class="video-player vertically_center large" id="video_pitch" data-video-url="https://ksr-video.imgix.net/projects/2916782/video-772949-h264_high.mp4" data-image="https://ksr-ugc.imgix.net/assets/016/204/363/548681fc9413ed4cfd470dd9d772cf3c_original.PNG?w=1024&amp;h=576&amp;fit=fill&amp;bg=000000&amp;v=1492109152&amp;auto=format&amp;q=92&amp;s=40d7fa9247a69895de16535f7596e67b" data-dimensions="{&quot;width&quot;:640,&quot;height&quot;:382}" >
-                                       <video class="has_webm landscape" preload="none" style="">
+                                       <video id='play-video' class="has_webm landscape" preload="none" style="">
                                           <source src=<%= @project['video_url'] %> type="video/mp4; codecs=&quot;avc1.64001E, mp4a.40.2&quot;">
                                           <source src=<%= @project['video_url'] %> type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;">
                                           <source src=<%= @project['video_url'] %> type="video/webm">
                                           You'll need an HTML5 capable browser to see this content.
                                        </video>
-                                       <img class="has_played_hide full-width poster landscape" alt="1977 EPA Graphic Standards System reissue project video thumbnail" src=<%= @project['project_image_url'] || @project["search_thumbnail_large"] %> style="min-height: 0px;">
+                                       <img id="video-image' class="has_played_hide full-width poster landscape" alt="1977 EPA Graphic Standards System reissue project video thumbnail" src=<%= @project['project_image_url'] || @project["search_thumbnail_large"] %> style="min-height: 0px;">
                                        <div class="reset-video js-reset-video-once">
                                           <div class="reset-video__icon">
                                              <div class="audio-indicator js-autoplay-svg">
@@ -305,10 +305,6 @@
                                    <data class="Project439069323" data-format="number" data-value="4" itemprop="Project[comments_count]"><%= @comments.count %></data>
                                 </span>
                              </a>
-                              <a class="js-load-project-content js-load-project-updates mx3 project-nav__link--updates tabbed-nav__link type-14" data-content="updates" href="/projects/thestandardsmanual/reissue-of-the-1977-epa-graphic-standards-system/updates">
-                              Updates
-                              <span class="count">0</span>
-                              </a>
                            </div>
                         </div>
                      </div>
@@ -330,7 +326,9 @@
                                               <li class="NS_comments__comment comment earliest_comment item latest_comment mb3 py3" id="comment-16435532">
                                                  <div class="comment-inner">
                                                     <div class="avatar left">
-                                                       <a href="/users/<%= comment['user_id'] %>/profile/about"><img class="circle" alt="" style="height: auto;" src="https://ksr-ugc.imgix.net/assets/006/113/655/8d30417575ce889ed8ef2b4084c7d36f_original.jpg?w=80&amp;h=80&amp;fit=crop&amp;v=1461367414&amp;auto=format&amp;q=92&amp;s=780b71bff6dea5d7cb50c2fd31e7a7ed" width="80" height="80"></a>
+                                                       <a href="/users/<%= comment['user_id'] %>/profile/about">
+                                                         <img class="circle" alt="" style="height: 40px; width: 40px; padding-right: 10px" src=<%= comment['profile_image'] || comment['profile_image_url'] %>>
+                                                       </a>
                                                     </div>
                                                     <div class="main clearfix pl3 ml3">
                                                        <h3>

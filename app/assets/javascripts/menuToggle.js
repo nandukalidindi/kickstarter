@@ -220,4 +220,13 @@ $(document).ready(function(){
       }
     });
   });
+
+
+  $("#video_pitch").unbind('click').bind('click', function(event) {
+    var playVideo = document.getElementById('play-video');
+
+    event.target.style['display'] = 'none';
+    playVideo.style['display'] = 'block';
+    playVideo.play();
+  });
 })
