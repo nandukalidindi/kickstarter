@@ -1,5 +1,7 @@
 class LoginController < ApplicationController
 
+  before_action :deep_munge_empty_strings, only: [:create_user]
+
   def login
   end
 
@@ -31,5 +33,11 @@ class LoginController < ApplicationController
     redirect_to '/signup', alert: 'Password do not match' if params[:password] != params[:password_confirm]
     ActiveRecord::Base.connection.execute("INSERT INTO users(first_name, last_name, username, email, password) VALUES ('#{full_name[0]}', '#{full_name[2]}', '#{username}', '#{email}', '#{password}')")
     redirect_to '/', notice: true
+  end
+
+  def deep_munge_empty_strings
+    params.keys.each do |x|
+      params[x] = nil if params[x] == ""
+    end
   end
 end
