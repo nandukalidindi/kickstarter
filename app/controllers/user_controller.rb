@@ -1,4 +1,7 @@
 class UserController < ApplicationController
+
+  before_action :deep_munge_empty_strings, only: [:update_profile]
+
   def show
     binding.pry
   end
@@ -67,15 +70,15 @@ class UserController < ApplicationController
   def update_profile
     ActiveRecord::Base.connection.execute("
     UPDATE users
-    SET first_name='#{params['first_name']}',
-        last_name='#{params['last_name']}',
-        username='#{params['username']}',
-        profile_image_url='#{params['profile_image_url']}',
-        biography='#{params['biography']}',
-        address='#{params['address']}',
-        state='#{params['state']}',
-        country='#{params['country']}',
-        pincode='#{params['pincode']}'
+    SET first_name=#{ActiveRecord::Base.sanitize(params['first_name'])},
+        last_name=#{ActiveRecord::Base.sanitize(params['last_name'])},
+        username=#{ActiveRecord::Base.sanitize(params['username'])},
+        profile_image_url=#{ActiveRecord::Base.sanitize(params['profile_image_url'])},
+        biography=#{ActiveRecord::Base.sanitize(params['biography'])},
+        address=#{ActiveRecord::Base.sanitize(params['address'])},
+        state=#{ActiveRecord::Base.sanitize(params['state'])},
+        country=#{ActiveRecord::Base.sanitize(params['country'])},
+        pincode=#{ActiveRecord::Base.sanitize(params['pincode'])}
     WHERE id=#{params[:id].to_i}
     ")
 
@@ -141,7 +144,7 @@ class UserController < ApplicationController
                           AND type='project_views'
                           GROUP BY project_id ORDER BY no_of_views DESC
                         ) AS A
-                ) ORDER BY random()"
+                ) ORDER BY random() limit 6"
 
     @recommendations = ActiveRecord::Base.connection.execute(recommend_sql).to_a
 
@@ -201,5 +204,11 @@ class UserController < ApplicationController
 
     ActiveRecord::Base.connection.execute("DELETE FROM followers WHERE follower_id=#{follower_id} AND following_id=#{to_be_unfollowed}")
     redirect_to :back
+  end
+
+  def deep_munge_empty_strings
+    params.keys.each do |x|
+      params[x] = nil if params[x] == ""
+    end
   end
 end

@@ -13,7 +13,6 @@
       <main role="main">
          <div id="growl_section" class="center jGrowl"></div>
          <div id="main_content">
-            <a rel="publisher" style="display:none" href="https://plus.google.com/118239121095465976293">Google+</a>
             <div class="bg-white" id="content-wrap">
                <div class="NS_site__homepage_staff_picks py3 bg-white border-bottom">
                   <div class="container-flex px3 py3 relative">
@@ -28,8 +27,10 @@
                                         <div class="row">
                                            <div class="col">
                                               <h3 class="art m0 normal">
-                                                 <a class="green-dark" href="/discover/recommended?ref=home_staff_picks">Projects We Love:</a>
-                                                 <a class="green-dark" href="/discover/categories/art?ref=home_featured"><%= project['type'] %></a>
+                                                <div style="display: flex;">
+                                                 <div class="green-dark">Projects We Love:</div>
+                                                 <div class="green-dark"><%= project['type'] %></div>
+                                               </div>
                                               </h3>
                                            </div>
                                            <div class="col-right see-all-link">
@@ -56,11 +57,10 @@
                                               </p>
                                               <div class="project-card-footer absolute-bottom home-staff-picks-pr0 ratio-16-9">
                                                  <div class="NS_projects__category_location ratio-16-9">
-                                                    <a class="grey-dark mr3 nowrap type-12" href="/discover/places/chicago-il?ref=city"><span class="ksr-icon__location" aria-hidden="true"></span>
+                                                    <span class="ksr-icon__location" aria-hidden="true"></span>
                                                     <%= project['location'] %>
-                                                    </a><a class="grey-dark mr3 nowrap type-12" href="/discover/categories/art/public%20art?ref=category"><span class="ksr-icon__tag" aria-hidden="true"></span>
+                                                    <span class="ksr-icon__tag" aria-hidden="true"></span>
                                                     <%= project['tags'][1..-2].split(",").map(&:capitalize).join(", ") %>
-                                                    </a>
                                                  </div>
                                               </div>
                                            </div>
@@ -127,10 +127,8 @@
                                   </div>
                                   <div class="project-card-footer">
                                      <div class="project-location">
-                                        <a href="https://www.kickstarter.com/discover/places/port-townsend-wa" data-location="{&quot;id&quot;:2475511,&quot;name&quot;:&quot;Port Townsend&quot;,&quot;slug&quot;:&quot;port-townsend-wa&quot;,&quot;short_name&quot;:&quot;Port Townsend, WA&quot;,&quot;displayable_name&quot;:&quot;Port Townsend, WA&quot;,&quot;country&quot;:&quot;US&quot;,&quot;state&quot;:&quot;WA&quot;,&quot;type&quot;:&quot;Town&quot;,&quot;is_root&quot;:false,&quot;urls&quot;:{&quot;web&quot;:{&quot;discover&quot;:&quot;https://www.kickstarter.com/discover/places/port-townsend-wa&quot;,&quot;location&quot;:&quot;https://www.kickstarter.com/locations/port-townsend-wa&quot;},&quot;api&quot;:{&quot;nearby_projects&quot;:&quot;https://api.kickstarter.com/v1/discover?signature=1493147980.274914a2efa5dce719c2b750b191b6a3812fa598&amp;woe_id=2475511&quot;}}}">
                                         <span class="ksr-icon__location" aria-hidden="true"></span>
-                                        <span class="location-name"<%= recommend['location'] %></span>
-                                        </a>
+                                        <span class="location-name"><%= recommend['location'] %></span>
                                      </div>
                                      <div class="project-stats-container">
                                         <div class="project-progress-bar">
@@ -198,10 +196,8 @@
                                </div>
                                <div class="project-card-footer">
                                   <div class="project-location">
-                                     <a href="https://www.kickstarter.com/discover/places/port-townsend-wa" data-location="{&quot;id&quot;:2475511,&quot;name&quot;:&quot;Port Townsend&quot;,&quot;slug&quot;:&quot;port-townsend-wa&quot;,&quot;short_name&quot;:&quot;Port Townsend, WA&quot;,&quot;displayable_name&quot;:&quot;Port Townsend, WA&quot;,&quot;country&quot;:&quot;US&quot;,&quot;state&quot;:&quot;WA&quot;,&quot;type&quot;:&quot;Town&quot;,&quot;is_root&quot;:false,&quot;urls&quot;:{&quot;web&quot;:{&quot;discover&quot;:&quot;https://www.kickstarter.com/discover/places/port-townsend-wa&quot;,&quot;location&quot;:&quot;https://www.kickstarter.com/locations/port-townsend-wa&quot;},&quot;api&quot;:{&quot;nearby_projects&quot;:&quot;https://api.kickstarter.com/v1/discover?signature=1493147980.274914a2efa5dce719c2b750b191b6a3812fa598&amp;woe_id=2475511&quot;}}}">
                                      <span class="ksr-icon__location" aria-hidden="true"></span>
-                                     <span class="location-name"<%= recommend['location'] %></span>
-                                     </a>
+                                     <span class="location-name"><%= recommend['location'] %></span>
                                   </div>
                                   <div class="project-stats-container">
                                      <div class="project-progress-bar">
